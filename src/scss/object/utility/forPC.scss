@@ -1,0 +1,9 @@
+@use 'foundation' as *;
+
+.forPC {
+  display: none;
+
+  @include mq("md") {
+    display: block;
+  }
+}

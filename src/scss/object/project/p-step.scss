@@ -1,0 +1,125 @@
+@use 'foundation' as *;
+
+.p-step {
+  padding: 0 prem(15);
+  @include mq("md") {
+    padding: 0 prem(48);
+
+  }
+}
+
+.p-step__inner {
+  border-radius: prem(24);
+  background-color: #FFF9ED;
+  padding: prem(40) 0 prem(24);
+  @include mq("md") {
+    padding: prem(56) 0;
+  }
+}
+
+
+.p-step__list {
+  margin-top: prem(40);
+  display: grid;
+  gap: prem(16);
+  @include mq("md") {
+    grid-template-columns: repeat(5,1fr);
+    margin-top: prem(80);
+
+  }
+}
+
+.p-step__item {
+  padding: prem(20) prem(16) prem(20) prem(20);
+  border-radius: prem(16);
+  background-color: $color-white;
+  position: relative;
+  margin-left: prem(48);
+  @include mq("md") {
+    margin-left: 0;
+    padding: 0 prem(12) prem(24);
+  }
+  &:not(:last-child){
+    &::before{
+      position: absolute;
+      content: '';
+      top: prem(40);
+      left: prem(-24);
+      transform: translateX(-50%);
+      width: prem(3);
+      height: 100%;
+      background: url("../images/top/step-dotted-sp.png") repeat-y center center / contain;
+      @include mq("md") {
+        display: none;
+      }
+
+  }
+  }
+  &:not(:last-child) .p-step__num{
+    @include mq("md") {
+      position: relative;
+    }
+    &::before{
+      position: absolute;
+      content: '';
+      @include mq("md") {
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        background: url("../images/top/step-dotted.png") repeat-x center center / contain;
+        width: prem(220);
+        height: prem(100);
+      }
+    }
+  }
+}
+
+.p-step__num {
+  span{
+    position: relative;
+  }
+  font-size: prem(24);
+  margin: prem(-46) auto 0;
+  width: prem(48);
+  height: prem(48);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: $semi-bold;
+  border-radius: 50%;
+  background-color: $color-orange;
+  color: $color-white;
+  @include mq("md") {
+    width: prem(56);
+    height: prem(56);
+  }
+  @media screen and (max-width:768px){
+    position: absolute;
+    left: prem(-48);
+    top: prem(48);
+  }
+
+}
+
+.p-step__title {
+  font-size: prem(20);
+  color: $color-orange;
+  font-weight: $bold;
+  line-height: calc(26/20);
+  display: flex;
+  align-items: center;
+  @include mq("md") {
+    justify-content: center;
+    text-align: center;
+    height: prem(52);
+    margin-top: prem(22);
+  }
+}
+
+.p-step__text {
+  font-size: prem(14);
+  margin-top: prem(16);
+  @include mq("md") {
+    font-size: prem(16);
+  }
+}

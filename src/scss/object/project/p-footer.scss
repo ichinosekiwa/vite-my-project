@@ -1,0 +1,135 @@
+@use 'foundation' as *;
+
+.p-footer__company {
+  margin-top: prem(48);
+  background-color: #FFF9ED;
+  padding: prem(40) 0 prem(48);
+  @include mq("md") {
+    margin-top: prem(64);
+  }
+}
+
+.p-footer-company__title{
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: prem(12);
+  .c-title__en{
+    margin-top: prem(3);
+    font-size: prem(16);
+  }
+  .c-title__ja{
+    font-size: prem(24);
+  }
+}
+
+.p-footer-company__items {
+  max-width: prem(575);
+  margin: prem(24) auto 0;
+  @include mq("md") {
+    margin: prem(20) auto 0;
+
+  }
+}
+
+.p-footer-company__item {
+  display: flex;
+  font-size: prem(14);
+  gap: prem(16);
+  margin-top: prem(24);
+  @include mq("md") {
+    font-size: prem(12);
+    gap: prem(24);
+    margin-top: prem(20);
+
+  }
+
+  dt {
+    width: prem(72);
+    flex-shrink: 0;
+    color: #999999;
+    font-weight: $bold;
+    white-space: nowrap;
+    @include mq("md") {
+      width: prem(80);
+
+    }
+  }
+}
+
+.p-footer-company__link {
+  color: $color-orange;
+  text-decoration: underline;
+  padding-right: prem(24);
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: prem(20);
+    height: prem(20);
+    background: url("../images/top/icon-tab-orange.png") no-repeat center center / contain;
+  }
+}
+
+.p-footer-company__box {
+  margin: prem(32) auto 0;
+  display: flex;
+  align-items: center;
+  font-size: prem(12);
+  gap: prem(12);
+  flex-direction: column;
+  @include mq("md") {
+    font-size: prem(14);
+    max-width: prem(575);
+    margin: prem(50) auto 0;
+    flex-direction: row;
+    gap: prem(32);
+
+  }
+  a{
+    width: 100%;
+    max-width: prem(157);
+    img{
+      width: 100%;
+      object-fit: cover;
+      aspect-ratio: 157/19;
+    }
+  }
+}
+.p-footer__bottom{
+  margin-bottom: prem(76);
+  text-align: center;
+  padding: prem(12);
+  background-color: $color-orange;
+  color: $color-white;
+  font-size: prem(12);
+  @include mq("md") {
+    margin-bottom: 0;
+  }
+  small{
+    display: block;
+    font-size: prem(12);
+    margin-top: prem(3);
+    font-weight: $bold;
+  }
+}
+
+.p-footer__bottom-privacy{
+  text-decoration: underline;
+  padding-right: prem(24);
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: prem(20);
+    height: prem(20);
+    background: url("../images/top/icon-tab-white.png") no-repeat center center / contain;
+  }
+}

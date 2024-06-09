@@ -1,0 +1,43 @@
+@use 'foundation' as *;
+
+.c-page-top {
+    padding-top: prem(15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: prem(56);
+    height: prem(56);
+    font-size: prem(12);
+    line-height: 1;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 50%;
+    background-color: $color-white;
+    cursor: pointer;
+    border:1px solid $color-orange;
+    color: $color-orange;
+    box-shadow: 0px 0px 24px 0px #00000014;
+    transition: all .3s ease;
+    &:hover{
+      border-color: $color-white;
+      color: $color-white;
+      background-color: $color-orange;
+      &::before{
+        border-color: $color-white;
+      }
+
+    }
+}
+
+.c-page-top::before {
+    content: "";
+    position: absolute;
+    top: prem(18);
+    left: 50%;
+    width: prem(13);
+    height: prem(13);
+    transition: all .3s ease;
+    border-top: prem(3) solid $color-orange;
+    border-right: prem(3) solid $color-orange;
+    transform: translateX(-50%) rotate(-45deg);
+}

@@ -1,0 +1,220 @@
+@use 'foundation' as *;
+
+
+.p-price{
+  font-weight: $medium;
+}
+
+.p-price__inner {
+  padding: prem(48) 0 prem(40);
+  background-color: #F9F9F9;
+  @include mq("md") {
+
+    border-radius: prem(24);
+  }
+  position: relative;
+  &::before{
+    pointer-events: none;
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url("../images/top/dotted-pattern.png") repeat;
+  }
+}
+
+.p-price__body{
+  position: relative;
+  max-width: prem(736);
+  margin: 0 auto;
+
+}
+
+.p-price__title {
+  text-align: center;
+  font-size: prem(24);
+  font-weight: bold;
+  @include mq("md") {
+    font-size: prem(32);
+  }
+}
+
+.p-price__conditions {
+  max-width: prem(736);
+  margin: prem(20) auto prem(40);
+  @include mq("md") {
+    margin: prem(24) auto prem(32);
+  }
+}
+
+.p-price__condition {
+  &:not(:first-child) {
+    margin-top: prem(12);
+    @include mq("md") {
+      margin-top: prem(16);
+
+    }
+  }
+
+  span {
+    color: $color-orange;
+    font-weight: bold;
+  }
+
+  small{
+    font-size: prem(12);
+    display: block;
+  }
+  padding-left: prem(51);
+  padding-right: prem(15);
+  position: relative;
+  @include mq("md") {
+    padding-right: 0;
+    font-size: prem(18);
+    padding-left: prem(44);
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: prem(24);
+    height: prem(24);
+    left: prem(15);
+    top: prem(2);
+    @include mq("md") {
+      left: 0;
+      width: prem(32);
+      height: prem(32);
+      top: prem(-2);
+    }
+    background: url("../images/top/icon-check.png") no-repeat center center / contain;
+  }
+}
+
+.p-price__tableWrap {
+  border-radius: prem(16);
+  margin-top: prem(20);
+  font-size: prem(14);
+  padding: 0 prem(15);
+  @include mq("md") {
+    padding: 0;
+    font-size: prem(16);
+  }
+  .p-price__table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: separate;
+    border-radius: prem(16);
+    border-spacing: 0;
+  }
+  td,
+  th {
+    padding: prem(16) prem(8);
+    vertical-align: middle;
+    text-align: center;
+    @include mq("md") {
+
+      padding: prem(16) 0;
+    }
+  }
+
+  th {
+    letter-spacing: .1em;
+    background-color: $color-orange;
+    color: $color-white;
+    font-weight: bold;
+    white-space: nowrap;
+    border-bottom: 1px solid $color-white;
+    border-right: 1px solid $color-white;
+    line-height: calc(16.8/16);
+  }
+
+  td {
+    background-color: #fff;
+    border-bottom: 1px solid #D1D1D1;
+    border-right: 1px solid #D1D1D1;
+    font-weight: $regular;
+    &:nth-child(2) {
+      text-align: left;
+      @include mq("md") {
+        text-align: center;
+      }
+    }
+  }
+
+  span {
+    font-size: prem(12);
+    margin-top: prem(5);
+    display: inline-block;
+    line-height: calc(15.6/12);
+  }
+
+  em {
+    font-size: prem(12);
+    font-style: normal;
+    color: $color-orange;
+    margin: 0 prem(-6);
+    font-weight: $medium;
+  }
+
+  tr:nth-child(1) {
+    th:nth-child(1) {
+      border-top-left-radius: prem(16);
+      width: 23.1%;
+      @include mq("md") {
+        width: 26.3%;
+      }
+    }
+    th:nth-child(2) {
+      width: 51.3%;
+      @include mq("md") {
+        width: 50.9%;
+      }
+    }
+    th:nth-child(3) {
+      border-top-right-radius: prem(16);
+      width: 25.6%;
+      @include mq("md") {
+        width: 22.8%;
+      }
+    }
+  }
+  tr:last-child{
+    th:nth-child(1) {
+      border-bottom-left-radius: prem(16);
+    }
+    td:last-child {
+      border-bottom-right-radius: prem(16);
+    }
+  }
+
+}
+
+.p-price__comment {
+  margin-top: prem(8);
+  font-size: prem(12);
+  line-height: calc(19/12);
+  padding: 0 prem(15);
+  display: flex;
+  gap: prem(5);
+  @include mq("md") {
+    padding: 0;
+  }
+}
+
+.p-price__comment + .p-price__comment{
+  margin-top: 0;
+}
+
+.p-price__confirm {
+  text-align: center;
+  margin-top: prem(32);
+  font-size: prem(18);
+  font-weight: $bold;
+}
+
+.p-price__btnWrap{
+  margin-top: prem(64);
+}

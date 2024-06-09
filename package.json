@@ -1,0 +1,31 @@
+{
+  "name": "project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && html-beautify dist/**/*.html && esbuild src/public/assets/js/*.js --bundle --minify --outdir=dist/assets/js/",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^6.0.0",
+    "@types/sharp": "^0.32.0",
+    "autoprefixer": "^10.4.19",
+    "css-declaration-sorter": "^7.2.0",
+    "glob": "^10.4.1",
+    "postcss-sort-media-queries": "^5.2.0",
+    "sass": "^1.77.4",
+    "vite": "^5.2.0",
+    "vite-plugin-handlebars": "^2.0.0",
+    "vite-plugin-imagemin": "^0.6.1",
+    "vite-plugin-sass-glob-import": "^3.0.2",
+    "vite-plugin-webp": "^1.1.3"
+  },
+  "browserslist": [
+    "last 3 versions",
+    "> 5%",
+    "Firefox ESR",
+    "not dead"
+  ]
+}

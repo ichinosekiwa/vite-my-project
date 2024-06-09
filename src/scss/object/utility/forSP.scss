@@ -1,0 +1,7 @@
+@use 'foundation' as *;
+
+.forSP {
+  @include mq("md") {
+    display: none !important;
+  }
+}

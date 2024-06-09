@@ -1,0 +1,225 @@
+@use 'foundation' as *;
+
+.p-mv {
+  padding-top: prem(215);
+  text-align: center;
+  position: relative;
+  background: url("../images/top/mv-sp.png") no-repeat center center / cover;
+  @include mq("md") {
+    padding: prem(310) 0 prem(60);
+    background: url("../images/top/mv-bg.png") no-repeat center center / cover;
+
+  }
+
+}
+.p-mv__img{
+  display: none;
+  @include mq("md") {
+    display: block;
+  }
+  width: 100%;
+  position: absolute;
+  img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    &:nth-child(1){
+      max-width: prem(588);
+      aspect-ratio: 588/399;
+      top: 0;
+      left: 0;
+      img{
+        object-position: top;
+      }
+  }
+    &:nth-child(2){
+      max-width: prem(607);
+      aspect-ratio: 607/400;
+      top: 0;
+      right: 0;
+      img{
+        object-position: top;
+      }
+    }
+    &:nth-child(3){
+      max-width: prem(538);
+      aspect-ratio: 538/475;
+      bottom: 0;
+      left: 0;
+      img{
+        object-position: bottom;
+      }
+    }
+    &:nth-child(4){
+      max-width: prem(576);
+      aspect-ratio: 576/392;
+      bottom: 0;
+      right: 0;
+      img{
+        object-position: bottom;
+      }
+  }
+}
+
+.p-mv__title {
+  position: relative;
+  letter-spacing: .1em;
+  font-weight: $bold;
+  font-size: prem(38);
+  line-height: 1.5;
+  @include mq("md") {
+    font-size: prem(56);
+  }
+  span{
+    letter-spacing: .04em;
+    font-size: prem(47);
+    @include mq("md") {
+      letter-spacing: .1em;
+      font-size: prem(64);
+    }
+    background: linear-gradient(90deg, #FF9ABC 0%, #FFBFA6 25.5%, #B4EE97 34.5%, #99C8F0 78%, #D499F0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.p-mv__textWrap {
+  position: relative;
+  @include mq("md") {
+    gap: prem(8);
+    font-size: prem(20);
+    display: flex;
+    justify-content: center;
+
+  }
+}
+
+.p-mv__subtitle {
+  font-weight: $medium;
+  margin-top: prem(10);
+  line-height: calc(24/16);
+  @include mq("md") {
+    margin-top: prem(35);
+
+  }
+}
+
+.p-mv__percent{
+  position: relative;
+  width: 100%;
+  max-width: prem(315);
+  margin: 0 auto;
+  @include mq("md") {
+    margin: 0;
+    max-width: prem(416);
+  }
+  img{
+    width: 100%;
+      object-fit: cover;
+      aspect-ratio: 315/61;
+      height: 100%;
+      @include mq("md") {
+        aspect-ratio: 416/82;
+      }
+  }
+}
+
+.p-mv__percent-year{
+  color: #999999;
+  position: absolute;
+  bottom: prem(-14);
+  right: prem(24);
+  font-size: prem(12);
+  font-weight: $medium;
+  @include mq("md") {
+    bottom: prem(-18);
+
+  }
+}
+
+.p-mv__btn {
+  position: relative;
+  margin-top: prem(54);
+  background-color: rgba($color: #fff, $alpha: .9);
+  padding: prem(16) prem(8);
+  border-radius: prem(32) 0 0 prem(32);
+  max-width: prem(300);
+  margin-left: auto;
+  @include mq("md") {
+    padding: prem(24) prem(32);
+    border-radius: prem(120);
+    margin-top: prem(70);
+    margin-right: auto;
+    max-width: prem(986);
+  }
+
+  .c-btn__box{
+    margin-top: prem(12);
+    display: flex;
+    gap: prem(6);
+    flex-direction: row-reverse;
+    @include mq("md") {
+      display: contents;
+      gap: prem(40);
+    }
+    .c-tel__num{
+      @media screen and (max-width: 768px) {
+        font-size: prem(12);
+        line-height: calc(15.6/12);
+        white-space: nowrap;
+        text-align: left;
+      }
+    }
+    .c-btn__link,.c-tel{
+      @media screen and (max-width: 768px) {
+        padding: prem(8);
+        min-width: prem(140);
+        gap: prem(4);
+      }
+    }
+    .c-tel__top img{
+      @media screen and (max-width: 768px) {
+        transform: none;
+        max-width: prem(18);
+        height: auto;
+      }
+
+    }
+    .c-btn__link-text{
+      @media screen and (max-width: 768px) {
+        font-size: prem(12);
+        text-align: left;
+        line-height: calc(15.6/12);
+      }
+    }
+  }
+  .c-btn{
+    display: block;
+    @include mq("md") {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: prem(32);
+      flex-direction: row;
+    }
+  }
+  .c-btn__text span{
+    color: $color-orange;
+    line-height: calc(24/16);
+    font-size: prem(14);
+    @include mq("md") {
+      font-size: prem(16);
+
+    }
+    &::before,&::after{
+      @include mq("md") {
+        display: none;
+      }
+    }
+  }
+  .c-tel__num{
+    color: $color-orange;
+  }
+
+}
