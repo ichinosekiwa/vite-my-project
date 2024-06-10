@@ -1,4 +1,4 @@
-@use '@/scss/foundation/' as *;
+@use '../../foundation/' as *;
 
 // ヘッダー
 .p-header {
@@ -24,8 +24,8 @@
 
     p {
       font-family: "Noto Sans JP";
-      font-size: 12px;
-      font-weight: $medium;
+      font-size: 0.75rem;
+      font-weight: 500;
       line-height: 130%;
     }
   }
@@ -38,9 +38,6 @@
   &__item {
     font-size: 0.875rem;
 
-    .c-btn__link {
-      color: $white;
-      background-color: $red-600;
-    }
+    .c-btn__link {}
   }
 }
