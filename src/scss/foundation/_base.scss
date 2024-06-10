@@ -1,0 +1,20 @@
+@use 'variables' as *;
+@use 'mixin' as *;
+
+body {
+    font-family: $font-family-base;
+    font-weight: $regular;
+    color: $black-950;
+    line-height: 1.7;
+    font-size: $base-font-size;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.3s;
+}
+
+a:hover {
+    opacity: 0.8;
+}
