@@ -1,7 +1,17 @@
-@use 'foundation' as *;
+@use '../../foundation/index' as *;
+
+.forPC {
+  display: block;
+
+  @include mq("md") {
+    display: none;
+  }
+}
 
 .forSP {
+  display: none;
+
   @include mq("md") {
-    display: none !important;
+    display: block;
   }
 }

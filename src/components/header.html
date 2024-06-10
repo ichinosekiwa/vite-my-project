@@ -1,25 +1,54 @@
 <header class="p-header js-header">
   <div class="l-inner p-header__inner">
-    <div class="p-header__body forPC">
+    <div class="p-header__body">
       <div class="p-header__logo">
         <a href="#" class="p-header__logo-link">
           <img src="./assets/images/logo.svg" width="212" height="48" alt="" />
         </a>
-        <p>マーケティングコンサルティング</p>
+        <p class="forPC">マーケティングコンサルティング</p>
       </div>
       <nav class="p-header__nav">
-        <ul class="p-header__items">
-          <li class="p-header__item js-hover">
+        <button
+          class="p-header__hamburger js-hamburger"
+          aria-label="Toggle navigation"
+        >
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="p-header__items js-nav-items">
+          <li class="p-header__item js-global-nav is-close">
             <a href="/service" class="p-header__link">サービス</a>
+            <ul class="p-header__itemSub">
+              <li class="p-header__linkSub">
+                <a href="">コンサルティング</a>
+              </li>
+              <li class="p-header__linkSub">
+                <a href="">顧問</a>
+              </li>
+              <li class="p-header__linkSub">
+                <a href="">研修</a>
+              </li>
+            </ul>
           </li>
-          <li class="p-header__item">
-            <a href="#step" class="p-header__link js-hover">3つの特徴</a>
+          <li class="p-header__item js-global-nav is-close">
+            <a href="#step" class="p-header__link">3つの特徴</a>
+            <ul class="p-header__itemSub">
+              <li class="p-header__linkSub">
+                <a href="">実業での圧倒的な実績</a>
+              </li>
+              <li class="p-header__linkSub">
+                <a href="">強いブランドづくり</a>
+              </li>
+              <li class="p-header__linkSub">
+                <a href="">立ち上げのスキル（ゼロイチ）</a>
+              </li>
+            </ul>
           </li>
-          <li class="p-header__item">
-            <a href="#voice" class="p-header__link js-hover">実績</a>
+          <li class="p-header__item js-global-nav is-close">
+            <a href="#voice" class="p-header__link">実績</a>
           </li>
-          <li class="p-header__item">
-            <a href="#faq" class="p-header__link js-hover">当社について</a>
+          <li class="p-header__item js-global-nav is-close">
+            <a href="#faq" class="p-header__link">当社について</a>
           </li>
           <li class="p-header__item">
             <a href="#faq" class="p-header__link">よくあるご質問</a>

@@ -1,6 +1,10 @@
 @use 'variables' as *;
 @use 'mixin' as *;
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: $font-family-base;
     font-weight: $regular;
@@ -9,12 +13,15 @@ body {
     font-size: $base-font-size;
 }
 
-a {
+a,
+button {
     text-decoration: none;
     color: inherit;
     transition: opacity 0.3s;
+    cursor: pointer;
 }
 
+button:hover,
 a:hover {
     opacity: 0.8;
 }

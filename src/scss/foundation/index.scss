@@ -1,4 +1,9 @@
-@use 'reset';
-@use 'mixin';
-@use 'base';
-@use 'variables';
+@use 'reset' as reset;
+@use 'base' as base;
+@use 'variables' as vars;
+@use 'mixin' as mixin;
+
+@forward 'reset';
+@forward 'base';
+@forward 'variables';
+@forward 'mixin';

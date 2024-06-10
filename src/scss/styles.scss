@@ -1,4 +1,7 @@
 @charset "UTF-8";
 @use "./foundation/" as *;
 
+@use "./object/utility/forPC" as *;
+@use "./object/utility/forSP" as *;
 @use "./object/project/p-header" as *;
+@use "./object/project/p-footer" as *;
