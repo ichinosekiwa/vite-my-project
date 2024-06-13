@@ -9,7 +9,7 @@
     }
 }
 
-.l-outline__wrap {
+.outline__wrap {
     margin-bottom: 16px;
 
     dl {
@@ -44,7 +44,7 @@
 }
 
 @include mq('md') {
-    .l-outline__wrap {
+    .outline__wrap {
         margin-bottom: 2.4rem;
 
         dl {

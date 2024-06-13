@@ -1,0 +1,223 @@
+@use '../../foundation/index' as *;
+@use '../../object/component/button' as *;
+
+// TOPページ
+
+.page-top {
+  background: #fff;
+
+  h2 {
+    font-family: "Zen Old Mincho";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 170%;
+
+    strong {
+      color: $text-red-600;
+      font-weight: 400;
+    }
+  }
+}
+
+.mv {
+  margin: 80px auto 104px;
+
+  &__inner {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 64px clamp(24px, 11.66%, 168px) 48px;
+    display: flex;
+    justify-content: space-between;
+
+    &-text {
+      p {
+        margin-bottom: 12px;
+        font-size: 14px;
+        letter-spacing: 2.24px;
+      }
+
+      h1 {
+        font-family: $font-family-head;
+        font-size: 56px;
+        font-weight: 400;
+        line-height: 1.3;
+        margin-bottom: 32px;
+        position: relative;
+
+        &::before {
+          position: absolute;
+          content: "";
+          background: url(../public/assets/images/icon-page-top-h1.svg) no-repeat top/cover;
+          width: 510px;
+          height: 22px;
+          top: 35%;
+        }
+      }
+    }
+
+    &-movie {
+      margin-top: 48px;
+      width: 362px;
+      height: 96px;
+      padding: 24px;
+      background-color: $gray-50;
+      overflow: hidden;
+      display: flex;
+      flex-direction: row;
+      gap: 16px;
+      align-items: center;
+
+
+      img {
+        padding: 24px 32px 16px 16px;
+        background: $bg-gray-50;
+        position: relative;
+        z-index: 1;
+        left: -24px;
+      }
+
+      ul {
+        display: flex;
+        animation: loop-text 30s infinite linear 1s both;
+
+        li {
+          width: 27em;
+        }
+
+        @keyframes loop-text {
+          from {
+            transform: translateX(0);
+          }
+
+          to {
+            transform: translate(-100%);
+          }
+        }
+      }
+
+      a {
+        display: block;
+        width: fit-content;
+        margin-left: -3.2em;
+        margin-top: 4px;
+        font-size: 12px;
+        text-decoration: underline;
+        line-height: 1.3;
+        font-weight: 500;
+        font-family: Poppins;
+        color: $text-red-600;
+      }
+    }
+  }
+}
+
+// About(スティーブ・ジョブズ)
+.about {
+  margin-bottom: 80px;
+
+  &__wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+
+    &::before {
+      content: "";
+      background: url(../public/assets/images/img-text-jobs.svg) no-repeat top/cover;
+      position: absolute;
+      bottom: -52px;
+      left: -64px;
+      width: 616px;
+      height: 186px;
+    }
+
+    .wrap-right {
+      max-width: 511px;
+
+      p {
+        line-height: 2;
+      }
+    }
+  }
+
+  &__head {
+    h2 {
+      font-size: 36px;
+      margin-bottom: 16px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 130%;
+      margin-bottom: 24px;
+    }
+  }
+
+  .c-btn__secondary {}
+}
+
+
+
+// FAQ アコーディオン
+.ac-wrap {
+  margin: 50px auto 0;
+  max-width: 300px;
+  width: 100%;
+}
+
+.ac-list {
+  &:not(:first-child) {
+    margin-top: 10px;
+  }
+}
+
+.ac-title {
+  background: #DDD;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 20px 40px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    right: 25px;
+    height: 2px;
+    width: 15px;
+    background: #333;
+    transform: rotate(90deg);
+    transition: all .3s ease-in-out;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    right: 25px;
+    height: 2px;
+    width: 15px;
+    background: #333;
+    transition: all .3s ease-in-out;
+  }
+
+  &.open {
+    &::before {
+      transform: rotate(180deg);
+    }
+
+    &::after {
+      opacity: 0;
+    }
+  }
+}
+
+.ac-text {
+  border-left: 1px solid #DDD;
+  border-right: 1px solid #DDD;
+  border-bottom: 1px solid #DDD;
+  display: none;
+  padding: 20px 40px;
+}

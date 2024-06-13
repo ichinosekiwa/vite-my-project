@@ -4,6 +4,7 @@ import handlebars from 'vite-plugin-handlebars';
 import viteImagemin from 'vite-plugin-imagemin';
 import fs from 'fs';
 import path from 'path';
+import imageminWebp from 'imagemin-webp'; // WebP変換用のプラグインをインポート
 
 const files = [];
 function readDirectory(dirPath) {
@@ -16,7 +17,6 @@ function readDirectory(dirPath) {
       if (item === 'components') {
         continue;
       }
-
       readDirectory(itemPath);
     } else {
       if (path.extname(itemPath) !== '.html') {
@@ -40,6 +40,7 @@ function readDirectory(dirPath) {
   }
 }
 readDirectory(path.resolve(__dirname, 'src'));
+
 const inputFiles = {};
 for (let i = 0; i < files.length; i++) {
   const file = files[i];
@@ -51,10 +52,19 @@ const pageData = {
     isHome: true,
     title: 'Main Page',
   },
-  '/list.html': {
+  '/archive.html': {
     isHome: false,
-    title: 'List Page',
+    title: 'News Page',
   },
+  '/single.html': {
+    isHome: false,
+    title: 'News Single Page',
+  },
+  '/outline.html': {
+    isHome: false,
+    title: 'Outline Page',
+  },
+  // 他のページ情報もここに追加する
 };
 
 export default defineConfig({
@@ -66,17 +76,15 @@ export default defineConfig({
   build: {
     outDir: '../dist',
     rollupOptions: {
-      input: inputFiles,
+      input: inputFiles, // 複数のHTMLファイルの入力設定
       output: {
         assetFileNames: (assetInfo) => {
-          let extType = assetInfo.name.split('.')[1];
+          let extType = path.extname(assetInfo.name).slice(1);
           if (/ttf|otf|eot|woff|woff2/i.test(extType)) {
             extType = 'fonts';
-          }
-          if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(extType)) {
+          } else if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(extType)) {
             extType = 'images';
-          }
-          if (extType === 'css') {
+          } else if (extType === 'css') {
             return `assets/css/style.css`;
           }
           return `assets/${extType}/[name][extname]`;
@@ -86,7 +94,6 @@ export default defineConfig({
       },
     },
   },
-
   plugins: [
     handlebars({
       partialDirectory: resolve(__dirname, './src/components'),
@@ -107,7 +114,7 @@ export default defineConfig({
       },
       pngquant: {
         quality: [0.8, 0.9],
-        speed: 4,
+        speed: 1,
       },
       svgo: {
         plugins: [
@@ -123,6 +130,11 @@ export default defineConfig({
       webp: {
         quality: 75,
       },
+      plugins: [
+        imageminWebp({
+          quality: 75
+        })
+      ]
     }),
   ],
 });

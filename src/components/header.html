@@ -5,9 +5,14 @@
   <!-- pageDataのtitle情報を出力 -->
   <title>{{title}}</title>
   <link rel="stylesheet" href="scss/styles.scss" />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <header class="p-header js-header">
-  <div class="l-inner p-header__inner">
+  <div class="p-header__inner">
     <div class="p-header__body">
       <div class="p-header__logo">
         <a href="#" class="p-header__logo-link">
@@ -24,7 +29,7 @@
           <span></span>
         </button>
         <ul class="p-header__items js-nav-items">
-          <li class="p-header__item js-global-nav">
+          <li class="p-header__item js-global-nav is-close">
             <a href="/service" class="p-header__link">サービス</a>
             <ul class="p-header__itemSub">
               <li class="p-header__linkSub">
@@ -38,7 +43,7 @@
               </li>
             </ul>
           </li>
-          <li class="p-header__item js-global-nav">
+          <li class="p-header__item js-global-nav is-close">
             <a href="#step" class="p-header__link">3つの特徴</a>
             <ul class="p-header__itemSub">
               <li class="p-header__linkSub">
@@ -52,10 +57,10 @@
               </li>
             </ul>
           </li>
-          <li class="p-header__item js-global-nav">
+          <li class="p-header__item js-global-nav is-close">
             <a href="#voice" class="p-header__link">実績</a>
           </li>
-          <li class="p-header__item js-global-nav">
+          <li class="p-header__item js-global-nav is-close">
             <a href="#faq" class="p-header__link">当社について</a>
           </li>
           <li class="p-header__item">
