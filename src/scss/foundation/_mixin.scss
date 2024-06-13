@@ -6,3 +6,19 @@
     @content;
   }
 }
+
+/*
+ * htmlのfont-size用
+ */
+@function rootFz($baseWidth: 1440px) {
+  @return math.div(10px, $baseWidth) * 100vw;
+}
+
+/*
+ * font-size可変用
+ *使用例） font-size: fs(14);
+ */
+@function fs($max) {
+  $value: math.div($max, 10);
+  @return clamp(10px, #{$value}rem, #{$max}px);
+}

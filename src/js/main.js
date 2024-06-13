@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     hamburger.addEventListener('click', () => {
         header.classList.toggle('is-open');
+        navItems.classList.toggle('is-open');
     });
 
     globalNavItems.forEach((item) => {

@@ -3,6 +3,13 @@
 
 html {
     scroll-behavior: smooth;
+    font-size: rootFz();
+}
+
+@include mq('md') {
+    html {
+        font-size: rootFz(375px);
+    }
 }
 
 body {
@@ -11,6 +18,12 @@ body {
     color: $black-950;
     line-height: 1.7;
     font-size: $base-font-size;
+    background: $bg-gray-50;
+}
+
+* {
+    margin: 0;
+    padding: 0;
 }
 
 a,
@@ -21,7 +34,43 @@ button {
     cursor: pointer;
 }
 
-button:hover,
+// button:hover,
 a:hover {
-    opacity: 0.8;
+    opacity: 0.6;
+}
+
+.forPC {
+    display: block;
+
+    @include mq("md") {
+        display: none;
+    }
+}
+
+.forSP {
+    display: none;
+
+    @include mq("md") {
+        display: block;
+    }
+}
+
+.l-main {
+    width: 100%;
+    max-width: 1000px;
+    margin: 80px auto 88px;
+
+    @include mq('md') {
+        margin: initial;
+        padding: 6rem 2.4rem 5.6rem;
+    }
+}
+
+.l-content {
+    padding: 48px 64px;
+    background-color: $bg-white;
+
+    @include mq('md') {
+        padding: 2.4rem;
+    }
 }

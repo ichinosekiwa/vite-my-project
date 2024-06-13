@@ -1,22 +1,10 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="noindex" />
-    <!-- pageDataのtitle情報を出力 -->
-    <title>{{title}}</title>
-    <link rel="stylesheet" href="scss/styles.scss" />
-  </head>
+  <!-- header.htmlの読み込み -->
+  {{> header}}
 
-  <body>
-    <!-- header.htmlの読み込み -->
-    {{> header}}
+  <div id="app" style="width: 100%; height: 500px"></div>
 
-    <div id="app" style="width: 100%; height: 500px"></div>
-
-    <!-- footer.htmlの読み込み -->
-    {{> footer}}
-    <script type="module" src="./js/main.js"></script>
-  </body>
+  <!-- footer.htmlの読み込み -->
+  {{> footer}}
 </html>

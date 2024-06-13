@@ -1,0 +1,72 @@
+@use '../../foundation/index' as *;
+@use '../../object/component/button' as *;
+
+// 会社概要
+.p-page__head {
+    &-sub {
+        width: 100vw;
+        margin: 0 calc(50% - 50vw) 48px;
+    }
+}
+
+.l-outline__wrap {
+    margin-bottom: 16px;
+
+    dl {
+        border-bottom: 1px solid $gray-100;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 14px;
+        position: relative;
+
+        &::before {
+            content: "";
+            width: 40px;
+            height: 1px;
+            background: $bg-red-600;
+            position: absolute;
+            bottom: -1px;
+            right: 0;
+            z-index: 1;
+        }
+    }
+
+    dt {
+        padding: 32px 20px;
+        width: 200px;
+        font-weight: 700;
+    }
+
+    dd {
+        padding: 32px 20px;
+    }
+}
+
+@include mq('md') {
+    .l-outline__wrap {
+        margin-bottom: 2.4rem;
+
+        dl {
+            flex-direction: column;
+            align-items: flex-start;
+
+            &:first-child {
+                dt {
+                    padding-top: 1.6rem;
+                }
+            }
+        }
+
+        dt {
+            width: 100%;
+            padding: 4rem 0 0;
+            margin-bottom: 0.8rem;
+        }
+
+        dd {
+            padding: 0 0 4rem;
+        }
+
+    }
+}
