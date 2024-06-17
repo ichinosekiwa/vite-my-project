@@ -44,17 +44,37 @@ document.addEventListener('DOMContentLoaded', () => {
 /*********************************************************
  * TOP 実績 スライダー（swiper.js使用）
  *********************************************************/
-const mySwiper = new Swiper('.swiper', {
+const mySwiper1 = new Swiper('.top-slide-1', {
     // オプション設定
     loop: true,
+    autoplay: {
+        delay: 10000,
+    },
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
     },
 
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next-1',
+        prevEl: '.swiper-button-prev-1',
+    },
+});
+
+const mySwiper2 = new Swiper('.top-slide-2', {
+    // オプション設定
+    loop: true,
+    autoplay: {
+        delay: 10000,
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+
+    navigation: {
+        nextEl: '.swiper-button-next-2',
+        prevEl: '.swiper-button-prev-2',
     },
 });
 

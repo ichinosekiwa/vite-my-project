@@ -9,9 +9,12 @@
   h2 {
     font-family: "Zen Old Mincho";
     font-size: 36px;
-    font-style: normal;
     font-weight: 400;
     line-height: 170%;
+
+    @include mq('md') {
+      font-size: fs(26);
+    }
 
     strong {
       color: $text-red-600;
@@ -23,6 +26,11 @@
 .mv {
   margin: 80px auto 104px;
 
+  @include mq("md") {
+    margin: 6rem auto 11.2rem;
+    position: relative;
+  }
+
   &__inner {
     width: 100%;
     max-width: 1440px;
@@ -30,6 +38,12 @@
     padding: 64px clamp(24px, 11.66%, 168px) 48px;
     display: flex;
     justify-content: space-between;
+
+    @include mq("md") {
+      padding: 5.6rem 2.4rem 4rem;
+      flex-direction: column;
+      width: 100vw;
+    }
 
     &-text {
       p {
@@ -55,6 +69,25 @@
           top: 35%;
         }
       }
+
+      @include mq("md") {
+        p {
+          font-size: fs(14);
+          margin-bottom: 0.8rem;
+        }
+
+        h1 {
+          font-size: fs(32);
+          line-height: 1.5;
+          margin-bottom: 2rem;
+
+          &::before {
+            width: 28.564rem;
+            height: 1.3rem;
+            top: 38%;
+          }
+        }
+      }
     }
 
     &-movie {
@@ -76,6 +109,10 @@
         position: relative;
         z-index: 1;
         left: -24px;
+
+        @include mq('md') {
+          padding: 2.4rem 1.6rem 1.6rem 1.6rem;
+        }
       }
 
       ul {
@@ -109,6 +146,20 @@
         font-family: Poppins;
         color: $text-red-600;
       }
+
+
+    }
+
+    @include mq("md") {
+      &-movie {
+        width: 87.2vw;
+        max-width: 400px;
+        position: absolute;
+        bottom: -5.6rem;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
     }
   }
 }
@@ -116,6 +167,17 @@
 // About(スティーブ・ジョブズ)
 .about {
   margin-bottom: 80px;
+
+  @include mq("md") {
+    margin-bottom: 7.2rem;
+    overflow: hidden;
+  }
+
+  @include mq('md') {
+    .c-btn__sm {
+      margin: 2.4rem auto 0;
+    }
+  }
 
   &__wrap {
     display: flex;
@@ -142,16 +204,42 @@
     }
   }
 
+  @include mq("md") {
+    &__wrap {
+      flex-direction: column;
+      z-index: 1;
+
+      &::before {
+        width: 38.3rem;
+        height: 10.5rem;
+        bottom: initial;
+        top: 18%;
+        left: -4px;
+        z-index: -1;
+      }
+    }
+  }
+
   &__head {
     h2 {
       font-size: 36px;
       margin-bottom: 16px;
+
+      @include mq('md') {
+        font-size: fs(26);
+        margin-bottom: fa(16);
+      }
     }
 
     p {
       font-size: 14px;
       line-height: 130%;
       margin-bottom: 24px;
+
+      @include mq('md') {
+        font-size: fs(14);
+        margin-bottom: fs(24);
+      }
     }
   }
 
@@ -162,6 +250,10 @@
   background: $bg-gray-50 url(../public/assets/images/patteren-page-worry-bg.svg)repeat;
   padding: 96px 0 88px;
 
+  @include mq('md') {
+    padding: 6.4rem 0 7.2rem;
+  }
+
   &__head {
     text-align: center;
     margin-bottom: 40px;
@@ -170,6 +262,19 @@
       font-size: 28px;
       font-weight: 500;
       margin-bottom: 20px;
+
+      @include mq('md') {
+        font-size: fs(28);
+        line-height: 1.3;
+        margin-bottom: 2rem;
+
+      }
+    }
+
+    @include mq('md') {
+      p {
+        font-size: fs(14);
+      }
     }
 
     .dots-top {
@@ -186,6 +291,10 @@
       display: flex;
       flex-direction: column;
       gap: 3.2rem;
+
+      @include mq("md") {
+        flex-direction: column;
+      }
     }
 
     &-item {
@@ -195,10 +304,19 @@
       border-radius: 12px;
       box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.05);
 
+      @include mq("md") {
+        flex-direction: column;
+      }
+
       img {
         width: 21.4rem;
         height: 100%;
         border-radius: 12px 0 0 12px;
+
+        @include mq("md") {
+          width: 100%;
+          border-radius: 1.2rem 1.2rem 0 0;
+        }
       }
 
       dl {
@@ -207,6 +325,12 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+
+        @include mq('md') {
+          flex-direction: column;
+          width: 100%;
+          padding: 3.2rem 2.4rem;
+        }
       }
 
       h3 {
@@ -219,9 +343,19 @@
         gap: 16px;
         margin-bottom: 16px;
 
+        @include mq('md') {
+          flex-direction: column;
+          gap: .8rem;
+          font-size: fs(24)
+        }
+
         span {
           color: $text-gray-500;
           font-size: 18px;
+
+          @include mq('md') {
+            font-size: fs(16)
+          }
         }
       }
 
@@ -236,12 +370,22 @@
         column-gap: 24px;
         padding-bottom: 24px;
 
+        @include mq('md') {
+          row-gap: 1.2rem;
+          width: 100%;
+        }
+
 
         dd {
           padding-left: 20px;
           position: relative;
           font-size: 14px;
           height: fit-content;
+
+          @include mq('md') {
+            font-size: fs(14);
+            padding-left: 2rem;
+          }
 
           &::before {
             content: "";
@@ -252,6 +396,11 @@
             left: 0;
             top: 50%;
             transform: translateY(-50%);
+
+            @include mq('md') {
+              transform: unset;
+              top: .4rem;
+            }
           }
         }
       }
@@ -266,10 +415,19 @@
           flex-direction: row;
           align-items: center;
 
+          @include mq('md') {
+            flex-direction: column;
+          }
+
           p {
             padding-right: 35px;
             margin-right: 12px;
             position: relative;
+
+            @include mq('md') {
+              padding: 0;
+              margin: 0 0 1.2rem;
+            }
 
             &::after {
               content: "";
@@ -280,6 +438,30 @@
               right: 0;
               top: 50%;
               transform: translateY(-50%);
+            }
+
+            @include mq('md') {
+              &::after {
+                content: "";
+                background: url(../public/assets/images/icon-arrow-right-triple-sp.svg)no-repeat top/cover;
+                width: 11px;
+                height: 13px;
+                position: absolute;
+                left: -2rem;
+                top: 50%;
+                transform: translateY(-50%);
+              }
+
+              &::before {
+                content: "";
+                background: url(../public/assets/images/icon-arrow-right-triple-sp.svg)no-repeat top/cover;
+                width: 11px;
+                height: 13px;
+                position: absolute;
+                right: -2rem;
+                top: 50%;
+                transform: translateY(-50%);
+              }
             }
           }
 
@@ -294,6 +476,10 @@
 
             &:not(:last-child) {
               margin-right: 8px;
+
+              @include mq('md') {
+                margin-right: .4rem;
+              }
             }
           }
         }
@@ -303,6 +489,11 @@
           flex-wrap: wrap;
           row-gap: 8px;
           width: calc(100% - 200px);
+
+          @include mq('md') {
+            row-gap: .4rem;
+            width: 100%;
+          }
         }
       }
     }
@@ -313,11 +504,20 @@
 .service {
   padding: 104px 0;
 
+  @include mq("md") {
+    padding: 6.4rem 0;
+  }
+
   &__head {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 32px;
+
+    @include mq("md") {
+      flex-direction: column;
+      margin-bottom: 3.2rem;
+    }
 
     span {
       display: block;
@@ -326,10 +526,25 @@
       line-height: 1;
       font-size: 16px;
       font-family: $font-family-en;
+
+      @include mq("md") {
+        margin-bottom: 2.4rem;
+      }
     }
 
     h2 {
       font-size: 32px;
+
+      @include mq("md") {
+        font-size: fs(28);
+        margin-bottom: 2rem;
+      }
+    }
+
+    p {
+      @include mq('md') {
+        font-size: fs(14);
+      }
     }
   }
 
@@ -338,12 +553,20 @@
       display: flex;
       justify-content: space-between;
       gap: 20px;
+
+      @include mq('md') {
+        flex-direction: column;
+      }
     }
 
     li {
       background-color: $bg-gray-50;
       border-radius: 12px;
       width: 320px;
+
+      @include mq('md') {
+        width: 100%;
+      }
 
       a {
         padding: 32px 40px;
@@ -353,6 +576,10 @@
         position: relative;
         overflow: hidden;
         border-radius: 12px;
+
+        @include mq('md') {
+          padding: 3.2rem;
+        }
 
         &::before {
           content: "→";
@@ -372,6 +599,12 @@
         width: 150px;
         height: 102px;
         margin: 0 auto 16px;
+
+        @include mq('md') {
+          width: 15rem;
+          height: 10.2rem;
+          margin: 0 auto 1.6rem;
+        }
       }
 
       h3 {
@@ -382,10 +615,19 @@
         font-family: $font-family-head;
         color: $text-red-600;
         margin-bottom: 8px;
+
+        @include mq('md') {
+          font-size: fs(20);
+          margin-bottom: .8rem;
+        }
       }
 
       p {
         font-size: 14px;
+
+        @include mq('md') {
+          font-size: fs(14);
+        }
       }
     }
   }
@@ -399,25 +641,56 @@
     width: 73.8vw;
     height: auto;
     min-height: 300px;
+
+    @include mq('md') {
+      width: 93.866vw;
+      aspect-ratio: 352.809/195;
+      min-height: initial;
+    }
   }
 
   span {
     position: absolute;
     bottom: 24px;
-    left: 6.4rem;
-    width: 96.7rem;
-    height: 12.5rem;
+    left: 0;
+    width: 100%;
+    height: auto;
+
+    @include mq('md') {
+      bottom: -7.2rem;
+      left: 1rem;
+      height: auto;
+
+      @include mq('md') {
+        overflow-x: hidden;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 144/52;
+      }
+    }
   }
 }
 
 // ３つの特徴
 .features {
-  padding: 11.2rem 0 88px;
+  padding: 112px 0 88px;
   background: $bg-gray-50;
+
+  @include mq('md') {
+    padding: 6.4rem 0;
+  }
 
   &__head {
     text-align: center;
     margin-bottom: 32px;
+
+    @include mq('md') {
+      padding: 6.4rem 0 0;
+      margin-bottom: 3.2rem;
+    }
 
     span {
       display: block;
@@ -432,6 +705,12 @@
       font-size: 32px;
       margin-bottom: 8px;
     }
+
+    p {
+      @include mq('md') {
+        font-size: fs(14);
+      }
+    }
   }
 
   &__wrap {
@@ -439,6 +718,11 @@
       display: flex;
       gap: 20px;
       justify-content: space-between;
+
+      @include mq('md') {
+        flex-direction: column;
+        gap: 2rem;
+      }
     }
 
     li {
@@ -449,7 +733,13 @@
         font-weight: 500;
         line-height: 130%;
         font-size: 20px;
+        font-weight: 500;
         font-family: $font-family-head;
+
+        @include mq('md') {
+          text-align: left;
+          font-size: fs(20);
+        }
 
         strong {
           color: $text-red-600;
@@ -475,6 +765,14 @@
         overflow: hidden;
         border-radius: 12px;
 
+        @include mq('md') {
+
+          img {
+            width: 8rem;
+            height: 8rem;
+          }
+        }
+
         &::before {
           content: "→";
           color: $white;
@@ -487,6 +785,12 @@
           right: -40px;
           padding: 10px 14px;
         }
+
+        @include mq('md') {
+          padding: 3.2rem;
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
       }
     }
   }
@@ -495,6 +799,24 @@
 //実績
 .works {
   padding: 8rem 0;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    width: 55.8rem;
+    height: 55.8rem;
+    border-radius: 50%;
+    background: var(--circle-grade-red, radial-gradient(50% 50% at 50% 50%, #FFF 35.32%, #FFF7F8 100%));
+    position: absolute;
+    left: -14rem;
+    bottom: -24.8rem;
+
+    @include mq('md') {
+      width: 25.6rem;
+      height: 25.6rem;
+    }
+  }
 
   &__head {
     text-align: left;
@@ -521,7 +843,10 @@
   &__wrap {
     display: flex;
     justify-content: space-between;
-    gap: 96px;
+
+    @include mq('md') {
+      flex-direction: column;
+    }
   }
 
   .wrap__right {
@@ -534,8 +859,6 @@
   .works__item {
 
     li {
-      padding: 24px 0px;
-
       h4 {
         width: fit-content;
         min-width: 180px;
@@ -553,7 +876,7 @@
       p {
         background: $white;
         text-align: center;
-        min-height: 156px;
+        height: 156px;
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -571,11 +894,19 @@
   }
 
   .swiper {
-    width: 63.8rem;
+    max-width: 648px;
+    width: 64.8rem;
     height: auto;
     background: $bg-gray-50;
     padding: 24px 0px 40px;
+
+    @include mq('md') {
+      width: 87.4vw;
+      max-width: 648px;
+    }
   }
+
+
 
   .swiper.swiper-pagination-bullet {
     background-color: red;
@@ -592,7 +923,7 @@
   }
 
   .swiper-pagination {
-    bottom: 20px !important;
+    bottom: 12px !important;
   }
 
 
@@ -607,7 +938,8 @@
     margin: 0 !important;
   }
 
-  .swiper-button-prev {
+  .swiper-button-prev-1,
+  .swiper-button-prev-2 {
     background: url(../public/assets/images/icon-arrow-circle-left.svg)no-repeat top/ cover;
     width: 52px;
     height: 52px;
@@ -616,7 +948,8 @@
     left: 24px;
   }
 
-  .swiper-button-next {
+  .swiper-button-next-1,
+  .swiper-button-next-2 {
     background: url(../public/assets/images/icon-arrow-circle-left.svg)no-repeat top/ cover;
     width: 52px;
     height: 52px;
@@ -626,28 +959,196 @@
     transform: scale(-1);
   }
 
+  .swiper-button-prev-1,
+  .swiper-button-next-1 {
+    top: 50%;
+  }
+
+  .swiper-button-prev-2,
+  .swiper-button-next-2 {
+    top: 50%;
+  }
+
   // ▲ スライダー
 }
 
-// FAQ アコーディオン
+// News お知らせ
+.news {
+  padding: 56px 0 64px;
+  background-color: $bg-gray-50;
 
+  &__inner {
+    padding: 6.4rem;
+    background-color: $white;
+    border-radius: 12px;
+  }
+
+  &__head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    .c-btn__sm {
+      margin-bottom: 8px;
+    }
+
+    span {
+      display: block;
+      color: $text-red-600;
+      margin-bottom: 4px;
+      line-height: 1;
+      font-size: 16px;
+      font-family: $font-family-en;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__wrap {
+    &__items {
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+
+      div {
+        position: relative;
+        padding-right: 3.2rem;
+        padding-bottom: 4rem;
+        overflow: hidden;
+        border-bottom: 1px solid #EFEFEF;
+
+        &::after {
+          position: absolute;
+          right: -32px;
+          bottom: -32px;
+          width: 64px;
+          height: 64px;
+          padding: 6px 0px 0 10px;
+          border-radius: 50%;
+          background: #DF2238;
+          content: "→";
+          color: #fff;
+          font-size: fs(16);
+        }
+      }
+    }
+
+    .c-news__date {
+      display: flex;
+      margin-bottom: 12px;
+      gap: 12px;
+      color: #BDBDBD;
+      font-size: 14px;
+      font-family: Poppins;
+
+      span {
+        height: 20px;
+        padding: 4px 8px;
+        border-radius: 4px;
+        background: #FFF7F7;
+        color: #DF2238;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1;
+        font-family: "Noto Sans JP";
+      }
+    }
+
+    .c-news__txt {
+      display: -webkit-box;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-box-orient: vertical;
+      max-height: 24px;
+      -webkit-line-clamp: 1;
+      font-size: 14px;
+      line-height: 2;
+    }
+  }
+}
+
+// FAQ よくあるご質問
+.faq {
+  margin: 88px 0 104px;
+  padding: 64px 0;
+  background-color: $bg-gray-50;
+
+  &__head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 32px;
+
+    .c-btn__sm {
+      margin-bottom: 8px;
+    }
+
+    span {
+      display: block;
+      color: $text-red-600;
+      margin-bottom: 4px;
+      line-height: 1;
+      font-size: 16px;
+      font-family: $font-family-en;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+  }
+}
+
+// ▼ FAQ アコーディオン
 .ac-wrap {
-  margin: 50px auto 0;
-  max-width: 300px;
   width: 100%;
+
+  dd {
+    position: relative;
+
+    &::before {
+      content: "";
+      background: url(../public/assets/images/icon-page-top-faq-a.svg)no-repeat top/cover;
+      width: 48px;
+      height: 48px;
+      position: absolute;
+      top: 16px;
+      left: -62px;
+      transform: scale(1);
+    }
+  }
 }
 
 .ac-list {
+  background: $bg-white;
+  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.05);
+  position: relative;
+
+  &::before {
+    content: "";
+    background: url(../public/assets/images/icon-page-top-faq-q.svg)no-repeat top/cover;
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    transform: scale(1);
+  }
+
   &:not(:first-child) {
-    margin-top: 10px;
+    margin-top: 16px;
   }
 }
 
 .ac-title {
-  background: #DDD;
   cursor: pointer;
-  font-size: 16px;
-  padding: 20px 40px;
+  font-size: 14px;
+  padding: 20px 76px 20px 84px;
   position: relative;
 
   &::before {
@@ -657,7 +1158,7 @@
     right: 25px;
     height: 2px;
     width: 15px;
-    background: #333;
+    background: $bg-red-600;
     transform: rotate(90deg);
     transition: all .3s ease-in-out;
   }
@@ -669,7 +1170,7 @@
     right: 25px;
     height: 2px;
     width: 15px;
-    background: #333;
+    background: $bg-red-600;
     transition: all .3s ease-in-out;
   }
 
@@ -685,9 +1186,78 @@
 }
 
 .ac-text {
-  border-left: 1px solid #DDD;
-  border-right: 1px solid #DDD;
-  border-bottom: 1px solid #DDD;
   display: none;
-  padding: 20px 40px;
+  padding: 19px 0px 16px 0px;
+  font-size: 14px;
+  margin: 0 76px 0 84px;
+  border-top: 2px dashed $gray-100 ;
+}
+
+// ▲ FAQ アコーディオン
+
+
+// ceo 代表者紹介
+.ceo {
+  padding-bottom: 104px;
+  position: relative;
+
+  &__inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 7.2rem;
+  }
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+
+    span {
+      display: block;
+      color: $text-red-600;
+      margin-bottom: 4px;
+      line-height: 1;
+      font-size: 16px;
+      font-family: $font-family-en;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    h3 {
+      font-size: 24px;
+      font-family: $font-family-head;
+      font-weight: 500;
+    }
+
+  }
+
+
+  &__img {
+    max-width: 351px;
+    height: auto;
+    aspect-ratio: 351/499;
+
+  }
+
+  .ceo-wrap {
+    max-width: 577px;
+
+    .ceo__img-txt {
+      position: absolute;
+      right: 0;
+      top: -103.904px;
+      width: 60.7rem;
+      height: 20.8rem;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 2;
+      margin-bottom: 24px;
+    }
+  }
 }
