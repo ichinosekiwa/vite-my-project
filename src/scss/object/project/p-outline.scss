@@ -6,6 +6,16 @@
     &-sub {
         width: 100vw;
         margin: 0 calc(50% - 50vw) 48px;
+        position: relative;
+        z-index: 1;
+
+        img {
+            width: 100vw;
+            margin: 0 calc(50% - 50vw);
+            height: auto;
+            max-height: 390px;
+            object-fit: cover;
+        }
     }
 }
 

@@ -31,7 +31,7 @@
     }
   }
 
-  .service__wrap {
+  .footer__service__wrap {
     margin-top: 4rem;
 
     ul {
@@ -262,7 +262,7 @@
       }
     }
 
-    .service__wrap {
+    .footer__service__wrap {
       margin-top: fs(16);
 
       ul {
@@ -271,7 +271,6 @@
       }
 
       li {
-        padding: 2.4rem 1.6rem;
         width: 100%;
         display: flex;
         align-items: center;
@@ -292,6 +291,7 @@
           flex-direction: row;
           align-items: center;
           gap: fs(20);
+          padding: 1.6rem 2.4rem;
 
         }
 

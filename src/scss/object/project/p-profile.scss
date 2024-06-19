@@ -1,0 +1,90 @@
+@use '../../foundation/index' as *;
+@use '../../object/component/button' as *;
+
+// 代表プロフィール・思い
+.p-page__head {
+    &-sub {
+        width: 100vw;
+        margin: 0 calc(50% - 50vw) 48px;
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.page-prolile-content {
+    section {
+        background-color: $bg-white;
+        padding: 48px 64px 64px;
+
+        &:not(:last-of-type) {
+            margin-bottom: 40px;
+        }
+    }
+
+    h2 {
+        z-index: 0;
+        position: relative;
+        margin-top: 24px;
+        margin-bottom: 32px;
+        padding-top: 32px;
+        border-top: 1px solid #EFEFEF;
+        color: #161A1E;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 1.7;
+        font-family: "Zen Old Mincho", serif;
+
+        @include mq('md') {
+            margin-bottom: 2.4rem;
+        }
+
+        &::before {
+            z-index: 1;
+            position: absolute;
+            top: -1px;
+            left: 0;
+            width: 75px;
+            height: 1px;
+            background: #DF2238;
+            content: "";
+        }
+    }
+}
+
+.profile-name {
+
+    margin-bottom: 4rem;
+
+    .name__wrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 48px;
+        position: relative;
+
+        &-img {
+            width: 393px;
+            height: 285px;
+        }
+
+        &-txt {
+            width: calc(100% - 393px);
+            font-size: 32px;
+            font-family: $font-family-head;
+
+            span {
+                font-size: 18px;
+                font-weight: 500;
+                padding-right: 16px;
+            }
+        }
+
+        .ceo__img-txt {
+            position: absolute;
+            width: 400px;
+            top: -52px;
+            right: -32px;
+        }
+    }
+}

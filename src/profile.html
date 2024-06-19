@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initiascale=1.0" />
+    <meta name="robots" content="noindex" />
+    <!-- pageDataのtitle情報を出力 -->
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="scss/styles.scss" />
+  </head>
+
+  <body>
+    <!-- header.htmlの読み込み -->
+    {{> header}}
+
+    <main class="main">
+      <section class="p-page__head">
+        <hgroup class="p-page__head__inner">
+          <p>PROFILE</p>
+          <h1>代表プロフィール・思い</h1>
+          <span>Profile</span>
+        </hgroup>
+      </section>
+
+      <article class="page-prolile-content">
+        <section class="profile-name" id="name">
+          <h2>代表者紹介</h2>
+          <div class="name__wrap">
+            <picture>
+              <source
+                srcset="../public/assets/images/img-page-profile-ceo-sp.jpg"
+                media="(max-width:768)"
+              />
+              <img
+                class="name__wrap-img"
+                src="../public/assets/images/img-page-profile-ceo.jpg"
+                alt="代表取締役 CEO 竹上 創"
+              />
+            </picture>
+            <p class="name__wrap-txt"><span>代表取締役 CEO</span>竹上 創</p>
+            <span class="ceo__img-txt">
+              <picture>
+                <source
+                  srcset="../public/assets/images/img-text-ceo-takegami-sp.svg"
+                  media="(max-width:768px)"
+                />
+                <img
+                  src="../public/assets/images/img-text-ceo-takegami.svg"
+                  alt="ビルが並ぶ街の風景"
+                /> </picture
+            ></span>
+          </div>
+        </section>
+        <section class="profile-ceo" id="profile">
+          <h2>代表プロフィール</h2>
+          <div class="ceo__wrap"></div>
+        </section>
+        <section class="profile-thought" id="thought">
+          <h2>思い</h2>
+          <div class="thought__wrap"></div>
+        </section>
+      </article>
+    </main>
+
+    <!-- footer.htmlの読み込み -->
+    {{> footer}}
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>

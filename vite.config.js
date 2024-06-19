@@ -64,6 +64,18 @@ const pageData = {
     isHome: false,
     title: 'Outline Page',
   },
+  '/privacypolicy.html': {
+    isHome: false,
+    title: 'privacypolicy Page',
+  },
+  '/features.html': {
+    isHome: false,
+    title: 'features Page',
+  },
+  '/consulting.html': {
+    isHome: false,
+    title: 'Consulting Page',
+  },
   // 他のページ情報もここに追加する
 };
 

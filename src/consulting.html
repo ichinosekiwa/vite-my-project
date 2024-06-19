@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initiascale=1.0" />
+    <meta name="robots" content="noindex" />
+    <!-- pageDataのtitle情報を出力 -->
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="scss/styles.scss" />
+  </head>
+
+  <body>
+    <!-- header.htmlの読み込み -->
+    {{> header}}
+
+    <main class="main">
+      <section class="p-page__head page-service">
+        <hgroup class="p-page__head__inner">
+          <p>CONSULTING</p>
+          <h1 date-en="CONSULTING">コンサルティング</h1>
+          <p class="txt-sub-h1">
+            売上向上、新商品開発、ブランディング、新規事業立上げ、経営戦略など、貴社の課題解決をサポートします。
+          </p>
+          <span>Consulting</span>
+        </hgroup>
+      </section>
+      <div class="p-page__head-sub">
+        <picture>
+          <source
+            srcset="../public/assets/images/service/img-consulting-mv-sp.jpg"
+            media="(max-width:768px)"
+          />
+          <img
+            src="../public/assets/images/service/img-consulting-mv.jpg"
+            alt="話し合う2人のサラリーマン"
+          />
+        </picture>
+      </div>
+
+      <article class="page-service consulting">
+        <section class="theme" id="theme">
+          <hgroup>
+            <h2>テーマ別</h2>
+            <p class="txt-annotation">
+              ※テーマ例は一例です。<br
+                class="forSP"
+              />内容についてはご相談ください
+            </p>
+          </hgroup>
+          <div class="theme__wrap">
+            <ul class="theme__list">
+              <li>
+                <img
+                  src="../public/assets/images/service/icon-consulting-theme-01.svg"
+                  alt="新事業立上げ・新ブランド立上げ"
+                />
+                <p>新事業立上げ・<br class="forSP" />新ブランド立上げ</p>
+              </li>
+              <li>
+                <img
+                  src="../public/assets/images/service/icon-consulting-theme-02.svg"
+                  alt="新事業立上げ・新ブランド立上げ"
+                />
+                <p>新商品開発・<br class="forSP" />新商品販売戦略</p>
+              </li>
+              <li>
+                <img
+                  src="../public/assets/images/service/icon-consulting-theme-03.svg"
+                  alt="新事業立上げ・新ブランド立上げ"
+                />
+                <p>経営戦略・経営計画・<br class="forSP" />事業計画策定</p>
+              </li>
+              <li>
+                <img
+                  src="../public/assets/images/service/icon-consulting-theme-04.svg"
+                  alt="ブランディング（ブランド立上げ、ブランド見直し）"
+                />
+                <p>
+                  ブランディング<br class="forSP" />（ブランド立上げ、<br
+                    class="forSP"
+                  />ブランド見直し）
+                </p>
+              </li>
+              <li>
+                <img
+                  src="../public/assets/images/service/icon-consulting-theme-05.svg"
+                  alt="中期ビジョン・経営理念策定"
+                />
+                <p>中期ビジョン・<br class="forSP" />経営理念策定</p>
+              </li>
+              <li>
+                <img
+                  src="../public/assets/images/service/icon-consulting-theme-06.svg"
+                  alt="マーケティング全般"
+                />
+                <p>マーケティング全般</p>
+              </li>
+              <li>
+                <img
+                  src="../public/assets/images/service/icon-consulting-theme-07.svg"
+                  alt="社内構造改革"
+                />
+                <p>社内構造改革</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="support" id="support">
+          <hgroup>
+            <h2>サポート形態</h2>
+            <p class="txt-sub-h2">
+              テーマやご要望に合わせて、様々なサポート形態が可能です。
+            </p>
+          </hgroup>
+          <div class="support__wrap">
+            <div class="support__wrap-index">
+              <ul class="index-list">
+                <li><a href="#brainstorming">壁打ち型</a></li>
+                <li><a href="#facilitation">ファシリテーション型</a></li>
+                <li><a href="#proposal">提案型</a></li>
+                <li><a href="#practical-work">実務遂行型</a></li>
+              </ul>
+              <img
+                src="../public/assets/images/service/img-consulting-support.jpg"
+                alt="サポート形態"
+              />
+            </div>
+            <div class="support__wrap-contents">
+              <ul class="support__wrap-items">
+                <li class="brainstorming" id="brainstorming">
+                  <div class="description">
+                    <img
+                      src="../public/assets/images/service/img-consulting-brainstorming-01.png"
+                      alt="壁打ち型"
+                    />
+                    <hgroup class="wrap-txt">
+                      <h3 date-en="Brainstorming"><span>01.</span>壁打ち型</h3>
+                      <p>
+                        クライアントの考え・悩み・思いを聞きながら、「このような視点では？」「例えばこのような考え方は？」などとやり取りをしながら、クライアントが自ら解決策に思い至るような方法です。クライアントの頭の中を整理しながら、クライアントの成長にも繋がります。
+                      </p>
+                    </hgroup>
+                  </div>
+                  <div class="ac-wrap">
+                    <dl class="ac-list">
+                      <dt class="ac-title js-faq_accordion">
+                        <span></span>
+                        壁打ち型の事例を見る
+                      </dt>
+                      <dd class="ac-text">
+                        <div class="case">
+                          <hgroup class="wrap-txt">
+                            <h4 date-en="CASE 01">社長の壁打ち</h4>
+                            <p>
+                              若くて実行力のある2代目社長。マーケティングの知見も高く、アイデアも豊富だが、共に議論・検討できる相手がいないため、壁打ちを要望。
+                            </p>
+                            <img
+                              src="../public/assets/images/service/img-consulting-brainstorming-01.png"
+                              alt="壁打ち型"
+                            />
+                          </hgroup>
+                        </div>
+                        <div class="point">
+                          <span class="title-en">Point</span>
+                          <ul class="point-list">
+                            <li>
+                              社長の様々なアイデアに対して、<strong>フィードバックを返しながら、アイデアを膨らませたり、他のアイデアを提案したり、方向性を見出したり、場合によっては細部のブラシュアップ</strong>などを実施した。
+                            </li>
+                            <li>
+                              <strong>顧客調査を提案</strong
+                              >し、実施したところ、それまで自社の強みと考えていた点が全く異なっており、事業の重点課題を変更した。
+                            </li>
+                            <li>
+                              同社の新規事業立上げにおいては、<strong>社長と共に当新規事業の顧客価値を徹底的に磨き上げて3つに絞り</strong>、最終的には有名コピーライターを紹介して、強力なキャッチコピーを制作。
+                            </li>
+                            <li>
+                              <strong>同社初の動画広告を制作</strong
+                              >。動画広告制作経験の無い同社に代わって撮影の立会い・編集作業の監修などを実施し、YouTubeで100万回以上の再生数を記録。
+                            </li>
+                          </ul>
+                        </div>
+                      </dd>
+                    </dl>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="flow" id="flow">
+          <hgroup>
+            <h2>サービスの流れ</h2>
+          </hgroup>
+          <div class="flow__wrap">
+            <!-- 一旦画像で・・・ -->
+            <picture>
+              <source
+                srcset="
+                  ../public/assets/images/service/img-consulting-flow-sp.png
+                "
+                media="(max-width:768px)"
+              />
+              <img
+                src="../public/assets/images/service/img-consulting-flow.png"
+                alt="サービスの流れ 一旦画像で・・・ "
+              />
+            </picture>
+            <div class="wrap-txt">
+              <h5 class="wrap-txt-ttl">スポット支援も対応</h5>
+              <p class="wrap-txt-detail">
+                まずはスポット的にコンサルティングを受けてみたい、とりあえず今直面している課題を解決したい、などのスポット対応も可能です。
+              </p>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <!-- footer.htmlの読み込み -->
+    {{> footer}}
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
