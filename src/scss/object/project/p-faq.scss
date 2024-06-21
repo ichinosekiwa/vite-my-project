@@ -1,0 +1,25 @@
+@use '../../foundation/index' as *;
+@use '../../object/component/button' as *;
+
+// FAQページ (アコーディオンはTOPから流用)
+
+.page-faq {
+    .faq {
+        margin: 0;
+        padding: 64px;
+        background-color: $bg-white;
+        border-radius: 12px;
+
+        @include mq('md') {
+            padding: 3.2rem 2.4rem;
+        }
+
+        &__wrap {
+            a {
+                color: $text-red-600;
+                text-decoration: underline;
+            }
+        }
+    }
+
+}

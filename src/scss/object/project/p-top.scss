@@ -120,10 +120,10 @@
         position: relative;
         z-index: 1;
         left: -24px;
+        width: 88px;
+        height: 88px;
+        padding: 16px;
 
-        @include mq('md') {
-          padding: 2.4rem 1.6rem 1.6rem 1.6rem;
-        }
       }
 
       ul {
@@ -769,6 +769,13 @@ article.full-width {
       background-color: $white;
       box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.05);
       border-radius: 12px;
+      min-height: 478px;
+      max-width: 320px;
+
+      @include mq('md') {
+        min-height: initial;
+        max-width: initial;
+      }
 
       h3 {
         text-align: center;
@@ -801,14 +808,17 @@ article.full-width {
         gap: 16px;
         background-color: #ffffff;
         width: 100%;
-        padding: 32px;
+        height: 100%;
         position: relative;
         overflow: hidden;
         border-radius: 12px;
+        padding: 32px;
 
-        @include mq('md') {
+        img {
+          width: 104px;
+          height: 104px;
 
-          img {
+          @include mq('md') {
             width: 8rem;
             height: 8rem;
           }
@@ -1290,15 +1300,15 @@ article.full-width {
       width: 48px;
       height: 48px;
       position: absolute;
-      top: 16px;
-      left: -62px;
-      transform: scale(1);
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%) scale(1);
 
       @include mq('md') {
         width: 4rem;
         height: 4rem;
         left: 0;
-        top: 2.4rem;
+        top: 4.8rem;
       }
     }
   }
@@ -1308,8 +1318,11 @@ article.full-width {
   background: $bg-white;
   box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.05);
   position: relative;
+  padding: 16px 20px;
 
-
+  @include mq('md') {
+    padding: 2rem;
+  }
 
   &:not(:first-child) {
     margin-top: 16px;
@@ -1321,8 +1334,12 @@ article.full-width {
 .ac-title {
   cursor: pointer;
   font-size: 14px;
-  padding: 20px 76px 20px 84px;
+  padding: 12px 24px 16px 64px;
   position: relative;
+
+  @include mq('md') {
+    padding-left: 5.6rem;
+  }
 
   span {
     &::before {
@@ -1331,9 +1348,10 @@ article.full-width {
       width: 48px;
       height: 48px;
       position: absolute;
-      top: 20px;
-      left: 20px;
-      transform: scale(1);
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%) scale(1);
+
     }
 
     @include mq('md') {
@@ -1342,7 +1360,7 @@ article.full-width {
         height: max(4rem, 40px);
         top: 50%;
         transform: translateY(-50%);
-        left: 2rem;
+        left: 0rem;
       }
     }
   }
@@ -1351,7 +1369,7 @@ article.full-width {
     position: absolute;
     content: '';
     top: 50%;
-    right: 25px;
+    right: 0;
     height: 2px;
     width: 15px;
     background: $bg-red-600;
@@ -1363,7 +1381,7 @@ article.full-width {
     position: absolute;
     content: '';
     top: 50%;
-    right: 25px;
+    right: 0;
     height: 2px;
     width: 15px;
     background: $bg-red-600;
@@ -1373,14 +1391,18 @@ article.full-width {
   @include mq('md') {
     padding: 2rem 4.4rem 2rem 7.2rem;
 
+    @include mq('md') {
+      padding-left: 5.6rem;
+    }
+
     &::before {
       width: 12px;
-      right: 16px;
+      right: 0px;
     }
 
     &::after {
       width: 12px;
-      right: 16px;
+      right: 0px;
     }
   }
 
@@ -1397,14 +1419,15 @@ article.full-width {
 
 .ac-text {
   display: none;
-  padding: 19px 0px 16px 0px;
+  margin: 20px 0 0 0;
+  padding: 20px 0px 8px 64px;
+  border-top: 2px dotted $gray-100 ;
   font-size: 14px;
-  margin: 0 76px 0 84px;
-  border-top: 2px dashed $gray-100 ;
 
   @include mq('md') {
-    margin: 0 2rem 0 2rem;
-    padding: 2.4rem 0 1.6rem 4.8rem;
+    margin: 0;
+    padding: 2.4rem 2rem 0.4rem 4.8rem;
+    font-size: fs(14);
   }
 }
 

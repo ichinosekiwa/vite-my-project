@@ -16,8 +16,16 @@
         background-color: $bg-white;
         padding: 48px 64px 64px;
 
+        @include mq('md') {
+            padding: 3.2rem 2.4rem 4rem;
+        }
+
         &:not(:last-of-type) {
             margin-bottom: 40px;
+
+            @include mq('md') {
+                margin-bottom: 2.4rem;
+            }
         }
     }
 
@@ -49,42 +57,107 @@
             content: "";
         }
     }
-}
 
-.profile-name {
 
-    margin-bottom: 4rem;
+    .profile-name {
 
-    .name__wrap {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        gap: 48px;
-        position: relative;
+        margin-bottom: 4rem;
 
-        &-img {
-            width: 393px;
-            height: 285px;
+        .name__wrap {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 48px;
+            position: relative;
+
+            @include mq('md') {
+                flex-direction: column;
+                justify-content: flex-start;
+                gap: 1.6rem;
+            }
+
+            &-img {
+                width: 393px;
+                height: 285px;
+
+                @include mq('md') {
+                    width: 100%;
+                    height: auto;
+                    aspect-ratio: 279/202.328;
+                }
+            }
+
+            &-txt {
+                width: calc(100% - 393px);
+                font-size: 32px;
+                font-family: $font-family-head;
+
+                span {
+                    font-size: 18px;
+                    font-weight: 500;
+                    padding-right: 16px;
+                }
+
+                @include mq('md') {
+                    width: 100%;
+                    font-size: fs(24);
+
+                    span {
+                        font-size: fs(16);
+                    }
+                }
+            }
+
+            .ceo__img-txt {
+                position: absolute;
+                width: 400px;
+                top: -52px;
+                right: -32px;
+
+                @include mq('md') {
+                    display: none;
+                }
+            }
         }
+    }
 
-        &-txt {
-            width: calc(100% - 393px);
-            font-size: 32px;
-            font-family: $font-family-head;
+    // 代表プロフィール
+    .profile-ceo {
+        .ceo__wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 56px;
 
-            span {
-                font-size: 18px;
-                font-weight: 500;
-                padding-right: 16px;
+            @include mq('md') {
+                gap: 3.2rem;
             }
         }
 
-        .ceo__img-txt {
-            position: absolute;
-            width: 400px;
-            top: -52px;
-            right: -32px;
+        .ceo__wrap__list {
+            h3 {
+                font-size: 18px;
+                font-weight: 500;
+                padding: 8px 0 20px;
+            }
+
+            li {
+                list-style: disc;
+                line-height: 2;
+                margin-left: 1.5em;
+            }
+        }
+    }
+
+    // 思い
+    .profile-thought {
+        p {
+            line-height: 2;
+            margin-bottom: 40px;
+        }
+
+        .c-btn__secondary {
+            margin: 0 auto;
         }
     }
 }

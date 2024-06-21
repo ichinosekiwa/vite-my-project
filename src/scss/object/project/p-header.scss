@@ -42,10 +42,15 @@
     display: flex;
     gap: 2.4rem;
     align-items: center;
+    margin-right: 1.2rem;
 
     .js-global-nav {
-      margin-right: 1.8rem;
       position: relative;
+      padding-right: 18px;
+
+      @include mq('md') {
+        padding-right: 2.4rem;
+      }
 
       &::before {
         content: "";
@@ -53,7 +58,7 @@
         width: 1.6rem;
         height: 1.6rem;
         position: absolute;
-        right: -18px;
+        right: 0px;
         top: 50%;
         transform: translateY(-50%);
         transition: 0.2s;
@@ -127,6 +132,7 @@
       padding: 1.2rem 3.2rem;
       border-radius: 4.8rem;
       font-weight: $bold;
+
     }
   }
 
@@ -201,7 +207,7 @@
       top: 100%;
       left: 50%;
       transform: translateX(-50%);
-      width: 91.5%;
+      width: 92%;
       height: 78dvh;
       padding: 1.2rem 1.6rem 2rem;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -221,17 +227,35 @@
     &__item {
       padding: 1.6rem 2.4rem 1.6rem 1.6rem;
 
-      .c-btn__link {
-        display: block;
-        width: 100%;
-        text-align: center;
+      a {
+        &.add-arrow {
+          position: relative;
+          width: 100%;
+          display: block;
+
+          &::before {
+            position: absolute;
+            top: 50%;
+            right: -18px;
+            left: unset;
+            width: 12px;
+            min-width: unset;
+            height: 12px;
+            transform: translateY(-50%);
+            background: url(../public/assets/images/icon-arrow-right.svg) no-repeat top/cover;
+            content: "";
+          }
+        }
       }
 
       .c-btn {
+        display: block;
         width: 100%;
         max-width: initial;
         text-align: center;
         padding: 16px 32px;
+        margin: 0 auto;
+        text-align: center;
       }
     }
 
@@ -273,6 +297,7 @@
           top: 50%;
           transform: translateY(-50%);
         }
+
       }
     }
   }

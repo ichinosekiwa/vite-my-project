@@ -78,10 +78,34 @@ const mySwiper2 = new Swiper('.top-slide-2', {
     },
 });
 
+/*********************************************************
+ * Seminar 特徴 スライダー（swiper.js使用）
+ *********************************************************/
+const mySwiper3 = new Swiper('.page-seminar-slide', {
+    // オプション設定
+    loop: true,
+    slidesPerView: 1.14,
+    spaceBetween: 16,
+    breakpoints: {
+        768: {
+            slidesPerView: 1.29,
+            spaceBetween: 32,
+        }
+    },
 
+    pagination: {
+        el: '.swiper-pagination-seminar',
+        type: "fraction",
+    },
+
+    navigation: {
+        nextEl: '.swiper-button-next-3',
+        prevEl: '.swiper-button-prev-3',
+    },
+});
 
 /*********************************************************
- * FAQ アコーディオン
+ * FAQ・顧問ページ アコーディオン
  *********************************************************/
 $(function () {
     $(".js-faq_accordion").on("click", function () {

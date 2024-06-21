@@ -1,0 +1,198 @@
+@use '../../foundation/index' as *;
+@use '../../object/component/button' as *;
+
+// 会社概要
+.page-works {
+    section {
+        background-color: $bg-white;
+        padding: 56px 64px;
+        border-radius: 20px;
+
+        &:not(:last-of-type) {
+            margin-bottom: 40px;
+        }
+
+        @include mq('md') {
+            padding: 3.2rem 2.4rem 4rem;
+        }
+    }
+
+    h2 {
+        z-index: 0;
+        position: relative;
+        margin-top: 24px;
+        margin-bottom: 32px;
+        padding-top: 32px;
+        border-top: 1px solid #EFEFEF;
+        color: #161A1E;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 1.7;
+        font-family: "Zen Old Mincho", serif;
+
+        @include mq('md') {
+            margin-bottom: 2.4rem;
+        }
+
+        &::before {
+            z-index: 1;
+            position: absolute;
+            top: -1px;
+            left: 0;
+            width: 75px;
+            height: 1px;
+            background: #DF2238;
+            content: "";
+        }
+    }
+
+    .consultant {
+        font-size: 14px;
+        line-height: 2;
+        font-weight: 400;
+
+        h3 {
+            font-size: 18px;
+            font-weight: 500;
+            padding: 8px 0 20px;
+        }
+
+        h4 {
+            font-size: 14px;
+            line-height: 2;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+    }
+
+    .consulting__wrap {
+        margin-bottom: 64px;
+
+        dl {
+            border-bottom: 1px solid $gray-100;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            font-size: 14px;
+        }
+
+        dt {
+            padding: 16px 20px 16px 0;
+            width: 152px;
+            font-weight: 700;
+        }
+
+        dd {
+            padding: 16px 20px;
+        }
+    }
+
+    @include mq('md') {
+        .consultant__wrap {
+            margin-bottom: 2.4rem;
+
+            dl {
+                flex-direction: column;
+                align-items: flex-start;
+
+                &:first-child {
+                    dt {
+                        padding-top: 1.6rem;
+                    }
+                }
+            }
+
+            dt {
+                width: 100%;
+                padding: 4rem 0 0;
+                margin-bottom: 0.8rem;
+            }
+
+            dd {
+                padding: 0 0 4rem;
+            }
+
+        }
+    }
+
+    .seminar__wrap {
+        &-items {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+
+            h5 {
+                color: $text-red-600;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 1.7;
+                margin-bottom: 4px;
+            }
+
+            dl {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                font-size: 14px;
+                line-height: 1.7;
+            }
+
+            dt {
+                width: 388px;
+                padding: 16px 20px 16px 0;
+                font-weight: 700;
+                border-bottom: 1px solid $gray-100;
+                display: flex;
+                align-items: center;
+            }
+
+            dd {
+                width: calc(100% - 388px);
+                padding: 16px 20px;
+                border-bottom: 1px solid $gray-100 ;
+
+                a {
+                    color: $text-red-600;
+                    text-decoration: underline;
+                }
+
+                img {
+                    width: 279px;
+                    height: 156.938px;
+                    margin-top: 12px;
+
+                }
+            }
+        }
+    }
+
+    .pic {
+
+        &__wrap {
+            h3 {
+                padding: 8px 0 20px;
+                font-weight: 500;
+                font-size: 18px;
+            }
+
+            &__list {
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+
+                &-item {
+                    li {
+                        list-style: disc;
+                        margin-left: 1.5em;
+                        font-size: 14px;
+                        line-height: 2;
+                    }
+                }
+            }
+        }
+    }
+
+    .ceo {
+        margin-top: 88px;
+    }
+}

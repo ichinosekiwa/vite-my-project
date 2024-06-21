@@ -50,7 +50,7 @@ for (let i = 0; i < files.length; i++) {
 const pageData = {
   '/index.html': {
     isHome: true,
-    title: 'Main Page',
+    title: 'Main page',
   },
   '/archive.html': {
     isHome: false,
@@ -66,15 +66,27 @@ const pageData = {
   },
   '/privacypolicy.html': {
     isHome: false,
-    title: 'privacypolicy Page',
+    title: 'Privacypolicy Page',
   },
   '/features.html': {
     isHome: false,
-    title: 'features Page',
+    title: 'Features Page',
   },
   '/consulting.html': {
     isHome: false,
     title: 'Consulting Page',
+  },
+  '/seminar.html': {
+    isHome: false,
+    title: 'Seminar Page',
+  },
+  '/adovisor.html': {
+    isHome: false,
+    title: 'Adovisor Page',
+  },
+  '/profile.html': {
+    isHome: false,
+    title: 'Profile Page',
   },
   // 他のページ情報もここに追加する
 };
