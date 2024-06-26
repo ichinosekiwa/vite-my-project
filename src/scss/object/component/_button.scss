@@ -1,12 +1,17 @@
 @use '../../foundation/index' as *;
 
 .c-btn {
+    display: block;
     width: fit-content;
     padding: 12px 32px;
     border-radius: 48px;
     font-size: 14px;
     line-height: 1.3;
     transition: 0.3s;
+
+    &:hover {
+        opacity: 1;
+    }
 
     &__primary {
         color: $white;
@@ -93,4 +98,47 @@
         }
     }
 
+    //アンカーリンクボタン
+    &__anchor {
+        color: $white;
+        background-color: $bg-red-600;
+        width: 352px;
+        height: 70px;
+        padding: 16px 16px 16px 20px;
+        font-size: 16px;
+        display: grid;
+        place-items: center;
+        position: relative;
+        text-align: center;
+
+        @include mq('md') {
+            width: 100%;
+        }
+
+        &::before {
+            content: "";
+            background: url(../public/assets/images/icon-arrow-right-white.svg)no-repeat top/ cover;
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%) rotate(90deg);
+            right: 20px;
+
+            @include mq('md') {
+                width: 12px;
+                height: 12px;
+            }
+        }
+
+        &:hover {
+            color: $red-600;
+            background-color: $white;
+            border: 1px solid $red-600;
+
+            &::before {
+                background: url(../public/assets/images/icon-arrow-right.svg)no-repeat top/ cover;
+            }
+        }
+    }
 }

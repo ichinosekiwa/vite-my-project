@@ -56,17 +56,10 @@
             font-weight: 500;
             padding: 8px 0 20px;
         }
-
-        h4 {
-            font-size: 14px;
-            line-height: 2;
-            font-weight: 400;
-            margin-bottom: 20px;
-        }
     }
 
     .consulting__wrap {
-        margin-bottom: 64px;
+
 
         dl {
             border-bottom: 1px solid $gray-100;
@@ -74,16 +67,37 @@
             flex-direction: row;
             align-items: center;
             font-size: 14px;
+
+            @include mq('md') {
+                flex-direction: column;
+            }
+
+            @include mq('md') {
+                &:not(:first-of-type) {
+                    padding-top: 2.4rem;
+                }
+            }
         }
 
         dt {
             padding: 16px 20px 16px 0;
             width: 152px;
             font-weight: 700;
+
+            @include mq('md') {
+                width: 100%;
+                padding: 0;
+                margin-bottom: 0.8rem;
+            }
         }
 
         dd {
             padding: 16px 20px;
+
+            @include mq('md') {
+                width: 100%;
+                padding: 0 0 2.4rem 0;
+            }
         }
     }
 
@@ -95,9 +109,11 @@
                 flex-direction: column;
                 align-items: flex-start;
 
+
                 &:first-child {
                     dt {
                         padding-top: 1.6rem;
+
                     }
                 }
             }
@@ -116,6 +132,13 @@
     }
 
     .seminar__wrap {
+        h4 {
+            font-size: 14px;
+            line-height: 2;
+            font-weight: 400;
+            margin-bottom: 32px;
+        }
+
         &-items {
             display: flex;
             flex-direction: column;
@@ -127,6 +150,11 @@
                 font-weight: 500;
                 line-height: 1.7;
                 margin-bottom: 4px;
+
+                @include mq('md') {
+                    margin-top: .8rem;
+                    padding-bottom: 1.6rem;
+                }
             }
 
             dl {
@@ -135,6 +163,10 @@
                 flex-wrap: wrap;
                 font-size: 14px;
                 line-height: 1.7;
+
+                @include mq('md') {
+                    flex-direction: column;
+                }
             }
 
             dt {
@@ -144,12 +176,28 @@
                 border-bottom: 1px solid $gray-100;
                 display: flex;
                 align-items: center;
+
+                @include mq('md') {
+                    width: 100%;
+                    padding: 0;
+                    margin-bottom: 0.8rem;
+                    border-bottom: none;
+
+                    &:not(:first-of-type) {
+                        padding-top: 2.4rem;
+                    }
+                }
             }
 
             dd {
                 width: calc(100% - 388px);
                 padding: 16px 20px;
                 border-bottom: 1px solid $gray-100 ;
+
+                @include mq('md') {
+                    width: 100%;
+                    padding: 0 0 2.4rem 0;
+                }
 
                 a {
                     color: $text-red-600;
@@ -160,6 +208,10 @@
                     width: 279px;
                     height: 156.938px;
                     margin-top: 12px;
+
+                    @include mq('md') {
+                        margin-top: .8rem;
+                    }
 
                 }
             }
@@ -192,7 +244,53 @@
         }
     }
 
-    .ceo {
-        margin-top: 88px;
-    }
+
 }
+
+// .page-works.ceo {
+//     padding-top: 88px;
+//     margin-top: 20px;
+//     background-color: $bg-white;
+
+//     @include mq('md') {
+//         width: 100vw;
+//         margin: 2rem calc(50% - 50vw) 0;
+//         padding: 6.4rem 2.4rem 5.6rem;
+//     }
+
+//     .ceo__head-heading2 {
+//         border: none;
+//         margin: 0 0 12px;
+//         padding: 0;
+
+//         &::before {
+//             content: none;
+//         }
+//     }
+
+//     @include mq('md') {
+//         .ceo-wrap p {
+//             font-size: fs(14);
+//             margin-bottom: 3.2rem;
+//         }
+
+//         .ceo-wrap .ceo__img-txt {
+//             top: min(26rem, 260px);
+//             right: -1.7rem;
+//         }
+
+//         .ceo__inner {
+//             gap: 4rem;
+//         }
+
+//         .ceo__img {
+//             aspect-ratio: unset;
+//             max-width: unset;
+//         }
+
+//         .c-btn__sm {
+//             margin: 0 auto;
+//             display: block;
+//         }
+//     }
+// }

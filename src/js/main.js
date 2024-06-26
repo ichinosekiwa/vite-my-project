@@ -104,6 +104,7 @@ const mySwiper3 = new Swiper('.page-seminar-slide', {
     },
 });
 
+
 /*********************************************************
  * FAQ・顧問ページ アコーディオン
  *********************************************************/
@@ -112,4 +113,16 @@ $(function () {
         $(this).next().slideToggle(200);
         $(this).toggleClass("open", 200);
     });
+});
+
+
+/*********************************************************
+ * FOOTER 代表紹介sectionの出し分け
+ *********************************************************/
+$(document).ready(function () {
+    var path = window.location.pathname;
+    // Check if the path is not the homepage ('/') or '/works'
+    if (path !== "/" && path !== "/works") {
+        $('#ceo').hide(); // Hides the CEO section
+    }
 });
