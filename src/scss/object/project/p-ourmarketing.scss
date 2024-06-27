@@ -1,0 +1,126 @@
+@use '../../foundation/index' as *;
+@use '../../object/component/button' as *;
+
+// 当社の考える「マーケティング」とは
+.p-page__head {
+    &-sub {
+        width: 100vw;
+        margin: 0 calc(50% - 50vw) 48px;
+        position: relative;
+        z-index: 1;
+
+        img {
+            width: 100vw;
+            margin: 0 calc(50% - 50vw);
+            height: auto;
+            max-height: 390px;
+            object-fit: cover;
+        }
+    }
+}
+
+.page-marketing {
+    @include mq('md') {
+        width: 87.2vw;
+        margin: 0 auto;
+    }
+
+    section {
+        background: $bg-white;
+        padding: 56px 64px;
+        border-radius: 20px;
+
+        @include mq('md') {
+            padding: 3.2rem 2.4rem 4rem;
+        }
+
+        &:not(:last-of-type) {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            z-index: 0;
+            position: relative;
+            margin-top: 24px;
+            margin-bottom: 32px;
+            padding-top: 32px;
+            border-top: 1px solid #EFEFEF;
+            color: #161A1E;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 1.7;
+            font-family: "Zen Old Mincho", serif;
+
+            @include mq('md') {
+                margin-bottom: 2.4rem;
+            }
+
+            &::before {
+                z-index: 1;
+                position: absolute;
+                top: -1px;
+                left: 0;
+                width: 75px;
+                height: 1px;
+                background: #DF2238;
+                content: "";
+            }
+        }
+
+        .wrap-text {
+            font-size: 14px;
+            line-height: 2;
+
+            strong {
+                color: $text-red-600;
+                font-weight: 400;
+            }
+        }
+    }
+
+    .aboutMarketing__wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .structure__wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .achieve__wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .depth__wrap {
+        display: flex;
+        flex-direction: row;
+        gap: 32px;
+
+        img {
+            width: max(42%, 364px);
+        }
+
+        .wrap-text {
+            max-width: 474px;
+        }
+
+        @include mq('md') {
+            flex-direction: column;
+            gap: 2.4rem;
+
+            img {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .wrap-text {
+                width: 100%;
+            }
+        }
+    }
+}

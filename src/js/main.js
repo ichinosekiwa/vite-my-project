@@ -4,19 +4,22 @@
  *********************************************************/
 const header_accordions = document.querySelectorAll('.js-global-nav');
 
-header_accordions.forEach((accordion) => {
+// ウィンドウの幅1000px以上の場合のみイベントを追加
+if (window.innerWidth >= 1000) {
+    header_accordions.forEach((accordion) => {
 
-    // マウスオーバーイベントの追加
-    accordion.addEventListener('mouseover', () => {
-        accordion.classList.add('is-active');
-        accordion.classList.remove('is-close');
-    });
+        accordion.addEventListener('mouseover', () => {
+            accordion.classList.add('is-active');
+            accordion.classList.remove('is-close');
+        });
 
-    accordion.addEventListener('mouseleave', (event) => {
-        accordion.classList.add('is-close');
-        accordion.classList.remove('is-active');
+        accordion.addEventListener('mouseleave', (event) => {
+            accordion.classList.add('is-close');
+            accordion.classList.remove('is-active');
+        });
     });
-});
+}
+
 
 /*********************************************************
  * ヘッダー　ハンバーガーメニュー
@@ -32,14 +35,40 @@ document.addEventListener('DOMContentLoaded', () => {
         navItems.classList.toggle('is-open');
     });
 
-    globalNavItems.forEach((item) => {
-        item.addEventListener('click', () => {
-            item.classList.toggle('is-active');
-            item.classList.toggle('is-close');
-        });
-    });
 });
 
+
+/*********************************************************
+ * ヘッダー　ハンバーガーメニュー内 アコーディオン
+ *********************************************************/
+if (window.innerWidth < 1000) {
+    const menuBtns = document.querySelectorAll('.js-header-ac-title');
+    const menuLists = document.querySelectorAll('.js-header-ac-items');
+
+    menuBtns.forEach((element, index) => {
+        element.addEventListener('click', function (event) {
+            event.stopPropagation();
+            menuBtns[index].classList.toggle('is-open');
+            menuLists[index].classList.toggle('is-open');
+        });
+    });
+}
+
+/*********************************************************
+ * フッター　アコーディオン
+ *********************************************************/
+if (window.innerWidth < 1000) {
+    const menuBtns = document.querySelectorAll('.js-footer-ac-title');
+    const menuLists = document.querySelectorAll('.js-footer-ac-items');
+
+    menuBtns.forEach((element, index) => {
+        element.addEventListener('click', function (event) {
+            event.stopPropagation();
+            menuBtns[index].classList.toggle('is-open');
+            menuLists[index].classList.toggle('is-open');
+        });
+    });
+}
 
 /*********************************************************
  * TOP 実績 スライダー（swiper.js使用）
@@ -122,7 +151,7 @@ $(function () {
 $(document).ready(function () {
     var path = window.location.pathname;
     // Check if the path is not the homepage ('/') or '/works'
-    if (path !== "/" && path !== "/works") {
+    if (path !== "/" && path !== "/works" && path !== "/ourmarketing") {
         $('#ceo').hide(); // Hides the CEO section
     }
 });

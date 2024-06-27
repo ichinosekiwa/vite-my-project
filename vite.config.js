@@ -88,6 +88,22 @@ const pageData = {
     isHome: false,
     title: 'Profile Page',
   },
+  '/ourmarketing.html': {
+    isHome: false,
+    title: 'Our Marketing Page',
+  },
+  '/works.html': {
+    isHome: false,
+    title: 'Works Page',
+  },
+  '/faq.html': {
+    isHome: false,
+    title: 'Faq Page',
+  },
+  '/contact.html': {
+    isHome: false,
+    title: 'Contact Page',
+  },
   // 他のページ情報もここに追加する
 };
 
@@ -134,21 +150,16 @@ export default defineConfig({
         optimizationLevel: 7,
       },
       mozjpeg: {
-        quality: 20,
+        quality: 75,
       },
       pngquant: {
         quality: [0.8, 0.9],
-        speed: 1,
+        speed: 4,
       },
       svgo: {
         plugins: [
-          {
-            name: 'removeViewBox',
-          },
-          {
-            name: 'removeEmptyAttrs',
-            active: false,
-          },
+          { name: 'removeViewBox', active: false }, // SVGファイルの設定を変更
+          { name: 'removeEmptyAttrs', active: false },
         ],
       },
       webp: {

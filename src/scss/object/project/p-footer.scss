@@ -211,7 +211,7 @@
   &__contact {
     width: 100vw;
     max-height: 356px;
-    background: url(../public/assets/images/img-footer-bg-pc.jpg)no-repeat center/cover;
+    background: url(../public/assets/images/common/img-footer-bg-pc.jpg)no-repeat center/cover;
 
     &__inner {
       padding: 104px 0;
@@ -272,12 +272,12 @@
 
   &__nav {
     &__inner {
-      padding: 112px 220px 64px;
+      padding: 112px 22rem 64px;
       position: relative;
 
       a.back-to-top::before {
         content: "";
-        background: url(../public/assets/images/icon-footer-scroll.svg)no-repeat center/cover;
+        background: url(../public/assets/images/common/icon-footer-scroll.svg)no-repeat center/cover;
         width: 169px;
         height: 169px;
         position: absolute;
@@ -291,8 +291,9 @@
       display: flex;
       flex-direction: column;
       column-gap: 4rem;
+      row-gap: 24px;
       flex-wrap: wrap;
-      max-height: 200px;
+      max-height: 13.19vw;
     }
 
     &__item {
@@ -305,7 +306,6 @@
       span {
         display: block;
         padding-bottom: 1.2rem;
-        margin-bottom: 1.6rem;
         border-bottom: 1px solid $gray-100;
         font-weight: $bold;
         font-size: fs(14);
@@ -314,7 +314,7 @@
 
         &::after {
           content: "";
-          background: url(../public/assets/images/icon-arrow-right.svg) no-repeat top/cover;
+          background: url(../public/assets/images/common/icon-arrow-right.svg) no-repeat top/cover;
           width: 14px;
           height: 12px;
           position: absolute;
@@ -327,7 +327,13 @@
     }
 
     &__hover {
-      padding-bottom: 1.2rem;
+      &:not(:last-child) {
+        padding-bottom: 1.2rem;
+      }
+
+      &:first-child {
+        padding-top: 1.6rem;
+      }
     }
   }
 
@@ -376,7 +382,7 @@
     }
 
     &__contact {
-      background: url(../public/assets/images/img-footer-bg-sp.jpg)no-repeat center/cover;
+      background: url(../public/assets/images/common/img-footer-bg-sp.jpg)no-repeat center/cover;
       max-height: initial;
 
       &__inner {
@@ -456,11 +462,16 @@
 
         a {
           &.back-to-top {
+            &:hover {
+              opacity: 1;
+            }
+
             &::before {
-              width: 5.6rem;
-              height: 5.6rem;
-              top: -50px;
+              top: -93px;
               right: 0;
+              width: 9.3rem;
+              height: 9.3rem;
+              opacity: 1;
             }
           }
         }
@@ -497,5 +508,68 @@
       height: auto;
       margin: 0 auto 2rem;
     }
+  }
+}
+
+// アコーディオン
+@include mq('lg') {
+  .js-footer-ac-title {
+    position: relative;
+  }
+
+  .js-footer-ac-title::before {
+    content: '';
+    position: absolute;
+    top: 19px;
+    right: 5px;
+    width: 2px;
+    height: 13px;
+    background-color: $gray-400;
+    transition: .3s;
+  }
+
+  .js-footer-ac-title::after {
+    content: '';
+    position: absolute;
+    top: 24px;
+    right: 0px;
+    width: 13px;
+    height: 2px;
+    background-color: $gray-400;
+  }
+
+  .js-footer-ac-title.is-open::before {
+    transform: rotate(-90deg);
+  }
+
+  .js-footer-ac-title .js-footer-ac-items {
+    display: none;
+    position: relative;
+  }
+
+  .p-footer__nav__hover {
+    position: relative;
+  }
+
+  .p-footer__nav__hover a::after {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: unset;
+    width: 12px;
+    min-width: unset;
+    height: 12px;
+    transform: translateY(-50%);
+    background: url(/public/assets/images/common/icon-arrow-right.svg) no-repeat top/cover;
+    content: "";
+  }
+
+  .js-footer-ac-title.is-open .js-footer-ac-items {
+    display: block;
+  }
+
+  .p-footer__nav__item.js-footer-ac-title span::after {
+    content: none;
+    right: 0;
   }
 }

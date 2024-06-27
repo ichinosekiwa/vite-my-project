@@ -28,8 +28,8 @@
 
         span {
             position: absolute;
-            right: 0;
-            bottom: -4rem;
+            right: -17rem;
+            bottom: -32%;
             color: $gray-100;
             font-family: $font-family-title;
             font-size: 88px;
@@ -45,16 +45,21 @@
 
 @include mq('md') {
     .p-page__head {
-        padding: 6.4rem clamp(20px, 6.4vw, 24px) 3.2rem;
+        padding: 6.4rem 0 3.2rem clamp(20px, 6.4vw, 24px);
 
         &__inner {
+            overflow: hidden;
+            padding-right: clamp(20px, 6.4vw, 24px);
+
             h1 {
                 font-size: fs(28);
             }
 
             span {
                 font-size: fs(40);
-                bottom: 0;
+                bottom: unset;
+                top: 3rem;
+                right: -2rem;
                 line-height: 1;
             }
         }

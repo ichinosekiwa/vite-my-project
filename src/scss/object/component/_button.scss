@@ -1,7 +1,7 @@
 @use '../../foundation/index' as *;
 
 .c-btn {
-    display: block;
+    // display: block;
     width: fit-content;
     padding: 12px 32px;
     border-radius: 48px;
@@ -38,7 +38,7 @@
 
         &::before {
             content: "";
-            background: url(../public/assets/images/icon-arrow-right.svg)no-repeat top/ cover;
+            background: url(../public/assets/images/common/icon-arrow-right.svg)no-repeat top/ cover;
             width: 12px;
             height: 12px;
             position: absolute;
@@ -54,7 +54,7 @@
 
             &::before {
                 content: "";
-                background: url(../public/assets/images/icon-arrow-right-white.svg)no-repeat top/ cover;
+                background: url(../public/assets/images/common/icon-arrow-right-white.svg)no-repeat top/ cover;
                 width: 12px;
                 height: 12px;
                 position: absolute;
@@ -117,7 +117,7 @@
 
         &::before {
             content: "";
-            background: url(../public/assets/images/icon-arrow-right-white.svg)no-repeat top/ cover;
+            background: url(../public/assets/images/common/icon-arrow-right-white.svg)no-repeat top/ cover;
             width: 16px;
             height: 16px;
             position: absolute;
@@ -137,7 +137,7 @@
             border: 1px solid $red-600;
 
             &::before {
-                background: url(../public/assets/images/icon-arrow-right.svg)no-repeat top/ cover;
+                background: url(../public/assets/images/common/icon-arrow-right.svg)no-repeat top/ cover;
             }
         }
     }

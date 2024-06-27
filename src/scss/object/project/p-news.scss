@@ -308,7 +308,7 @@
 
         &::after {
             content: "";
-            background: url(../public/assets/images/icon-arrow-right.svg)no-repeat top/cover;
+            background: url(../public/assets/images/common/icon-arrow-right.svg)no-repeat top/cover;
             width: 13px;
             height: 12px;
             position: absolute;
@@ -319,7 +319,7 @@
 
         &:hover {
             &::after {
-                background: url(../public/assets/images/icon-arrow-right-white.svg)no-repeat top/cover;
+                background: url(../public/assets/images/common/icon-arrow-right-white.svg)no-repeat top/cover;
             }
         }
 

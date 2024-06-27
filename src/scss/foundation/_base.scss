@@ -39,6 +39,10 @@ a:hover {
     opacity: 0.6;
 }
 
+a.in-active {
+    pointer-events: none;
+}
+
 .forPC {
     display: block;
 
