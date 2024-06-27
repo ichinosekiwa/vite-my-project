@@ -736,6 +736,8 @@ article.full-width {
 .features {
   padding: 112px 0 88px;
   background: $bg-gray-50;
+  position: relative;
+  overflow: hidden;
 
   @include mq('md') {
     padding: 6.4rem 0;
@@ -769,7 +771,24 @@ article.full-width {
       }
     }
   }
+&__bg-text {
+  display: flex;
+  position: absolute;
+  bottom: -50px;
+  white-space: nowrap;
+  width: 100%;
+  @include mq('md') {
+    display: none;
+  }
+  p {
+    font-size: 40rem;
+    font-weight: 275;
+line-height: 100%;
+font-family: $font-family-en;
+color: $white;
 
+  }
+}
   &__wrap {
     ul {
       display: flex;
@@ -1251,13 +1270,22 @@ article.full-width {
 .faq {
   margin: 88px 0 104px;
   padding: 64px 0;
-  background-color: $bg-gray-50;
+  background-color: $bg-white;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
 
   @include mq('md') {
     margin: 6.4rem 2.4rem;
     padding: 0;
 
-    &__inner {
+  
+  }
+  &__inner {
+    background-color: $bg-gray-50;
+    border-radius: 12px;
+    padding: 6.4rem;
+    @include mq('md') {
       padding: 4.8rem 2.4rem;
     }
   }
@@ -1300,6 +1328,26 @@ article.full-width {
   @include mq('md') {
     .c-btn__sm {
       margin: 3.2rem auto 0;
+    }
+  }
+  &__bg-text {
+    display: flex;
+    position: absolute;
+    bottom: 25%;
+    white-space: nowrap;
+    width: 100%;
+    z-index: -1;
+    @include mq('md') {
+      display: none;
+    }
+  
+    p {
+      font-size: 40rem;
+      font-weight: 275;
+  line-height: 100%;
+  font-family: $font-family-en;
+  color: $text-gray-100;
+  
     }
   }
 }
