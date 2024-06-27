@@ -169,7 +169,8 @@ export default defineConfig({
         imageminWebp({
           quality: 75
         })
-      ]
+      ],
+      include: ['src/public/assets/images/**/*.{jpg,jpeg,png,svg,gif}'],//圧縮対象のパターンを指定
     }),
   ],
 });
