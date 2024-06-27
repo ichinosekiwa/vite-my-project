@@ -1,222 +1,194 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initiascale=1.0" />
-    <meta name="robots" content="noindex" />
-    <!-- pageDataのtitle情報を出力 -->
-    <title>{{title}}</title>
-    <link rel="stylesheet" href="scss/styles.scss" />
-  </head>
 
-  <body>
-    <!-- header.htmlの読み込み -->
-    {{> header}}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initiascale=1.0" />
+  <meta name="robots" content="noindex" />
+  <!-- pageDataのtitle情報を出力 -->
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="scss/styles.scss" />
+</head>
 
-    <main class="main">
-      <section class="p-page__head page-faq">
-        <hgroup class="p-page__head__inner">
-          <p>FAQ</p>
-          <h1 date-en="Faq">よくあるご質問</h1>
-          <span>Faq</span>
-        </hgroup>
-      </section>
+<body>
+  <!-- header.htmlの読み込み -->
+  {{> header}}
 
-      <article class="page-faq">
-        <section class="faq" id="faq">
-          <div class="faq__wrap">
-            <div class="ac-wrap">
-              <dl class="ac-list">
-                <dt class="ac-title js-faq_accordion">
-                  <span></span>
-                  大企業の経験が多いように見えますが、中小企業のサポートはできますか？
-                </dt>
-                <dd class="ac-text">
-                  <p>
-                    事業担当者として関わったうちの2社は、当時まさに事業立上げ（スタートアップ）時であり、文字通りの中小企業でした。<br
-                      class="forSP"
-                    /><br
-                      class="forSP"
-                    />大企業の場合も、「新規事業立上げ」でしたので、ヒト・モノ・カネ・情報が無い、まさに中小企業のような組織でした。<br /><br
-                      class="forSP"
-                    />
-                    コンサルタントとしては、大企業だけでなく、多くの中小企業のお手伝いをさせていただいています。
-                  </p>
-                </dd>
-              </dl>
-              <dl class="ac-list">
-                <dt class="ac-title js-faq_accordion">
-                  <span></span>
-                  コンサルティング、顧問、セミナーの料金を教えてください。
-                </dt>
-                <dd class="ac-text">
-                  <p>
-                    案件の内容や訪問頻度、<a href="">サポートの形態</a
-                    >などによって、料金は異なります。<br />
-                    一度ご相談ください。、<a href="">無料相談窓口</a
-                    >はこちらから。
-                  </p>
-                </dd>
-              </dl>
-              <dl class="ac-list">
-                <dt class="ac-title js-faq_accordion">
-                  <span></span>
-                  まだ問題や課題がなんとなくモヤモヤしている状態ですが、無料経営相談を受ける意味はありますか？
-                </dt>
-                <dd class="ac-text">
-                  <p>
-                    そういう時こそ、無料相談を受けていただく意味があります。以下のようなお声を頂いています。<br />
-                    「頭の中にあることをなんとなく話しているうちに、問題点や課題が整理されてきた」「モヤモヤしていたところがクリアになった」。
-                  </p>
-                </dd>
-              </dl>
-              <dl class="ac-list">
-                <dt class="ac-title js-faq_accordion">
-                  <span></span>
-                  リモート（オンライン）でのコンサルティング、顧問、は可能ですか？
-                </dt>
-                <dd class="ac-text">
-                  <p>可能です。</p>
-                </dd>
-              </dl>
-              <dl class="ac-list">
-                <dt class="ac-title js-faq_accordion">
-                  <span></span>
-                  webマーケティング（デジタルマーケティング）やECについての相談は出来ますか？
-                </dt>
-                <dd class="ac-text">
-                  <p>
-                    SNSの活用、SEO対策、リスティング広告、などの、個別戦術の方法論については、専業の代理店さんが詳しいです。<br /><br
-                      class="forSP"
-                    />
-                    当社は、全体戦略を策定した上で、これら様々ある戦術の方法論の中から、どれを選択し、全体戦略の中でどう連携させていくか、についてサポートします。<br
-                      class="forSP"
-                    /><br
-                      class="forSP"
-                    />リアルの活動（リアルマーケティング、営業活動、展示会など）とのシナジーまで考えます。<br
-                      class="forSP"
-                    /><br
-                      class="forSP"
-                    />必要であれば、専業の代理店さんにチームに入っていただいて、一緒に作業をすることもあります。<br
-                      class="forSP"
-                    /><br />
-                    <a href="/our-marketing"
-                      >当社の考えるマーケティングとは →</a
-                    >
-                  </p>
-                </dd>
-              </dl>
-              <dl class="ac-list">
-                <dt class="ac-title js-faq_accordion">
-                  <span></span>
-                  PRのサポートしてもらうことは出来ますか？
-                </dt>
-                <dd class="ac-text">
-                  <p>
-                    PRはとても重要な機能であり、当社代表自身も大いに活用してきました。但しPRは、全体戦略の中のごく一部の機能です。<br /><br
-                      class="forSP"
-                    />
-                    PRは「情報発信」の1つですが、「情報発信」の中には、リアルの広告や看板、チラシもあれば、デジタルの発信（SNS、webサイト、SEO対策、リスティング広告、コンテンツマーケティング、インフルエンサー等々）もあります。<br /><br />
+  <main class="main">
+    <section class="p-page__head page-faq">
+      <hgroup class="p-page__head__inner">
+        <p>FAQ</p>
+        <h1 date-en="Faq">よくあるご質問</h1>
+        <span>Faq</span>
+      </hgroup>
+    </section>
 
-                    つまりPRを実施するためには、その上位に「情報発信の大きな戦略」が必要であり、PR以外の発信方法との連携・連動が必要となります。<br /><br />
-
-                    当社は、こうした「大きな戦略」を策定するところから入ります。PR自体は非常に専門家・細分化された機能ですので、<br />必要に応じて専業の企業さんにチームに入っていただいて、一緒に作業をすることもあります。
-                  </p>
+    <article class="page-faq">
+      <section class="faq" id="faq">
+        <div class="faq__wrap">
+          <div class="ac-wrap">
+            <dl class="ac-list">
+              <dt class="ac-title js-faq_accordion">
+                <span></span>
+                大企業の経験が多いように見えますが、中小企業のサポートはできますか？
+              </dt>
+              <dd class="ac-text">
+                <p>
+                  事業担当者として関わったうちの2社は、当時まさに事業立上げ（スタートアップ）時であり、文字通りの中小企業でした。<br class="forSP" /><br
+                    class="forSP" />大企業の場合も、「新規事業立上げ」でしたので、ヒト・モノ・カネ・情報が無い、まさに中小企業のような組織でした。<br /><br class="forSP" />
+                  コンサルタントとしては、大企業だけでなく、多くの中小企業のお手伝いをさせていただいています。
+                </p>
+              </dd>
+            </dl>
+            <dl class="ac-list">
+              <dt class="ac-title js-faq_accordion">
+                <span></span>
+                コンサルティング、顧問、セミナーの料金を教えてください。
+              </dt>
+              <dd class="ac-text">
+                <p>
+                  案件の内容や訪問頻度、<a href="">サポートの形態</a>などによって、料金は異なります。<br />
+                  一度ご相談ください。、<a href="">無料相談窓口</a>はこちらから。
+                </p>
+              </dd>
+            </dl>
+            <dl class="ac-list">
+              <dt class="ac-title js-faq_accordion">
+                <span></span>
+                まだ問題や課題がなんとなくモヤモヤしている状態ですが、無料経営相談を受ける意味はありますか？
+              </dt>
+              <dd class="ac-text">
+                <p>
+                  そういう時こそ、無料相談を受けていただく意味があります。以下のようなお声を頂いています。<br />
+                  「頭の中にあることをなんとなく話しているうちに、問題点や課題が整理されてきた」「モヤモヤしていたところがクリアになった」。
+                </p>
+              </dd>
+            </dl>
+            <dl class="ac-list">
+              <dt class="ac-title js-faq_accordion">
+                <span></span>
+                リモート（オンライン）でのコンサルティング、顧問、は可能ですか？
+              </dt>
+              <dd class="ac-text">
+                <p>可能です。</p>
+              </dd>
+            </dl>
+            <dl class="ac-list">
+              <dt class="ac-title js-faq_accordion">
+                <span></span>
+                webマーケティング（デジタルマーケティング）やECについての相談は出来ますか？
+              </dt>
+              <dd class="ac-text">
+                <p>
+                  SNSの活用、SEO対策、リスティング広告、などの、個別戦術の方法論については、専業の代理店さんが詳しいです。<br /><br class="forSP" />
+                  当社は、全体戦略を策定した上で、これら様々ある戦術の方法論の中から、どれを選択し、全体戦略の中でどう連携させていくか、についてサポートします。<br class="forSP" /><br
+                    class="forSP" />リアルの活動（リアルマーケティング、営業活動、展示会など）とのシナジーまで考えます。<br class="forSP" /><br
+                    class="forSP" />必要であれば、専業の代理店さんにチームに入っていただいて、一緒に作業をすることもあります。<br class="forSP" /><br />
                   <a href="/our-marketing">当社の考えるマーケティングとは →</a>
-                </dd>
-              </dl>
-              <dl class="ac-list">
-                <dt class="ac-title js-faq_accordion">
-                  <span></span>
-                  戦略を策定・提案してもらっても、社内にそれを実施する組織・人材がいません。
-                </dt>
-                <dd class="ac-text">
-                  <p>
-                    <a href="">「実務遂行」までをサポートする形態</a
-                    >もあります。<br />
-                    当社で実務を遂行しながら貴社にノウハウを蓄積できるようにして、最終的には貴社単独で自走できるようにしていく、というやり方もあります。企業によって状況は様々ですので、まずは一度ご相談ください。
-                  </p>
-                </dd>
-              </dl>
-              <dl class="ac-list">
-                <dt class="ac-title js-faq_accordion">
-                  <span></span>
-                  補助金や助成金の申請のサポートはしていますか？
-                </dt>
-                <dd class="ac-text">
-                  <p>
-                    サポートしています。<br />
-                    補助金や助成金の申請は、単なる「（補助金/助成金を得るための）申請テクニック」だけではなく、それをいかに本当の意味で事業に活かせるかが重要です。
-                  </p>
-                </dd>
-              </dl>
-              <dl class="ac-list">
-                <dt class="ac-title js-faq_accordion">
-                  <span></span>
-                  法律や税金関係など、<br
-                    class="forSP"
-                  />「コンサルタント」だけでカバーできない案件の場合はどう対応しますか？
-                </dt>
-                <dd class="ac-text">
-                  <p>
-                    当社は、弁護士、税理士、会計士、弁理士、行政書士、社労士など、各分野のエキスパートとの強いネットワークを有しています。<br
-                      class="forSP"
-                    /><br
-                      class="forSP"
-                    />案件に応じて、どのような専門家に頼るべきかをアドバイスしたり、必要に応じて信頼できる専門家を紹介するなど、貴社の課題をワンストップで解決します。<br /><br
-                      class="forSP"
-                    />
-                    ※弁護士、税理士、社労士などの専門領域については、当該資格保持者以外の人間がアドバイスをすることは禁じられていますので、当社が直接アドバイスをすることはいたしません。
-                  </p>
-                </dd>
-              </dl>
-              <dl class="ac-list">
-                <dt class="ac-title js-faq_accordion">
-                  <span></span>
-                  webサイトの制作、動画広告、カタログ、キャッチコピーの制作などを依頼することはできますか？
-                </dt>
-                <dd class="ac-text">
-                  <p>
-                    こうした制作は、それぞれweb制作会社、動画制作会社、デザイナー、コピーライターなどの、専門の企業・人材が必要になります。<br /><br />
-                    当社はこれらの専門家、専門企業との強いネットワークを有しています。当社は、制作にあたっての「大元の戦略」を策定するところからサポートし、必要に応じて必要な制作会社、デザイナー、コピーライターなどに参画していただきます。<br /><br />
-                    ※当社は、制作のみのご依頼は受け付けておりません。<br />
-                    <a href="/our-marketing"
-                      >当社の考えるマーケティングとは →</a
-                    >
-                  </p>
-                </dd>
-              </dl>
-              <dl class="ac-list">
-                <dt class="ac-title js-faq_accordion">
-                  <span></span>
-                  オーダーメイドのセミナーの場合、費用はどのくらいかかりますか？
-                </dt>
-                <dd class="ac-text">
-                  <p>
-                    内容や必要な準備時間（ヒアリングや現地視察、業界調査・競合調査なども含みます）によって変わります。まずは一度ご相談ください。
-                  </p>
-                </dd>
-              </dl>
-              <dl class="ac-list">
-                <dt class="ac-title js-faq_accordion">
-                  <span></span>
-                  リモート（オンライン）での研修は可能ですか？
-                </dt>
-                <dd class="ac-text">
-                  <p>
-                    可能です。対面とリモート（オンライン）を組み合わせた研修も実施しています。<br />
-                    特に多拠点の企業様の場合は、国外からの参加も含めて、リモートで実施されることが多くあります。
-                  </p>
-                </dd>
-              </dl>
-            </div>
-          </div>
-        </section>
-      </article>
-    </main>
+                </p>
+              </dd>
+            </dl>
+            <dl class="ac-list">
+              <dt class="ac-title js-faq_accordion">
+                <span></span>
+                PRのサポートしてもらうことは出来ますか？
+              </dt>
+              <dd class="ac-text">
+                <p>
+                  PRはとても重要な機能であり、当社代表自身も大いに活用してきました。但しPRは、全体戦略の中のごく一部の機能です。<br /><br class="forSP" />
+                  PRは「情報発信」の1つですが、「情報発信」の中には、リアルの広告や看板、チラシもあれば、デジタルの発信（SNS、webサイト、SEO対策、リスティング広告、コンテンツマーケティング、インフルエンサー等々）もあります。<br /><br />
 
-    <!-- footer.htmlの読み込み -->
-    {{> footer}}
-    <script type="module" src="./js/main.js"></script>
-  </body>
+                  つまりPRを実施するためには、その上位に「情報発信の大きな戦略」が必要であり、PR以外の発信方法との連携・連動が必要となります。<br /><br />
+
+                  当社は、こうした「大きな戦略」を策定するところから入ります。PR自体は非常に専門家・細分化された機能ですので、<br />必要に応じて専業の企業さんにチームに入っていただいて、一緒に作業をすることもあります。
+                </p>
+                <a href="/our-marketing">当社の考えるマーケティングとは →</a>
+              </dd>
+            </dl>
+            <dl class="ac-list">
+              <dt class="ac-title js-faq_accordion">
+                <span></span>
+                戦略を策定・提案してもらっても、社内にそれを実施する組織・人材がいません。
+              </dt>
+              <dd class="ac-text">
+                <p>
+                  <a href="">「実務遂行」までをサポートする形態</a>もあります。<br />
+                  当社で実務を遂行しながら貴社にノウハウを蓄積できるようにして、最終的には貴社単独で自走できるようにしていく、というやり方もあります。企業によって状況は様々ですので、まずは一度ご相談ください。
+                </p>
+              </dd>
+            </dl>
+            <dl class="ac-list">
+              <dt class="ac-title js-faq_accordion">
+                <span></span>
+                補助金や助成金の申請のサポートはしていますか？
+              </dt>
+              <dd class="ac-text">
+                <p>
+                  サポートしています。<br />
+                  補助金や助成金の申請は、単なる「（補助金/助成金を得るための）申請テクニック」だけではなく、それをいかに本当の意味で事業に活かせるかが重要です。
+                </p>
+              </dd>
+            </dl>
+            <dl class="ac-list">
+              <dt class="ac-title js-faq_accordion">
+                <span></span>
+                法律や税金関係など、<br class="forSP" />「コンサルタント」だけでカバーできない案件の場合はどう対応しますか？
+              </dt>
+              <dd class="ac-text">
+                <p>
+                  当社は、弁護士、税理士、会計士、弁理士、行政書士、社労士など、各分野のエキスパートとの強いネットワークを有しています。<br class="forSP" /><br
+                    class="forSP" />案件に応じて、どのような専門家に頼るべきかをアドバイスしたり、必要に応じて信頼できる専門家を紹介するなど、貴社の課題をワンストップで解決します。<br /><br
+                    class="forSP" />
+                  ※弁護士、税理士、社労士などの専門領域については、当該資格保持者以外の人間がアドバイスをすることは禁じられていますので、当社が直接アドバイスをすることはいたしません。
+                </p>
+              </dd>
+            </dl>
+            <dl class="ac-list">
+              <dt class="ac-title js-faq_accordion">
+                <span></span>
+                webサイトの制作、動画広告、カタログ、キャッチコピーの制作などを依頼することはできますか？
+              </dt>
+              <dd class="ac-text">
+                <p>
+                  こうした制作は、それぞれweb制作会社、動画制作会社、デザイナー、コピーライターなどの、専門の企業・人材が必要になります。<br /><br />
+                  当社はこれらの専門家、専門企業との強いネットワークを有しています。当社は、制作にあたっての「大元の戦略」を策定するところからサポートし、必要に応じて必要な制作会社、デザイナー、コピーライターなどに参画していただきます。<br /><br />
+                  ※当社は、制作のみのご依頼は受け付けておりません。<br />
+                  <a href="/our-marketing">当社の考えるマーケティングとは →</a>
+                </p>
+              </dd>
+            </dl>
+            <dl class="ac-list">
+              <dt class="ac-title js-faq_accordion">
+                <span></span>
+                オーダーメイドのセミナーの場合、費用はどのくらいかかりますか？
+              </dt>
+              <dd class="ac-text">
+                <p>
+                  内容や必要な準備時間（ヒアリングや現地視察、業界調査・競合調査なども含みます）によって変わります。まずは一度ご相談ください。
+                </p>
+              </dd>
+            </dl>
+            <dl class="ac-list">
+              <dt class="ac-title js-faq_accordion">
+                <span></span>
+                リモート（オンライン）での研修は可能ですか？
+              </dt>
+              <dd class="ac-text">
+                <p>
+                  可能です。対面とリモート（オンライン）を組み合わせた研修も実施しています。<br />
+                  特に多拠点の企業様の場合は、国外からの参加も含めて、リモートで実施されることが多くあります。
+                </p>
+              </dd>
+            </dl>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <!-- footer.htmlの読み込み -->
+  {{> footer}}
+
+</body>
+
 </html>

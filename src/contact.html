@@ -1,210 +1,158 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initiascale=1.0" />
-    <meta name="robots" content="noindex" />
-    <!-- pageDataのtitle情報を出力 -->
-    <title>{{title}}</title>
-    <link rel="stylesheet" href="scss/styles.scss" />
-  </head>
 
-  <body>
-    <!-- header.htmlの読み込み -->
-    {{> header}}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initiascale=1.0" />
+  <meta name="robots" content="noindex" />
+  <!-- pageDataのtitle情報を出力 -->
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="scss/styles.scss" />
+</head>
 
-    <main class="main contact">
-      <section class="p-page__head page-service">
-        <hgroup class="p-page__head__inner">
-          <p>CONTACT</p>
-          <h1 date-en="Contact">無料相談窓口</h1>
-          <span>Contact</span>
-        </hgroup>
-      </section>
+<body>
+  <!-- header.htmlの読み込み -->
+  {{> header}}
 
-      <article class="page-contact">
-        <section class="free" id="free">
-          <h2>まずは<br class="forSP" /><strong>無料相談</strong>からどうぞ</h2>
-          <div class="free__wrap">
-            <img
-              class="forPC"
-              src="../public/assets/images/contact/img-contact-worry.png"
-              alt="まずは無料相談からどうぞ"
-            />
-            <img
-              class="forSP balloons"
-              src="../public/assets/images/contact/img-contact-worry-sp1.png"
-              alt="まずは無料相談からどうぞ"
-            />
-            <img
-              class="forSP person"
-              src="../public/assets/images/contact/img-contact-worry-sp2.png"
-              alt="まずは無料相談からどうぞ"
-            />
-            <div class="free__wrap-cta">
-              <hgroup>
-                <h3>
-                  様々な相談を<br class="forSP" /><strong>無料</strong
-                  >で承ります
-                </h3>
-                <p>
-                  ※オンラインミーティングで<br
-                    class="forSP"
-                  />1時間程度を想定しています。
-                </p>
-              </hgroup>
-              <a href="#contactform" class="c-btn c-btn__anchor"
-                >無料相談申込は<br class="forSP" />こちらから</a
-              >
-            </div>
-          </div>
-        </section>
-        <section class="voice" id="voice">
-          <h2>
-            「無料相談は、<strong
-              >意外に<br class="forSP" />ハードルが高い...</strong
-            >」<br class="forSP" />という方へ
-          </h2>
-          <div class="voice__wrap">
-            <div class="voice__wrap-exam">
-              <picture>
-                <source
-                  srcset="
-                    ../public/assets/images/contact/img-contact-voice-sp.png
-                  "
-                  media="(max-width:768px)"
-                />
-                <img
-                  src="../public/assets/images/contact/img-contact-voice-pc.png"
-                  alt="まずは無料相談からどうぞ"
-                />
-              </picture>
-            </div>
-            <div class="voice__wrap-reason">
-              <p>
-                これらの理由で、<br
-                  class="forSP"
-                />相談そのものをためらう方が<br
-                  class="forSP"
-                />多くいらっしゃいますが、
-              </p>
-              <p class="forPC"><em>そういう時こそご相談ください！</em></p>
-              <p class="forSP">
-                <em>そういう時こそ</em><em>ご相談ください！</em>
-              </p>
-            </div>
-            <div class="voice__wrap-voices">
-              <h3 data-en="Voice">
-                こんな<br class="forSP" />お声を頂いています
+  <main class="main contact">
+    <section class="p-page__head page-service">
+      <hgroup class="p-page__head__inner">
+        <p>CONTACT</p>
+        <h1 date-en="Contact">無料相談窓口</h1>
+        <span>Contact</span>
+      </hgroup>
+    </section>
+
+    <article class="page-contact">
+      <section class="free" id="free">
+        <h2>まずは<br class="forSP" /><strong>無料相談</strong>からどうぞ</h2>
+        <div class="free__wrap">
+          <img class="forPC" src="../public/assets/images/contact/img-contact-worry.png" alt="まずは無料相談からどうぞ" />
+          <img class="forSP balloons" src="../public/assets/images/contact/img-contact-worry-sp1.png"
+            alt="まずは無料相談からどうぞ" />
+          <img class="forSP person" src="../public/assets/images/contact/img-contact-worry-sp2.png"
+            alt="まずは無料相談からどうぞ" />
+          <div class="free__wrap-cta">
+            <hgroup>
+              <h3>
+                様々な相談を<br class="forSP" /><strong>無料</strong>で承ります
               </h3>
-              <ul class="voices__wrap-lists">
-                <li>
-                  <img
-                    src="../public/assets/images/contact/icon-contact-voice-01.png"
-                    alt=""
-                  />
-                  <p>
-                    頭の中にあることを<br class="forSP" />なんとなく<br
-                      class="forPC"
-                    />話しているうちに、<br class="forPC" /><strong
-                      >問題点や課題が整理されてきた</strong
-                    >
-                  </p>
-                </li>
-                <li>
-                  <img
-                    src="../public/assets/images/contact/icon-contact-voice-02.png"
-                    alt=""
-                  />
-                  <p>
-                    <strong
-                      >モヤモヤしていたところが<br class="forPC" />
-                      クリアになった</strong
-                    >
-                  </p>
-                </li>
-                <li>
-                  <img
-                    src="../public/assets/images/contact/icon-contact-voice-04.png"
-                    alt=""
-                  />
-                  <p>
-                    やってみようと<br class="forSP" />思っていた方向が
-                    <br /><strong
-                      >間違っていなかったと<br class="forSP" />思えた</strong
-                    >
-                  </p>
-                </li>
-                <li>
-                  <img
-                    src="../public/assets/images/contact/icon-contact-voice-03.png"
-                    alt=""
-                  />
-                  <p>
-                    これまで<br class="forSP" />実施していたことの<br /><strong
-                      >優先順位が見えてきた</strong
-                    >
-                  </p>
-                </li>
-              </ul>
-            </div>
+              <p>
+                ※オンラインミーティングで<br class="forSP" />1時間程度を想定しています。
+              </p>
+            </hgroup>
+            <a href="#contactform" class="c-btn c-btn__anchor">無料相談申込は<br class="forSP" />こちらから</a>
           </div>
-        </section>
-        <section class="example" id="example">
-          <h2>無料相談の<strong>具体例</strong></h2>
-          <div class="example__wrap">
-            <ul class="example__wrap-lists">
+        </div>
+      </section>
+      <section class="voice" id="voice">
+        <h2>
+          「無料相談は、<strong>意外に<br class="forSP" />ハードルが高い...</strong>」<br class="forSP" />という方へ
+        </h2>
+        <div class="voice__wrap">
+          <div class="voice__wrap-exam">
+            <picture>
+              <source srcset="
+                    ../public/assets/images/contact/img-contact-voice-sp.png
+                  " media="(max-width:768px)" />
+              <img src="../public/assets/images/contact/img-contact-voice-pc.png" alt="まずは無料相談からどうぞ" />
+            </picture>
+          </div>
+          <div class="voice__wrap-reason">
+            <p>
+              これらの理由で、<br class="forSP" />相談そのものをためらう方が<br class="forSP" />多くいらっしゃいますが、
+            </p>
+            <p class="forPC"><em>そういう時こそご相談ください！</em></p>
+            <p class="forSP">
+              <em>そういう時こそ</em><em>ご相談ください！</em>
+            </p>
+          </div>
+          <div class="voice__wrap-voices">
+            <h3 data-en="Voice">
+              こんな<br class="forSP" />お声を頂いています
+            </h3>
+            <ul class="voices__wrap-lists">
               <li>
-                商品/サービスには自信があるのだが、<br
-                  class="forPC"
-                />なかなか売れない
+                <img src="../public/assets/images/contact/icon-contact-voice-01.png" alt="" />
+                <p>
+                  頭の中にあることを<br class="forSP" />なんとなく<br class="forPC" />話しているうちに、<br
+                    class="forPC" /><strong>問題点や課題が整理されてきた</strong>
+                </p>
               </li>
-              <li>どういう商品/サービスを開発すれば良いかわからない</li>
-              <li>新事業を立ち上げたいが、どうすれば良いかわからない</li>
-              <li>webサイトを持っているが、そこから 「引合い」が来ない</li>
-              <li>引合いがあっても、受注に繋がらない</li>
-              <li>広告費をかけているが、効果が見えない</li>
-              <li>もっとブランドイメージを上げたい</li>
-              <li>古くなったブランドを再生したい</li>
-              <li>そもそもどういうブランドにすれば良いかわからない</li>
-              <li>社内にマーケティング機能を立ち上げたい</li>
-              <li>商品企画、マーケティング、営業部門がばらばら</li>
-              <li>データはあるが、どう分析・活用すれば良いかわからない</li>
-              <li>企業のビジョンを作りたい</li>
-              <li>社内の構造改革をしたい</li>
-              <li>中長期戦略を作りたい</li>
-              <li>事業計画を作りたい</li>
+              <li>
+                <img src="../public/assets/images/contact/icon-contact-voice-02.png" alt="" />
+                <p>
+                  <strong>モヤモヤしていたところが<br class="forPC" />
+                    クリアになった</strong>
+                </p>
+              </li>
+              <li>
+                <img src="../public/assets/images/contact/icon-contact-voice-04.png" alt="" />
+                <p>
+                  やってみようと<br class="forSP" />思っていた方向が
+                  <br /><strong>間違っていなかったと<br class="forSP" />思えた</strong>
+                </p>
+              </li>
+              <li>
+                <img src="../public/assets/images/contact/icon-contact-voice-03.png" alt="" />
+                <p>
+                  これまで<br class="forSP" />実施していたことの<br /><strong>優先順位が見えてきた</strong>
+                </p>
+              </li>
             </ul>
-            <p>
-              無料相談だけでスッキリされて解決される方もいらっしゃいます。<br />
-              <strong
-                >契約への勧誘などはありませんので、まずは無料相談からどうぞ。</strong
-              >
-            </p>
           </div>
-        </section>
-        <section class="contactform" id="contactform">
-          <h2><strong>無料相談申込み</strong></h2>
-          <div class="contactform__wrap"></div>
-          <div class="contactform__wrap-under">
-            <p>
-              お問い合わせを頂いた場合、通常2営業日以内に返信し、<br />
-              面談の日程調整をさせていただきます。
-            </p>
-            <div class="agree">
-              <input type="checkbox" id="agree" name="agree" required /><label
-                for="agree"
-                ><a href="/privacypolicy">個人情報保護方針</a>に同意する</label
-              >
-            </div>
-            <a href="" class="c-btn c-btn__secondary">送信内容を確認する</a>
+        </div>
+      </section>
+      <section class="example" id="example">
+        <h2>無料相談の<strong>具体例</strong></h2>
+        <div class="example__wrap">
+          <ul class="example__wrap-lists">
+            <li>
+              商品/サービスには自信があるのだが、<br class="forPC" />なかなか売れない
+            </li>
+            <li>どういう商品/サービスを開発すれば良いかわからない</li>
+            <li>新事業を立ち上げたいが、どうすれば良いかわからない</li>
+            <li>webサイトを持っているが、そこから 「引合い」が来ない</li>
+            <li>引合いがあっても、受注に繋がらない</li>
+            <li>広告費をかけているが、効果が見えない</li>
+            <li>もっとブランドイメージを上げたい</li>
+            <li>古くなったブランドを再生したい</li>
+            <li>そもそもどういうブランドにすれば良いかわからない</li>
+            <li>社内にマーケティング機能を立ち上げたい</li>
+            <li>商品企画、マーケティング、営業部門がばらばら</li>
+            <li>データはあるが、どう分析・活用すれば良いかわからない</li>
+            <li>企業のビジョンを作りたい</li>
+            <li>社内の構造改革をしたい</li>
+            <li>中長期戦略を作りたい</li>
+            <li>事業計画を作りたい</li>
+          </ul>
+          <p>
+            無料相談だけでスッキリされて解決される方もいらっしゃいます。<br />
+            <strong>契約への勧誘などはありませんので、まずは無料相談からどうぞ。</strong>
+          </p>
+        </div>
+      </section>
+      <section class="contactform" id="contactform">
+        <h2><strong>無料相談申込み</strong></h2>
+        <div class="contactform__wrap"></div>
+        <div class="contactform__wrap-under">
+          <p>
+            お問い合わせを頂いた場合、通常2営業日以内に返信し、<br />
+            面談の日程調整をさせていただきます。
+          </p>
+          <div class="agree">
+            <input type="checkbox" id="agree" name="agree" required /><label for="agree"><a
+                href="/privacypolicy">個人情報保護方針</a>に同意する</label>
           </div>
-        </section>
-      </article>
-    </main>
+          <a href="" class="c-btn c-btn__secondary">送信内容を確認する</a>
+        </div>
+      </section>
+    </article>
+  </main>
 
-    <!-- footer.htmlの読み込み -->
-    {{> footer}}
-    <script type="module" src="./js/main.js"></script>
-  </body>
+  <!-- footer.htmlの読み込み -->
+  {{> footer}}
+
+</body>
+
 </html>

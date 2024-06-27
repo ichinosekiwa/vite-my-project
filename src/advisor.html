@@ -1,472 +1,396 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initiascale=1.0" />
-    <meta name="robots" content="noindex" />
-    <!-- pageDataのtitle情報を出力 -->
-    <title>{{title}}</title>
-    <link rel="stylesheet" href="scss/styles.scss" />
-  </head>
 
-  <body>
-    <!-- header.htmlの読み込み -->
-    {{> header}}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initiascale=1.0" />
+  <meta name="robots" content="noindex" />
+  <!-- pageDataのtitle情報を出力 -->
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="scss/styles.scss" />
+</head>
 
-    <main class="main">
-      <section class="p-page__head page-service">
-        <hgroup class="p-page__head__inner">
-          <p>ADVISOR</p>
-          <h1 date-en="ADVISOR">顧問</h1>
-          <p class="txt-sub-h1">
-            社長・経営幹部の右腕・相談役として、中長期にわたって、課題発見、課題解決を通して、企業としての力を向上していきます。<br />
-            定期的な訪問・オンライン会議などにより、日常業務における課題を抽出し、解決策を検討するなどのサポートを提供します。<br />
-            日常的な壁打ち・相談のパートナーとなります。
-          </p>
-          <span>Advisor</span>
+<body>
+  <!-- header.htmlの読み込み -->
+  {{> header}}
+
+  <main class="main">
+    <section class="p-page__head page-service">
+      <hgroup class="p-page__head__inner">
+        <p>ADVISOR</p>
+        <h1 date-en="ADVISOR">顧問</h1>
+        <p class="txt-sub-h1">
+          社長・経営幹部の右腕・相談役として、中長期にわたって、課題発見、課題解決を通して、企業としての力を向上していきます。<br />
+          定期的な訪問・オンライン会議などにより、日常業務における課題を抽出し、解決策を検討するなどのサポートを提供します。<br />
+          日常的な壁打ち・相談のパートナーとなります。
+        </p>
+        <span>Advisor</span>
+      </hgroup>
+    </section>
+    <div class="p-page__head-sub">
+      <picture>
+        <source srcset="../public/assets/images/service/img-advisor-mv-sp.jpg" media="(max-width:768px)" />
+        <img src="../public/assets/images/service/img-advisor-mv.jpg" alt="話し合う2人のサラリーマン" />
+      </picture>
+    </div>
+
+    <article class="page-service advisor">
+      <section class="strength" id="strength">
+        <hgroup>
+          <h2>当社の強み</h2>
         </hgroup>
+        <div class="strength__wrap">
+          <ul class="strength__list">
+            <li data-en="Point .01">
+              <img src="../public/assets/images/service/img-advisor-strength-01.jpg" alt="多様な業種、業態、販路を熟知" />
+              <div class="list__head">
+                <h3>多様な業種、業態、販路を熟知</h3>
+                <p>
+                  当社代表は、パソコン周辺機器、AV機器、日系カジュアルウェア、スポーツウェア、外資系カジュアルウェア、寝具など、多様な業種を実務担当者として経験してきました。加えて、B2CからB2B、ネット通販の事業責任者でした。<br />
+                  チャネル（販売経路）も、自社直営店舗、百貨店、GMS、ショッピングモール、ドラッグストア、専門店、家電量販店、ECモール等々、様々な販路をマネジメントしてきました。<br />
+                  <strong>特定の業種、特定の業態、特定の企業規模、特定の販路、に限定されない、幅広い経験と、普遍的な知見に基づいたアドバイス、サポートを提供します。</strong>
+                </p>
+              </div>
+            </li>
+            <li data-en="Point .02">
+              <img src="../public/assets/images/service/img-advisor-strength-02.jpg" alt="企業内の多様な部門・機能を熟知" />
+              <div class="list__head">
+                <h3>企業内の多様な部門・機能を熟知</h3>
+                <p>
+                  当社代表は、製造業の上流から下流までのほぼ全ての機能（研究～開発～製造（工場）～営業）を直接経験しています。<br />
+                  加えて、システム開発、マーケティング、EC（ネット通販）、カタログ通販、需要予測・在庫管理、経営企画。更に、小売り部門（自社店舗網）のトップ、経営企画部門の立上げも務めました。<br />
+                  これらの広範な経験と知見により、
+                  <strong>貴社の様々な部署の現場感を把握しながらも大局的な視点でのアドバイス、サポートを提供します。</strong>
+                </p>
+              </div>
+            </li>
+            <li data-en="Point .03">
+              <img src="../public/assets/images/service/img-advisor-strength-03.jpg" alt="様々な企業特性を熟知" />
+              <div class="list__head">
+                <h3>様々な企業特性を熟知</h3>
+                <p>
+                  企業によって、組織や意思決定プロセスから実行方法まで全く異なります。<br />
+                  当社代表は、伝統的大企業からスタートアップ、外資系企業、中小企業まで、実務担当者として様々な組織を経験しており、外部コンサルタントではわからない社内の組織特性を、身を以て熟知しています。<br />
+                  外資系企業の場合は、本国（本社）とのやりとりや、日本の事情を的確かつ説得力をもって伝えることも重要になります。それぞれの企業特性にマッチしたアドバイス、サポートを提供します。
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="service__cta">
+          <p>
+            当社の顧問実績は<br class="forSP" />こちらからご覧いただけます。
+          </p>
+          <a href="" class="c-btn c-btn__secondary">顧問実績</a>
+        </div>
       </section>
-      <div class="p-page__head-sub">
-        <picture>
-          <source
-            srcset="../public/assets/images/service/img-advisor-mv-sp.jpg"
-            media="(max-width:768px)"
-          />
-          <img
-            src="../public/assets/images/service/img-advisor-mv.jpg"
-            alt="話し合う2人のサラリーマン"
-          />
-        </picture>
-      </div>
 
-      <article class="page-service advisor">
-        <section class="strength" id="strength">
-          <hgroup>
-            <h2>当社の強み</h2>
-          </hgroup>
-          <div class="strength__wrap">
-            <ul class="strength__list">
-              <li data-en="Point .01">
-                <img
-                  src="../public/assets/images/service/img-advisor-strength-01.jpg"
-                  alt="多様な業種、業態、販路を熟知"
-                />
-                <div class="list__head">
-                  <h3>多様な業種、業態、販路を熟知</h3>
-                  <p>
-                    当社代表は、パソコン周辺機器、AV機器、日系カジュアルウェア、スポーツウェア、外資系カジュアルウェア、寝具など、多様な業種を実務担当者として経験してきました。加えて、B2CからB2B、ネット通販の事業責任者でした。<br />
-                    チャネル（販売経路）も、自社直営店舗、百貨店、GMS、ショッピングモール、ドラッグストア、専門店、家電量販店、ECモール等々、様々な販路をマネジメントしてきました。<br />
-                    <strong
-                      >特定の業種、特定の業態、特定の企業規模、特定の販路、に限定されない、幅広い経験と、普遍的な知見に基づいたアドバイス、サポートを提供します。</strong
-                    >
-                  </p>
+      <article class="full-width">
+        <picture>
+          <source srcset="
+                ../public/assets/images/service/img-advisor-strength-sp.jpg
+              " media="(max-width:768px)" />
+          <img src="../public/assets/images/service/img-advisor-strength.jpg" alt="ビルが並ぶ街の風景" />
+        </picture>
+      </article>
+
+      <section class="support" id="support">
+        <hgroup>
+          <h2>サポート形態</h2>
+          <p class="txt-sub-h2">
+            テーマやご要望に合わせて、様々なサポート形態が可能です。
+          </p>
+        </hgroup>
+        <div class="support__wrap">
+          <div class="support__wrap-index">
+            <ul class="index-list">
+              <li>
+                <a href="#brainstorming"><span class="list-num">01.</span>壁打ち型</a>
+              </li>
+              <li>
+                <a href="#facilitation"><span class="list-num">02.</span>ファシリテーション型</a>
+              </li>
+              <li>
+                <a href="#proposal"><span class="list-num">03.</span>提案型</a>
+              </li>
+              <li>
+                <a href="#practical-work"><span class="list-num">04.</span>実務遂行型</a>
+              </li>
+            </ul>
+            <img src="../public/assets/images/service/img-consulting-support.jpg" alt="サポート形態" />
+          </div>
+          <div class="support__wrap-contents">
+            <ul class="support__wrap-items">
+              <li class="support__wrap-item brainstorming" id="brainstorming">
+                <div class="description">
+                  <img src="../public/assets/images/service/img-consulting-brainstorming-01.png" alt="壁打ち型" />
+                  <hgroup class="wrap-txt">
+                    <h3 data-num="01." data-en="Brainstorming">壁打ち型</h3>
+                    <p>
+                      クライアントの考え・悩み・思いを聞きながら、「このような視点では？」「例えばこのような考え方は？」などとやり取りをしながら、クライアントが自ら解決策に思い至るような方法です。クライアントの頭の中を整理しながら、クライアントの成長にも繋がります。
+                    </p>
+                  </hgroup>
+                </div>
+                <div class="ac-wrap">
+                  <dl class="ac-list">
+                    <dt class="ac-title js-faq_accordion">
+                      <span></span>
+                      壁打ち型の事例を見る
+                    </dt>
+                    <dd class="ac-text">
+                      <div class="case">
+                        <hgroup class="wrap-txt">
+                          <span>CASE 01</span>
+                          <h4>社長の壁打ち</h4>
+                          <p>
+                            若くて実行力のある2代目社長。マーケティングの知見も高く、アイデアも豊富だが、共に議論・検討できる相手がいないため、壁打ちを要望。
+                          </p>
+                        </hgroup>
+                        <img src="../public/assets/images/service/img-brainstorming-case01.jpg" alt="壁打ち型" />
+                      </div>
+                      <div class="point">
+                        <span class="title-en">Point</span>
+                        <ul class="point-list">
+                          <li>
+                            社長の様々なアイデアに対して、<strong>フィードバックを返しながら、アイデアを膨らませたり、他のアイデアを提案したり、方向性を見出したり、場合によっては細部のブラシュアップ</strong>などを実施した。
+                          </li>
+                          <li>
+                            <strong>顧客調査を提案</strong>し、実施したところ、それまで自社の強みと考えていた点が全く異なっており、事業の重点課題を変更した。
+                          </li>
+                          <li>
+                            同社の新規事業立上げにおいては、<strong>社長と共に当新規事業の顧客価値を徹底的に磨き上げて3つに絞り</strong>、最終的には有名コピーライターを紹介して、強力なキャッチコピーを制作。
+                          </li>
+                          <li>
+                            <strong>同社初の動画広告を制作</strong>。動画広告制作経験の無い同社に代わって撮影の立会い・編集作業の監修などを実施し、YouTubeで100万回以上の再生数を記録。
+                          </li>
+                        </ul>
+                      </div>
+                    </dd>
+                  </dl>
                 </div>
               </li>
-              <li data-en="Point .02">
-                <img
-                  src="../public/assets/images/service/img-advisor-strength-02.jpg"
-                  alt="企業内の多様な部門・機能を熟知"
-                />
-                <div class="list__head">
-                  <h3>企業内の多様な部門・機能を熟知</h3>
-                  <p>
-                    当社代表は、製造業の上流から下流までのほぼ全ての機能（研究～開発～製造（工場）～営業）を直接経験しています。<br />
-                    加えて、システム開発、マーケティング、EC（ネット通販）、カタログ通販、需要予測・在庫管理、経営企画。更に、小売り部門（自社店舗網）のトップ、経営企画部門の立上げも務めました。<br />
-                    これらの広範な経験と知見により、
-                    <strong
-                      >貴社の様々な部署の現場感を把握しながらも大局的な視点でのアドバイス、サポートを提供します。</strong
-                    >
-                  </p>
+              <li class="support__wrap-item facilitation" id="facilitation">
+                <div class="description">
+                  <img src="../public/assets/images/service/img-consulting-facilitation-01.png" alt="ファシリテーション型" />
+                  <hgroup class="wrap-txt">
+                    <h3 data-num="02." data-en="facilitation">
+                      ファシリテーション型
+                    </h3>
+                    <p>
+                      クライアントが複数メンバーやプロジェクトチームの場合に、メンバーの意見を引き出し、メンバー間の議論を効果的に促進しながら、プロジェクトの合意形成を図っていきます。コンサルタントはファシリテーションに徹して、議論の中から重要な論点を整理し、メンバーの意思・意見・議論を中心にワークショップを進めます。この進め方によって、メンバー全員が高い参画意識と共通認識を持ってプロジェクトを進めることが可能になります。
+                    </p>
+                  </hgroup>
+                </div>
+                <div class="ac-wrap">
+                  <dl class="ac-list">
+                    <dt class="ac-title js-faq_accordion">
+                      <span></span>
+                      ファシリテーション型の事例を見る
+                    </dt>
+                    <dd class="ac-text">
+                      <div class="case">
+                        <hgroup class="wrap-txt">
+                          <span>CASE 01</span>
+                          <h4>企業コンセプトの見直し</h4>
+                          <p>
+                            一部上場企業が以前から提唱している「企業コンセプト」が社内外に浸透していないという課題があり、社長からの直接のオーダー。<br />
+                            既に存在するコンセプトの再定義のため、商品企画、マーケティング、営業などを混じえた部署横断型のプロジェクトを提案。加えて、プロジェクトメンバーの意見・解釈を尊重しつつ、メンバーの当事者意識を高めるために「ファシリテーション型」のサポートを提案した。
+                          </p>
+                        </hgroup>
+                        <img src="../public/assets/images/service/img-facilitation-case01.jpg" alt="ファシリテーション型" />
+                      </div>
+                      <div class="point">
+                        <span class="title-en">Point</span>
+                        <ul class="point-list">
+                          <li>
+                            コンセプト自体は広告代理店によってキレイな「文章」になっていたが、メンバー間ですら、その「文章の解釈」が大きく異なっていることが判明した。
+                          </li>
+                          <li>
+                            コンサルタントのファシリテーションの元、プロジェクトメンバーが各々の解釈を出し合い、議論し、意見を交わした。
+                          </li>
+                          <li>
+                            多様な意見が出る中で、<strong>コンサルタントは焦点となる重要論点を抽出・整理し、その点に絞ってメンバーの議論を深めた</strong>。
+                          </li>
+                          <li>
+                            論点を絞って議論していく中で、メンバー間に「あるべき共通の解釈」が形成されていった。
+                          </li>
+                          <li>
+                            あるべき共通の解釈を元に、<strong>広告代理店の文章は破棄し、プロジェクト内でコンセプトを端的/正確に表現するコピーを作るに至った</strong>。
+                          </li>
+                          <li>
+                            <strong>コンサルタントはファシリテーションに徹し、メンバーの議論を活性化させること、論点を明らかにすること、絞った論点でメンバーの議論を深めること、その中での合意形成を促すこと、に注力</strong>し、あくまでもプロジェクトメンバーがあるべき解釈に至り、コピーを生み出した、という形に導いた。
+                          </li>
+                          <li>
+                            新たに構築された企業コンセプトに基づいて、商品企画、マーケティングコミュニケーションの検討・サポートに移行した。
+                          </li>
+                        </ul>
+                      </div>
+                    </dd>
+                  </dl>
                 </div>
               </li>
-              <li data-en="Point .03">
-                <img
-                  src="../public/assets/images/service/img-advisor-strength-03.jpg"
-                  alt="様々な企業特性を熟知"
-                />
-                <div class="list__head">
-                  <h3>様々な企業特性を熟知</h3>
-                  <p>
-                    企業によって、組織や意思決定プロセスから実行方法まで全く異なります。<br />
-                    当社代表は、伝統的大企業からスタートアップ、外資系企業、中小企業まで、実務担当者として様々な組織を経験しており、外部コンサルタントではわからない社内の組織特性を、身を以て熟知しています。<br />
-                    外資系企業の場合は、本国（本社）とのやりとりや、日本の事情を的確かつ説得力をもって伝えることも重要になります。それぞれの企業特性にマッチしたアドバイス、サポートを提供します。
-                  </p>
+              <li class="support__wrap-item proposal" id="proposal">
+                <div class="description">
+                  <img src="../public/assets/images/service/img-consulting-proposal-01.png" alt="提案型" />
+                  <hgroup class="wrap-txt">
+                    <h3 data-num="03." data-en="proposal">
+                      提案型<br class="forSP" /><small>
+                        (一般的なコンサルティングプロセス)</small>
+                    </h3>
+                    <p>
+                      コンサルタント自身がプロジェクト推進のイニシアチブを持ち、仮説形成・調査・分析・戦略策定までを実施します。戦略実行段階のサポートもいたします。
+                    </p>
+                  </hgroup>
+                </div>
+                <div class="ac-wrap">
+                  <dl class="ac-list">
+                    <dt class="ac-title js-faq_accordion">
+                      <span></span>
+                      提案型の事例を見る
+                    </dt>
+                    <dd class="ac-text">
+                      <div class="case">
+                        <hgroup class="wrap-txt">
+                          <span>CASE 01</span>
+                          <h4>
+                            中堅飲食チェーンの<br />
+                            ブランディング
+                          </h4>
+                          <p>
+                            売上は上がっているが、今後、ブランドを高めていきたい。従来から料理の特徴などを発信していたが、しっかりとしたブランド戦略が無かった。
+                          </p>
+                        </hgroup>
+                        <img src="../public/assets/images/service/img-proposal-case01.jpg" alt="提案型" />
+                      </div>
+                      <div class="point">
+                        <span class="title-en">Point</span>
+                        <ul class="point-list">
+                          <li>
+                            <strong>社内ヒアリングをベースにいくつかの「仮説」を立て、仮説を元に、市場調査を設計～実施。</strong>調査に基づいて、自社と同業他社、顧客についての分析を実施。
+                          </li>
+                          <li>
+                            自社の強み・弱み・顧客層・ブランドイメージ・認知経路・NPS、競合の強み・弱み・イメージ、顧客層、NPS等を><strong>同業他社との比較を混じえて徹底的に比較・分析</strong>。
+                          </li>
+                          <li>
+                            分析結果を踏まえて、<strong>「ブランドアイデンティティ」「ブランドプロミス」「ペルソナ」を設定。</strong>
+                          </li>
+                          <li>
+                            「ブランドアイデンティティ」「ブランドプロミス」「ペルソナ」に基づいて以下を実施。<br />
+                            ・あるべき店舗デザイン（外装・店頭・店内・什器・家具・小物・パネル・POP
+                            etc.）を統一 <br />
+                            ・ターゲットに伝えるべき、シンプルで強力なメッセージを作成
+                            <br />
+                            ・ターゲットとメッセージにマッチする発信方法を実施（SNS、チラシ、看板、インフルエンサー
+                            etc.）
+                          </li>
+                          <p class="txt-annotation">
+                            ※クライアントとディスカッションしながら各施策を検討。施策の実務・実施は当該クライアントが担当
+                          </p>
+                        </ul>
+                      </div>
+                    </dd>
+                  </dl>
+                </div>
+              </li>
+              <li class="support__wrap-item practical-work" id="practical-work">
+                <div class="description">
+                  <img src="../public/assets/images/service/img-consulting-practicalwork-01.png" alt="実務遂行型" />
+                  <hgroup class="wrap-txt">
+                    <h3 data-num="04." data-en="Practical work">
+                      実務遂行型
+                    </h3>
+                    <p>
+                      提案型に加えて、戦略策定以降の「実施」段階までを担います。社内に実務担当者が不在で、企業自身による施策の実行が難しい場合などに対応いたします。
+                    </p>
+                  </hgroup>
+                </div>
+                <div class="ac-wrap">
+                  <dl class="ac-list">
+                    <dt class="ac-title js-faq_accordion">
+                      <span></span>
+                      実務遂行型の事例を見る
+                    </dt>
+                    <dd class="ac-text">
+                      <div class="case">
+                        <hgroup class="wrap-txt">
+                          <span>CASE 01</span>
+                          <h4>
+                            中小製造業の<br class="forSP" />新規事業立上げ
+                          </h4>
+                          <p>
+                            中小製造企業が世界初の画期的な製品を開発し、某有名コンサルティング会社がサポートしていたが、成果が出ておらず、当社に依頼があった。事実上の新事業立上げのサポート。<br />
+                            クライアント社内にマーケティング機能・担当者が不在だったため、実務までほぼ全ての作業を当社にて実施。
+                          </p>
+                        </hgroup>
+                        <img src="../public/assets/images/service/img-practicalwork-case01.jpg" alt="実務遂行型" />
+                      </div>
+                      <div class="point">
+                        <span class="title-en">Point</span>
+                        <ul class="point-list">
+                          <p class="txt-annotation">以下を当社にて実施。</p>
+                          <li>
+                            市場調査（アンケート設計～調査～分析）、競合調査と、それに基づく戦略策定。
+                          </li>
+                          <li>
+                            webサイト構築（2サイト）<br />
+                            制作会社選定～基本構想～ページ構成～制作ディレクション～コンテンツ制作（文章作成含む）
+                          </li>
+                          <li>
+                            カタログ作成<br />
+                            制作会社選定～基本構想～制作ディレクション～コンテンツ制作（文章作成含む）
+                          </li>
+                          <li>
+                            薬機法チェック<br />
+                            薬機法に関わる商品であったため、薬機法の専門家と連携してチェック
+                          </li>
+                          <li>
+                            リスティング広告（検索広告）<br />
+                            基本戦略策定～代理店選定～代理店へのオリエンテーション～LP制作～リスティング広告ディレクション～代理店の月次レポート読込み～代理店との月次ミーティング・ディレクション
+                          </li>
+                          <li>
+                            PR<br />大手新聞、大手雑誌、有名海外雑誌などに記事掲載
+                          </li>
+                          <li>月次レポート作成・報告</li>
+                          <li>
+                            問合せメールへの営業担当による返信内容の添削
+                          </li>
+                          <p class="txt-annotation">
+                            ※webサイト・カタログのコンテンツ（文章）、営業提案資料、プレスリリースの全てを当社にて制作。
+                          </p>
+                        </ul>
+                      </div>
+                    </dd>
+                  </dl>
                 </div>
               </li>
             </ul>
           </div>
-          <div class="service__cta">
-            <p>
-              当社の顧問実績は<br class="forSP" />こちらからご覧いただけます。
-            </p>
-            <a href="" class="c-btn c-btn__secondary">顧問実績</a>
-          </div>
-        </section>
+        </div>
+      </section>
 
-        <article class="full-width">
+      <section class="flow" id="flow">
+        <hgroup>
+          <h2>サービスの流れ</h2>
+        </hgroup>
+        <div class="flow__wrap">
           <picture>
-            <source
-              srcset="
-                ../public/assets/images/service/img-advisor-strength-sp.jpg
-              "
-              media="(max-width:768px)"
-            />
-            <img
-              src="../public/assets/images/service/img-advisor-strength.jpg"
-              alt="ビルが並ぶ街の風景"
-            />
+            <source srcset="../public/assets/images/service/img-advisor-flow-sp.png" media="(max-width:768px)" />
+            <img src="../public/assets/images/service/img-advisor-flow.png" alt="サービスの流れ" />
           </picture>
-        </article>
-
-        <section class="support" id="support">
-          <hgroup>
-            <h2>サポート形態</h2>
-            <p class="txt-sub-h2">
-              テーマやご要望に合わせて、様々なサポート形態が可能です。
+          <div class="wrap-txt">
+            <h5 class="wrap-txt-ttl">スポット支援も対応</h5>
+            <p class="wrap-txt-detail">
+              まずはスポット的にコンサルティングを受けてみたい、とりあえず今直面している課題を解決したい、などのスポット対応も可能です。
             </p>
-          </hgroup>
-          <div class="support__wrap">
-            <div class="support__wrap-index">
-              <ul class="index-list">
-                <li>
-                  <a href="#brainstorming"
-                    ><span class="list-num">01.</span>壁打ち型</a
-                  >
-                </li>
-                <li>
-                  <a href="#facilitation"
-                    ><span class="list-num">02.</span>ファシリテーション型</a
-                  >
-                </li>
-                <li>
-                  <a href="#proposal"
-                    ><span class="list-num">03.</span>提案型</a
-                  >
-                </li>
-                <li>
-                  <a href="#practical-work"
-                    ><span class="list-num">04.</span>実務遂行型</a
-                  >
-                </li>
-              </ul>
-              <img
-                src="../public/assets/images/service/img-consulting-support.jpg"
-                alt="サポート形態"
-              />
-            </div>
-            <div class="support__wrap-contents">
-              <ul class="support__wrap-items">
-                <li class="support__wrap-item brainstorming" id="brainstorming">
-                  <div class="description">
-                    <img
-                      src="../public/assets/images/service/img-consulting-brainstorming-01.png"
-                      alt="壁打ち型"
-                    />
-                    <hgroup class="wrap-txt">
-                      <h3 data-num="01." data-en="Brainstorming">壁打ち型</h3>
-                      <p>
-                        クライアントの考え・悩み・思いを聞きながら、「このような視点では？」「例えばこのような考え方は？」などとやり取りをしながら、クライアントが自ら解決策に思い至るような方法です。クライアントの頭の中を整理しながら、クライアントの成長にも繋がります。
-                      </p>
-                    </hgroup>
-                  </div>
-                  <div class="ac-wrap">
-                    <dl class="ac-list">
-                      <dt class="ac-title js-faq_accordion">
-                        <span></span>
-                        壁打ち型の事例を見る
-                      </dt>
-                      <dd class="ac-text">
-                        <div class="case">
-                          <hgroup class="wrap-txt">
-                            <span>CASE 01</span>
-                            <h4>社長の壁打ち</h4>
-                            <p>
-                              若くて実行力のある2代目社長。マーケティングの知見も高く、アイデアも豊富だが、共に議論・検討できる相手がいないため、壁打ちを要望。
-                            </p>
-                          </hgroup>
-                          <img
-                            src="../public/assets/images/service/img-brainstorming-case01.jpg"
-                            alt="壁打ち型"
-                          />
-                        </div>
-                        <div class="point">
-                          <span class="title-en">Point</span>
-                          <ul class="point-list">
-                            <li>
-                              社長の様々なアイデアに対して、<strong>フィードバックを返しながら、アイデアを膨らませたり、他のアイデアを提案したり、方向性を見出したり、場合によっては細部のブラシュアップ</strong>などを実施した。
-                            </li>
-                            <li>
-                              <strong>顧客調査を提案</strong
-                              >し、実施したところ、それまで自社の強みと考えていた点が全く異なっており、事業の重点課題を変更した。
-                            </li>
-                            <li>
-                              同社の新規事業立上げにおいては、<strong>社長と共に当新規事業の顧客価値を徹底的に磨き上げて3つに絞り</strong>、最終的には有名コピーライターを紹介して、強力なキャッチコピーを制作。
-                            </li>
-                            <li>
-                              <strong>同社初の動画広告を制作</strong
-                              >。動画広告制作経験の無い同社に代わって撮影の立会い・編集作業の監修などを実施し、YouTubeで100万回以上の再生数を記録。
-                            </li>
-                          </ul>
-                        </div>
-                      </dd>
-                    </dl>
-                  </div>
-                </li>
-                <li class="support__wrap-item facilitation" id="facilitation">
-                  <div class="description">
-                    <img
-                      src="../public/assets/images/service/img-consulting-facilitation-01.png"
-                      alt="ファシリテーション型"
-                    />
-                    <hgroup class="wrap-txt">
-                      <h3 data-num="02." data-en="facilitation">
-                        ファシリテーション型
-                      </h3>
-                      <p>
-                        クライアントが複数メンバーやプロジェクトチームの場合に、メンバーの意見を引き出し、メンバー間の議論を効果的に促進しながら、プロジェクトの合意形成を図っていきます。コンサルタントはファシリテーションに徹して、議論の中から重要な論点を整理し、メンバーの意思・意見・議論を中心にワークショップを進めます。この進め方によって、メンバー全員が高い参画意識と共通認識を持ってプロジェクトを進めることが可能になります。
-                      </p>
-                    </hgroup>
-                  </div>
-                  <div class="ac-wrap">
-                    <dl class="ac-list">
-                      <dt class="ac-title js-faq_accordion">
-                        <span></span>
-                        ファシリテーション型の事例を見る
-                      </dt>
-                      <dd class="ac-text">
-                        <div class="case">
-                          <hgroup class="wrap-txt">
-                            <span>CASE 01</span>
-                            <h4>企業コンセプトの見直し</h4>
-                            <p>
-                              一部上場企業が以前から提唱している「企業コンセプト」が社内外に浸透していないという課題があり、社長からの直接のオーダー。<br />
-                              既に存在するコンセプトの再定義のため、商品企画、マーケティング、営業などを混じえた部署横断型のプロジェクトを提案。加えて、プロジェクトメンバーの意見・解釈を尊重しつつ、メンバーの当事者意識を高めるために「ファシリテーション型」のサポートを提案した。
-                            </p>
-                          </hgroup>
-                          <img
-                            src="../public/assets/images/service/img-facilitation-case01.jpg"
-                            alt="ファシリテーション型"
-                          />
-                        </div>
-                        <div class="point">
-                          <span class="title-en">Point</span>
-                          <ul class="point-list">
-                            <li>
-                              コンセプト自体は広告代理店によってキレイな「文章」になっていたが、メンバー間ですら、その「文章の解釈」が大きく異なっていることが判明した。
-                            </li>
-                            <li>
-                              コンサルタントのファシリテーションの元、プロジェクトメンバーが各々の解釈を出し合い、議論し、意見を交わした。
-                            </li>
-                            <li>
-                              多様な意見が出る中で、<strong>コンサルタントは焦点となる重要論点を抽出・整理し、その点に絞ってメンバーの議論を深めた</strong>。
-                            </li>
-                            <li>
-                              論点を絞って議論していく中で、メンバー間に「あるべき共通の解釈」が形成されていった。
-                            </li>
-                            <li>
-                              あるべき共通の解釈を元に、<strong>広告代理店の文章は破棄し、プロジェクト内でコンセプトを端的/正確に表現するコピーを作るに至った</strong>。
-                            </li>
-                            <li>
-                              <strong
-                                >コンサルタントはファシリテーションに徹し、メンバーの議論を活性化させること、論点を明らかにすること、絞った論点でメンバーの議論を深めること、その中での合意形成を促すこと、に注力</strong
-                              >し、あくまでもプロジェクトメンバーがあるべき解釈に至り、コピーを生み出した、という形に導いた。
-                            </li>
-                            <li>
-                              新たに構築された企業コンセプトに基づいて、商品企画、マーケティングコミュニケーションの検討・サポートに移行した。
-                            </li>
-                          </ul>
-                        </div>
-                      </dd>
-                    </dl>
-                  </div>
-                </li>
-                <li class="support__wrap-item proposal" id="proposal">
-                  <div class="description">
-                    <img
-                      src="../public/assets/images/service/img-consulting-proposal-01.png"
-                      alt="提案型"
-                    />
-                    <hgroup class="wrap-txt">
-                      <h3 data-num="03." data-en="proposal">
-                        提案型<br class="forSP" /><small>
-                          (一般的なコンサルティングプロセス)</small
-                        >
-                      </h3>
-                      <p>
-                        コンサルタント自身がプロジェクト推進のイニシアチブを持ち、仮説形成・調査・分析・戦略策定までを実施します。戦略実行段階のサポートもいたします。
-                      </p>
-                    </hgroup>
-                  </div>
-                  <div class="ac-wrap">
-                    <dl class="ac-list">
-                      <dt class="ac-title js-faq_accordion">
-                        <span></span>
-                        提案型の事例を見る
-                      </dt>
-                      <dd class="ac-text">
-                        <div class="case">
-                          <hgroup class="wrap-txt">
-                            <span>CASE 01</span>
-                            <h4>
-                              中堅飲食チェーンの<br />
-                              ブランディング
-                            </h4>
-                            <p>
-                              売上は上がっているが、今後、ブランドを高めていきたい。従来から料理の特徴などを発信していたが、しっかりとしたブランド戦略が無かった。
-                            </p>
-                          </hgroup>
-                          <img
-                            src="../public/assets/images/service/img-proposal-case01.jpg"
-                            alt="提案型"
-                          />
-                        </div>
-                        <div class="point">
-                          <span class="title-en">Point</span>
-                          <ul class="point-list">
-                            <li>
-                              <strong
-                                >社内ヒアリングをベースにいくつかの「仮説」を立て、仮説を元に、市場調査を設計～実施。</strong
-                              >調査に基づいて、自社と同業他社、顧客についての分析を実施。
-                            </li>
-                            <li>
-                              自社の強み・弱み・顧客層・ブランドイメージ・認知経路・NPS、競合の強み・弱み・イメージ、顧客層、NPS等を><strong>同業他社との比較を混じえて徹底的に比較・分析</strong>。
-                            </li>
-                            <li>
-                              分析結果を踏まえて、<strong
-                                >「ブランドアイデンティティ」「ブランドプロミス」「ペルソナ」を設定。</strong
-                              >
-                            </li>
-                            <li>
-                              「ブランドアイデンティティ」「ブランドプロミス」「ペルソナ」に基づいて以下を実施。<br />
-                              ・あるべき店舗デザイン（外装・店頭・店内・什器・家具・小物・パネル・POP
-                              etc.）を統一 <br />
-                              ・ターゲットに伝えるべき、シンプルで強力なメッセージを作成
-                              <br />
-                              ・ターゲットとメッセージにマッチする発信方法を実施（SNS、チラシ、看板、インフルエンサー
-                              etc.）
-                            </li>
-                            <p class="txt-annotation">
-                              ※クライアントとディスカッションしながら各施策を検討。施策の実務・実施は当該クライアントが担当
-                            </p>
-                          </ul>
-                        </div>
-                      </dd>
-                    </dl>
-                  </div>
-                </li>
-                <li
-                  class="support__wrap-item practical-work"
-                  id="practical-work"
-                >
-                  <div class="description">
-                    <img
-                      src="../public/assets/images/service/img-consulting-practicalwork-01.png"
-                      alt="実務遂行型"
-                    />
-                    <hgroup class="wrap-txt">
-                      <h3 data-num="04." data-en="Practical work">
-                        実務遂行型
-                      </h3>
-                      <p>
-                        提案型に加えて、戦略策定以降の「実施」段階までを担います。社内に実務担当者が不在で、企業自身による施策の実行が難しい場合などに対応いたします。
-                      </p>
-                    </hgroup>
-                  </div>
-                  <div class="ac-wrap">
-                    <dl class="ac-list">
-                      <dt class="ac-title js-faq_accordion">
-                        <span></span>
-                        実務遂行型の事例を見る
-                      </dt>
-                      <dd class="ac-text">
-                        <div class="case">
-                          <hgroup class="wrap-txt">
-                            <span>CASE 01</span>
-                            <h4>
-                              中小製造業の<br class="forSP" />新規事業立上げ
-                            </h4>
-                            <p>
-                              中小製造企業が世界初の画期的な製品を開発し、某有名コンサルティング会社がサポートしていたが、成果が出ておらず、当社に依頼があった。事実上の新事業立上げのサポート。<br />
-                              クライアント社内にマーケティング機能・担当者が不在だったため、実務までほぼ全ての作業を当社にて実施。
-                            </p>
-                          </hgroup>
-                          <img
-                            src="../public/assets/images/service/img-practicalwork-case01.jpg"
-                            alt="実務遂行型"
-                          />
-                        </div>
-                        <div class="point">
-                          <span class="title-en">Point</span>
-                          <ul class="point-list">
-                            <p class="txt-annotation">以下を当社にて実施。</p>
-                            <li>
-                              市場調査（アンケート設計～調査～分析）、競合調査と、それに基づく戦略策定。
-                            </li>
-                            <li>
-                              webサイト構築（2サイト）<br />
-                              制作会社選定～基本構想～ページ構成～制作ディレクション～コンテンツ制作（文章作成含む）
-                            </li>
-                            <li>
-                              カタログ作成<br />
-                              制作会社選定～基本構想～制作ディレクション～コンテンツ制作（文章作成含む）
-                            </li>
-                            <li>
-                              薬機法チェック<br />
-                              薬機法に関わる商品であったため、薬機法の専門家と連携してチェック
-                            </li>
-                            <li>
-                              リスティング広告（検索広告）<br />
-                              基本戦略策定～代理店選定～代理店へのオリエンテーション～LP制作～リスティング広告ディレクション～代理店の月次レポート読込み～代理店との月次ミーティング・ディレクション
-                            </li>
-                            <li>
-                              PR<br />大手新聞、大手雑誌、有名海外雑誌などに記事掲載
-                            </li>
-                            <li>月次レポート作成・報告</li>
-                            <li>
-                              問合せメールへの営業担当による返信内容の添削
-                            </li>
-                            <p class="txt-annotation">
-                              ※webサイト・カタログのコンテンツ（文章）、営業提案資料、プレスリリースの全てを当社にて制作。
-                            </p>
-                          </ul>
-                        </div>
-                      </dd>
-                    </dl>
-                  </div>
-                </li>
-              </ul>
-            </div>
           </div>
-        </section>
+        </div>
+      </section>
+    </article>
+  </main>
 
-        <section class="flow" id="flow">
-          <hgroup>
-            <h2>サービスの流れ</h2>
-          </hgroup>
-          <div class="flow__wrap">
-            <picture>
-              <source
-                srcset="../public/assets/images/service/img-advisor-flow-sp.png"
-                media="(max-width:768px)"
-              />
-              <img
-                src="../public/assets/images/service/img-advisor-flow.png"
-                alt="サービスの流れ"
-              />
-            </picture>
-            <div class="wrap-txt">
-              <h5 class="wrap-txt-ttl">スポット支援も対応</h5>
-              <p class="wrap-txt-detail">
-                まずはスポット的にコンサルティングを受けてみたい、とりあえず今直面している課題を解決したい、などのスポット対応も可能です。
-              </p>
-            </div>
-          </div>
-        </section>
-      </article>
-    </main>
+  <!-- footer.htmlの読み込み -->
+  {{> footer}}
 
-    <!-- footer.htmlの読み込み -->
-    {{> footer}}
-    <script type="module" src="./js/main.js"></script>
-  </body>
+</body>
+
 </html>

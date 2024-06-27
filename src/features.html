@@ -1,172 +1,141 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initiascale=1.0" />
-    <meta name="robots" content="noindex" />
-    <!-- pageDataのtitle情報を出力 -->
-    <title>{{title}}</title>
-    <link rel="stylesheet" href="scss/styles.scss" />
-  </head>
 
-  <body>
-    <!-- header.htmlの読み込み -->
-    {{> header}}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initiascale=1.0" />
+  <meta name="robots" content="noindex" />
+  <!-- pageDataのtitle情報を出力 -->
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="scss/styles.scss" />
+</head>
 
-    <main class="main">
-      <section class="p-page__head">
-        <hgroup class="p-page__head__inner">
-          <p>TEMPLATE</p>
-          <h1>特徴テンプレート</h1>
-          <span>Template</span>
-        </hgroup>
-      </section>
-      <div class="p-page__head-sub">
-        <picture>
-          <source
-            srcset="../public/assets/images/mv-page-outline-sp.jpg"
-            media="(max-width:768px)"
-          />
-          <img
-            src="../public/assets/images/mv-page-outline-pc.jpg"
-            alt="街の風景"
-          />
-        </picture>
-      </div>
+<body>
+  <!-- header.htmlの読み込み -->
+  {{> header}}
 
-      <article class="page-features-content">
-        <!-- TSMマネジメントの3つの特徴 -->
-        <section>
-          <h3>
-            TSMマネジメントの<br class="forSP" /><strong>3つの特徴</strong>
-          </h3>
-          <div class="features__item features-parts1">
-            <picture>
-              <source
-                srcset="../public/assets/images/img-page-features-01-sp.png"
-                media="(max-width:768px)"
-              />
-              <img
-                src="../public/assets/images/img-page-features-01.png"
-                alt="TSMマネジメントの3つの特徴 pageTitleが入ります"
-              />
-            </picture>
-          </div>
-        </section>
+  <main class="main">
+    <section class="p-page__head">
+      <hgroup class="p-page__head__inner">
+        <p>TEMPLATE</p>
+        <h1>特徴テンプレート</h1>
+        <span>Template</span>
+      </hgroup>
+    </section>
+    <div class="p-page__head-sub">
+      <picture>
+        <source srcset="../public/assets/images/mv-page-outline-sp.jpg" media="(max-width:768px)" />
+        <img src="../public/assets/images/mv-page-outline-pc.jpg" alt="街の風景" />
+      </picture>
+    </div>
 
-        <!-- 上に画像、下にテキスト -->
-        <section>
-          <h2>上に画像、下にテキスト</h2>
-          <div class="features__item features-parts2">
-            <img
-              src="../public/assets/images/img-page-features-03.jpg"
-              alt="h2が入ります"
-            />
-            <div class="wrap-txt">
-              <p>
-                「リソース」とは、いわゆる「人・物・金・情報」です。<br />
-                スタートアップや中小企業はもちろん、大企業であっても、新事業、新ブランド、新商品の立上げ時に、潤沢なリソースを用意できることはまずありません。<br />
-                ※赤字状態でも大きな資本を得てテレビCMを乱打できるような有望ベンチャーなどは別です。<br />
-                新事業なので、まず情報（業界の情報、市場・顧客の情報、競合の情報、業界の常識・しきたり、等々）がありません。不十分な情報の中で戦略を立て、判断し、実行し、学びながら方向転換していきます。<br />
-                広告を打ったり、キャンペーンを実施したりする十分な予算もありません。その中で現実的（実行可能）であり、かつ少ない予算で最大の効果を上げられる打ち手を考え、実施していきます。<br />
-                必要な人材もいません。頭数だけでなく、必要とする能力を十分に持つ人もいません。<br />
-                そして戦う相手は多くの場合、既に業界にいる百戦錬磨の大企業です。<br />
-                異なる業界でゼロイチ（ゼロからの立上げ）を複数回経験するという幸運な機会を得ました。<br />
-                こうした環境下での<strong
-                  >ゼロイチ成功経験は、当社の大きな財産です。</strong
-                >
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <!-- 上にテキスト、下に画像 -->
-        <section>
-          <h2>上にテキスト、下に画像</h2>
-          <div class="features__item features-parts3">
-            <div class="wrap-txt">
-              <p>
-                「リソース」とは、いわゆる「人・物・金・情報」です。<br />
-                スタートアップや中小企業はもちろん、大企業であっても、新事業、新ブランド、新商品の立上げ時に、潤沢なリソースを用意できることはまずありません。<br />
-                ※赤字状態でも大きな資本を得てテレビCMを乱打できるような有望ベンチャーなどは別です。<br />
-                新事業なので、まず情報（業界の情報、市場・顧客の情報、競合の情報、業界の常識・しきたり、等々）がありません。不十分な情報の中で戦略を立て、判断し、実行し、学びながら方向転換していきます。<br />
-                広告を打ったり、キャンペーンを実施したりする十分な予算もありません。その中で現実的（実行可能）であり、かつ少ない予算で最大の効果を上げられる打ち手を考え、実施していきます。<br />
-                必要な人材もいません。頭数だけでなく、必要とする能力を十分に持つ人もいません。<br />
-                そして戦う相手は多くの場合、既に業界にいる百戦錬磨の大企業です。<br />
-                異なる業界でゼロイチ（ゼロからの立上げ）を複数回経験するという幸運な機会を得ました。<br />
-                こうした環境下でのゼロイチ成功経験は、当社の大きな財産です。
-              </p>
-            </div>
-
-            <img
-              src="../public/assets/images/img-page-features-03.jpg"
-              alt="h2が入ります"
-            />
-          </div>
-        </section>
-
-        <!--  全幅の画像コンテンツ -->
-        <article class="full-width">
+    <article class="page-features-content">
+      <!-- TSMマネジメントの3つの特徴 -->
+      <section>
+        <h3>
+          TSMマネジメントの<br class="forSP" /><strong>3つの特徴</strong>
+        </h3>
+        <div class="features__item features-parts1">
           <picture>
-            <source
-              srcset="../public/assets/images/img-page-features-02-sp.jpg"
-              media="(max-width:768px)"
-            />
-            <img
-              src="../public/assets/images/img-page-features-02.jpg"
-              alt="pageTitleが入ります"
-            />
+            <source srcset="../public/assets/images/img-page-features-01-sp.png" media="(max-width:768px)" />
+            <img src="../public/assets/images/img-page-features-01.png" alt="TSMマネジメントの3つの特徴 pageTitleが入ります" />
           </picture>
-        </article>
+        </div>
+      </section>
 
-        <!-- 左にテキスト、右に画像 -->
-        <section>
-          <h2>左にテキスト、右に画像</h2>
-          <div class="features__item features-parts4">
-            <div class="wrap-txt">
-              <p>
-                立上げ時は、リソースが無いだけでなく、組織もルールも仕組みもありません。例えば、どう計画を立て、どう進捗を確認すれば良いのか、なにをKPIとするのか、どのような情報を収集すれば良いのか、それをどう分析すれば良いのか、どういうタイミングでどういう会議を持てば良いのか、誰が何を決めるのか、どの情報を誰にどう共有すれば良いのか。 
-                そもそも頭数がいない中で、誰がどの役割を果たせば良いのか・・・・・<br />
-                一度決めても、すぐに変更が必要になります。<br /><strong>
-                  ということを、ビジネスを推進しながら、走りながら決め、決めながら走り、そして変更していきます。これも、安定した組織・ルール・インフラのある既存事業では得られない貴重な経験であり、当社の財産です。</strong
-                >
-              </p>
-            </div>
+      <!-- 上に画像、下にテキスト -->
+      <section>
+        <h2>上に画像、下にテキスト</h2>
+        <div class="features__item features-parts2">
+          <img src="../public/assets/images/img-page-features-03.jpg" alt="h2が入ります" />
+          <div class="wrap-txt">
+            <p>
+              「リソース」とは、いわゆる「人・物・金・情報」です。<br />
+              スタートアップや中小企業はもちろん、大企業であっても、新事業、新ブランド、新商品の立上げ時に、潤沢なリソースを用意できることはまずありません。<br />
+              ※赤字状態でも大きな資本を得てテレビCMを乱打できるような有望ベンチャーなどは別です。<br />
+              新事業なので、まず情報（業界の情報、市場・顧客の情報、競合の情報、業界の常識・しきたり、等々）がありません。不十分な情報の中で戦略を立て、判断し、実行し、学びながら方向転換していきます。<br />
+              広告を打ったり、キャンペーンを実施したりする十分な予算もありません。その中で現実的（実行可能）であり、かつ少ない予算で最大の効果を上げられる打ち手を考え、実施していきます。<br />
+              必要な人材もいません。頭数だけでなく、必要とする能力を十分に持つ人もいません。<br />
+              そして戦う相手は多くの場合、既に業界にいる百戦錬磨の大企業です。<br />
+              異なる業界でゼロイチ（ゼロからの立上げ）を複数回経験するという幸運な機会を得ました。<br />
+              こうした環境下での<strong>ゼロイチ成功経験は、当社の大きな財産です。</strong>
+            </p>
+          </div>
+        </div>
+      </section>
 
-            <img
-              src="../public/assets/images/img-page-features-04.jpg"
-              alt="h2が入ります"
-            />
+      <!-- 上にテキスト、下に画像 -->
+      <section>
+        <h2>上にテキスト、下に画像</h2>
+        <div class="features__item features-parts3">
+          <div class="wrap-txt">
+            <p>
+              「リソース」とは、いわゆる「人・物・金・情報」です。<br />
+              スタートアップや中小企業はもちろん、大企業であっても、新事業、新ブランド、新商品の立上げ時に、潤沢なリソースを用意できることはまずありません。<br />
+              ※赤字状態でも大きな資本を得てテレビCMを乱打できるような有望ベンチャーなどは別です。<br />
+              新事業なので、まず情報（業界の情報、市場・顧客の情報、競合の情報、業界の常識・しきたり、等々）がありません。不十分な情報の中で戦略を立て、判断し、実行し、学びながら方向転換していきます。<br />
+              広告を打ったり、キャンペーンを実施したりする十分な予算もありません。その中で現実的（実行可能）であり、かつ少ない予算で最大の効果を上げられる打ち手を考え、実施していきます。<br />
+              必要な人材もいません。頭数だけでなく、必要とする能力を十分に持つ人もいません。<br />
+              そして戦う相手は多くの場合、既に業界にいる百戦錬磨の大企業です。<br />
+              異なる業界でゼロイチ（ゼロからの立上げ）を複数回経験するという幸運な機会を得ました。<br />
+              こうした環境下でのゼロイチ成功経験は、当社の大きな財産です。
+            </p>
           </div>
-        </section>
-        <!-- 左に画像、右にテキスト -->
-        <section>
-          <h2>左に画像、右にテキスト</h2>
-          <div class="features__item features-parts5">
-            <img
-              src="../public/assets/images/img-page-features-04.jpg"
-              alt="h2が入ります"
-            />
-            <div class="wrap-txt">
-              <p>
-                「リソース」とは、いわゆる「人・物・金・情報」です。<br />
-                スタートアップや中小企業はもちろん、大企業であっても、新事業、新ブランド、新商品の立上げ時に、潤沢なリソースを用意できることはまずありません。<br />
-                ※赤字状態でも大きな資本を得てテレビCMを乱打できるような有望ベンチャーなどは別です。<br />
-                新事業なので、まず情報（業界の情報、市場・顧客の情報、競合の情報、業界の常識・しきたり、等々）がありません。不十分な情報の中で戦略を立て、判断し、実行し、学びながら方向転換していきます。<br />
-                広告を打ったり、キャンペーンを実施したりする十分な予算もありません。その中で現実的（実行可能）であり、かつ少ない予算で最大の効果を上げられる打ち手を考え、実施していきます。<br />
-                必要な人材もいません。頭数だけでなく、必要とする能力を十分に持つ人もいません。<br />
-                そして戦う相手は多くの場合、既に業界にいる百戦錬磨の大企業です。<br />
-                異なる業界でゼロイチ（ゼロからの立上げ）を複数回経験するという幸運な機会を得ました。<br />
-                こうした環境下でのゼロイチ成功経験は、当社の大きな財産です。
-              </p>
-            </div>
-          </div>
-        </section>
+
+          <img src="../public/assets/images/img-page-features-03.jpg" alt="h2が入ります" />
+        </div>
+      </section>
+
+      <!--  全幅の画像コンテンツ -->
+      <article class="full-width">
+        <picture>
+          <source srcset="../public/assets/images/img-page-features-02-sp.jpg" media="(max-width:768px)" />
+          <img src="../public/assets/images/img-page-features-02.jpg" alt="pageTitleが入ります" />
+        </picture>
       </article>
-    </main>
 
-    <!-- footer.htmlの読み込み -->
-    {{> footer}}
-    <script type="module" src="./js/main.js"></script>
-  </body>
+      <!-- 左にテキスト、右に画像 -->
+      <section>
+        <h2>左にテキスト、右に画像</h2>
+        <div class="features__item features-parts4">
+          <div class="wrap-txt">
+            <p>
+              立上げ時は、リソースが無いだけでなく、組織もルールも仕組みもありません。例えば、どう計画を立て、どう進捗を確認すれば良いのか、なにをKPIとするのか、どのような情報を収集すれば良いのか、それをどう分析すれば良いのか、どういうタイミングでどういう会議を持てば良いのか、誰が何を決めるのか、どの情報を誰にどう共有すれば良いのか。 
+              そもそも頭数がいない中で、誰がどの役割を果たせば良いのか・・・・・<br />
+              一度決めても、すぐに変更が必要になります。<br /><strong>
+                ということを、ビジネスを推進しながら、走りながら決め、決めながら走り、そして変更していきます。これも、安定した組織・ルール・インフラのある既存事業では得られない貴重な経験であり、当社の財産です。</strong>
+            </p>
+          </div>
+
+          <img src="../public/assets/images/img-page-features-04.jpg" alt="h2が入ります" />
+        </div>
+      </section>
+      <!-- 左に画像、右にテキスト -->
+      <section>
+        <h2>左に画像、右にテキスト</h2>
+        <div class="features__item features-parts5">
+          <img src="../public/assets/images/img-page-features-04.jpg" alt="h2が入ります" />
+          <div class="wrap-txt">
+            <p>
+              「リソース」とは、いわゆる「人・物・金・情報」です。<br />
+              スタートアップや中小企業はもちろん、大企業であっても、新事業、新ブランド、新商品の立上げ時に、潤沢なリソースを用意できることはまずありません。<br />
+              ※赤字状態でも大きな資本を得てテレビCMを乱打できるような有望ベンチャーなどは別です。<br />
+              新事業なので、まず情報（業界の情報、市場・顧客の情報、競合の情報、業界の常識・しきたり、等々）がありません。不十分な情報の中で戦略を立て、判断し、実行し、学びながら方向転換していきます。<br />
+              広告を打ったり、キャンペーンを実施したりする十分な予算もありません。その中で現実的（実行可能）であり、かつ少ない予算で最大の効果を上げられる打ち手を考え、実施していきます。<br />
+              必要な人材もいません。頭数だけでなく、必要とする能力を十分に持つ人もいません。<br />
+              そして戦う相手は多くの場合、既に業界にいる百戦錬磨の大企業です。<br />
+              異なる業界でゼロイチ（ゼロからの立上げ）を複数回経験するという幸運な機会を得ました。<br />
+              こうした環境下でのゼロイチ成功経験は、当社の大きな財産です。
+            </p>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <!-- footer.htmlの読み込み -->
+  {{> footer}}
+
+</body>
+
 </html>

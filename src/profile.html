@@ -1,155 +1,143 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initiascale=1.0" />
-    <meta name="robots" content="noindex" />
-    <!-- pageDataのtitle情報を出力 -->
-    <title>{{title}}</title>
-    <link rel="stylesheet" href="scss/styles.scss" />
-  </head>
 
-  <body>
-    <!-- header.htmlの読み込み -->
-    {{> header}}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initiascale=1.0" />
+  <meta name="robots" content="noindex" />
+  <!-- pageDataのtitle情報を出力 -->
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="scss/styles.scss" />
+</head>
 
-    <main class="main">
-      <section class="p-page__head">
-        <hgroup class="p-page__head__inner">
-          <p>PROFILE</p>
-          <h1>代表プロフィール・思い</h1>
-          <span>Profile</span>
-        </hgroup>
-      </section>
+<body>
+  <!-- header.htmlの読み込み -->
+  {{> header}}
 
-      <article class="page-prolile-content">
-        <section class="profile-name" id="name">
-          <h2>代表者紹介</h2>
-          <div class="name__wrap">
+  <main class="main">
+    <section class="p-page__head">
+      <hgroup class="p-page__head__inner">
+        <p>PROFILE</p>
+        <h1>代表プロフィール・思い</h1>
+        <span>Profile</span>
+      </hgroup>
+    </section>
+
+    <article class="page-prolile-content">
+      <section class="profile-name" id="name">
+        <h2>代表者紹介</h2>
+        <div class="name__wrap">
+          <picture>
+            <source srcset="../public/assets/images/img-page-profile-ceo-sp.jpg" media="(max-width:768)" />
+            <img class="name__wrap-img" src="../public/assets/images/img-page-profile-ceo.jpg" alt="代表取締役 CEO 竹上 創" />
+          </picture>
+          <p class="name__wrap-txt"><span>代表取締役 CEO</span>竹上 創</p>
+          <span class="ceo__img-txt">
             <picture>
-              <source
-                srcset="../public/assets/images/img-page-profile-ceo-sp.jpg"
-                media="(max-width:768)"
-              />
-              <img
-                class="name__wrap-img"
-                src="../public/assets/images/img-page-profile-ceo.jpg"
-                alt="代表取締役 CEO 竹上 創"
-              />
+              <source srcset="../public/assets/images/img-text-ceo-takegami-sp.svg" media="(max-width:768px)" />
+              <img src="../public/assets/images/img-text-ceo-takegami.svg" alt="ビルが並ぶ街の風景" />
             </picture>
-            <p class="name__wrap-txt"><span>代表取締役 CEO</span>竹上 創</p>
-            <span class="ceo__img-txt">
-              <picture>
-                <source
-                  srcset="../public/assets/images/img-text-ceo-takegami-sp.svg"
-                  media="(max-width:768px)"
-                />
-                <img
-                  src="../public/assets/images/img-text-ceo-takegami.svg"
-                  alt="ビルが並ぶ街の風景"
-                /> </picture
-            ></span>
-          </div>
-        </section>
-        <section class="profile-ceo" id="profile">
-          <h2>代表プロフィール</h2>
-          <div class="ceo__wrap">
-            <ul class="ceo__wrap__list summary">
-              <h3>サマリー</h3>
-              <li>
-                複数の企業で、経営戦略、事業戦略、経営企画、商品企画、マーケティングを担当。
-              </li>
-              <li>
-                多様な業種でマーケティングを中心に成果を上げる
-                <ul>
-                  <li class="txt-indent">
-                    パソコン周辺機器、AV機器、日系カジュアルウェア、スポーツウェア、外資系カジュアルウェア、寝具。
-                  </li>
-                </ul>
-              </li>
-              <li>
-                多様な部門を実経験
-                <ul>
-                  <li class="txt-indent">
-                    メーカーの上流から下流（研究～開発～製造（工場）～営業）。システム開発（情報処理技術者第一種）、マーケティング、EC（ネット通販）、カタログ通販、需要予測・在庫管理、経営企画（経営企画部門立上げ経験あり）、IPO準備担当、小売り部門（自社店舗網）。
-                  </li>
-                </ul>
-              </li>
-              <li>
-                真夏のゴルフ場で、半袖ポロシャツの下に長袖インナーを着用するというスタイルを提唱し、普及に成功
-              </li>
-            </ul>
-            <ul class="ceo__wrap__list history">
-              <h3>略歴</h3>
-              <li>2023年　株式会社リスキル　社外取締役（現職）</li>
-              <li>
-                2020年　株式会社TSMマネジメント設立　代表取締役 CEO（現職）
-              </li>
-              <li>
-                2014年　株式会社エアウィーヴ　執行役員（経営企画、マーケティング、商品企画、ECなど）
-              </li>
-              <li>
-                2012年　エディー・バウアー・ジャパン　マーケティング本部長
-              </li>
-              <li>
-                2006年　株式会社ドーム　アンダーアーマー部部長、マーケティング部部長
-              </li>
-              <li>
-                2001年　株式会社ユニクロ　ダイレクト事業部　マーケティングマネージャ
-              </li>
-              <li>1993年　シカゴ大学経営大学院卒業（MBA）</li>
-              <li>
-                1984年　オリンパス　システムエンジニア、マーケティング、事業開発など
-              </li>
-            </ul>
-            <ul class="ceo__wrap__list license">
-              <h3>資格・学歴他</h3>
-              <li>シカゴ大学経営学修士（MBA）</li>
-              <li>ロンドン・スクール・オブ・エコノミクス（LSE）</li>
-              <li>早稲田大学法学部</li>
-              <li>中小企業診断士</li>
-              <li>
-                株式会社日本能率協会マネジメントセンター
-                パートナー・コンサルタント
-              </li>
-              <li>中小企業基盤整備機構　中小企業アドバイザー</li>
-              <li>
-                東京都中小企業振興公社　飲食事業者向け経営基盤強化支援事業　専門家
-              </li>
-              <li>東京信用保証協会　専門家派遣　専門家</li>
-              <li>情報処理技術者第一種</li>
-              <li>睡眠健康指導士</li>
-              <li>TOEIC 980点</li>
-              <li>ファイナンシャルプランナー</li>
-              <li>バトンズ認定M&Aアドバイザー</li>
-            </ul>
-          </div>
-        </section>
-        <section class="profile-thought" id="thought">
-          <h2>思い</h2>
-          <div class="thought__wrap">
-            <p>
-              企業内のマーケターとして、様々な事業の立上げ、ブランドの立上げ、新商品の立上げに関わってきました。<br />
-              成功も失敗も、たくさん経験しました。<br /><br />
-              ふと、仕事から離れて世の中を見た時に、良い商品/サービスなのに売れないものが沢山あると感じました。<br />
-              せっかく良い商品/サービスを開発したのに、売れない、知られていない。<br /><br />
-              もったいない。<br />
-              それは開発した企業だけでなく、世の中にとってももったいないことです。<br /><br />
-              良い商品/サービスを世に広めることで、開発した企業が報われるようにしたい。<br />
-              良い商品/サービスを世に広めることで、世の人々に、より豊かな価値を提供したい。<br /><br />
-              そんな思いで、会社を立ち上げました。<br />
-              自身の経験も踏まえて、企業のため、世の中のために、良い商品/サービスを、全身全霊で広めます。
-            </p>
-            <a href="" class="c-btn c-btn__secondary"
-              >当社の考える<br />マーケティングとは</a
-            >
-          </div>
-        </section>
-      </article>
-    </main>
+          </span>
+        </div>
+      </section>
+      <section class="profile-ceo" id="profile">
+        <h2>代表プロフィール</h2>
+        <div class="ceo__wrap">
+          <ul class="ceo__wrap__list summary">
+            <h3>サマリー</h3>
+            <li>
+              複数の企業で、経営戦略、事業戦略、経営企画、商品企画、マーケティングを担当。
+            </li>
+            <li>
+              多様な業種でマーケティングを中心に成果を上げる
+              <ul>
+                <li class="txt-indent">
+                  パソコン周辺機器、AV機器、日系カジュアルウェア、スポーツウェア、外資系カジュアルウェア、寝具。
+                </li>
+              </ul>
+            </li>
+            <li>
+              多様な部門を実経験
+              <ul>
+                <li class="txt-indent">
+                  メーカーの上流から下流（研究～開発～製造（工場）～営業）。システム開発（情報処理技術者第一種）、マーケティング、EC（ネット通販）、カタログ通販、需要予測・在庫管理、経営企画（経営企画部門立上げ経験あり）、IPO準備担当、小売り部門（自社店舗網）。
+                </li>
+              </ul>
+            </li>
+            <li>
+              真夏のゴルフ場で、半袖ポロシャツの下に長袖インナーを着用するというスタイルを提唱し、普及に成功
+            </li>
+          </ul>
+          <ul class="ceo__wrap__list history">
+            <h3>略歴</h3>
+            <li>2023年　株式会社リスキル　社外取締役（現職）</li>
+            <li>
+              2020年　株式会社TSMマネジメント設立　代表取締役 CEO（現職）
+            </li>
+            <li>
+              2014年　株式会社エアウィーヴ　執行役員（経営企画、マーケティング、商品企画、ECなど）
+            </li>
+            <li>
+              2012年　エディー・バウアー・ジャパン　マーケティング本部長
+            </li>
+            <li>
+              2006年　株式会社ドーム　アンダーアーマー部部長、マーケティング部部長
+            </li>
+            <li>
+              2001年　株式会社ユニクロ　ダイレクト事業部　マーケティングマネージャ
+            </li>
+            <li>1993年　シカゴ大学経営大学院卒業（MBA）</li>
+            <li>
+              1984年　オリンパス　システムエンジニア、マーケティング、事業開発など
+            </li>
+          </ul>
+          <ul class="ceo__wrap__list license">
+            <h3>資格・学歴他</h3>
+            <li>シカゴ大学経営学修士（MBA）</li>
+            <li>ロンドン・スクール・オブ・エコノミクス（LSE）</li>
+            <li>早稲田大学法学部</li>
+            <li>中小企業診断士</li>
+            <li>
+              株式会社日本能率協会マネジメントセンター
+              パートナー・コンサルタント
+            </li>
+            <li>中小企業基盤整備機構　中小企業アドバイザー</li>
+            <li>
+              東京都中小企業振興公社　飲食事業者向け経営基盤強化支援事業　専門家
+            </li>
+            <li>東京信用保証協会　専門家派遣　専門家</li>
+            <li>情報処理技術者第一種</li>
+            <li>睡眠健康指導士</li>
+            <li>TOEIC 980点</li>
+            <li>ファイナンシャルプランナー</li>
+            <li>バトンズ認定M&Aアドバイザー</li>
+          </ul>
+        </div>
+      </section>
+      <section class="profile-thought" id="thought">
+        <h2>思い</h2>
+        <div class="thought__wrap">
+          <p>
+            企業内のマーケターとして、様々な事業の立上げ、ブランドの立上げ、新商品の立上げに関わってきました。<br />
+            成功も失敗も、たくさん経験しました。<br /><br />
+            ふと、仕事から離れて世の中を見た時に、良い商品/サービスなのに売れないものが沢山あると感じました。<br />
+            せっかく良い商品/サービスを開発したのに、売れない、知られていない。<br /><br />
+            もったいない。<br />
+            それは開発した企業だけでなく、世の中にとってももったいないことです。<br /><br />
+            良い商品/サービスを世に広めることで、開発した企業が報われるようにしたい。<br />
+            良い商品/サービスを世に広めることで、世の人々に、より豊かな価値を提供したい。<br /><br />
+            そんな思いで、会社を立ち上げました。<br />
+            自身の経験も踏まえて、企業のため、世の中のために、良い商品/サービスを、全身全霊で広めます。
+          </p>
+          <a href="" class="c-btn c-btn__secondary">当社の考える<br />マーケティングとは</a>
+        </div>
+      </section>
+    </article>
+  </main>
 
-    <!-- footer.htmlの読み込み -->
-    {{> footer}}
-    <script type="module" src="./js/main.js"></script>
-  </body>
+  <!-- footer.htmlの読み込み -->
+  {{> footer}}
+
+</body>
+
 </html>

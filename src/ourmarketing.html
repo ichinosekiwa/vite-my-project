@@ -1,207 +1,161 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initiascale=1.0" />
-    <meta name="robots" content="noindex" />
-    <!-- pageDataのtitle情報を出力 -->
-    <title>{{title}}</title>
-    <link rel="stylesheet" href="scss/styles.scss" />
-  </head>
 
-  <body>
-    <!-- header.htmlの読み込み -->
-    {{> header}}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initiascale=1.0" />
+  <meta name="robots" content="noindex" />
+  <!-- pageDataのtitle情報を出力 -->
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="scss/styles.scss" />
+</head>
 
-    <main class="main contact">
-      <section class="p-page__head">
-        <hgroup class="p-page__head__inner">
-          <p>OUR MARKETING</p>
-          <h1>当社の考える「マーケティング」とは</h1>
-          <span>Our marketing</span>
-        </hgroup>
-      </section>
-      <div class="p-page__head-sub">
-        <picture>
-          <source
-            srcset="../public/assets/images/marketing/mv-page-marketing-sp.jpg"
-            media="(max-width:768px)"
-          />
-          <img
-            src="../public/assets/images/marketing/mv-page-marketing-pc.jpg"
-            alt=""
-          />
-        </picture>
-      </div>
-      <article class="page-marketing">
-        <section class="aboutMarketing" id="aboutMarketing">
-          <h2>
-            マーケティングとは「企業全体として売れる仕組み・仕掛けを作ること」
-          </h2>
-          <div class="aboutMarketing__wrap">
-            <p class="wrap-text">
-              「マーケティング」という言葉は、企業や人によって定義・役割が異なります。<br />
-              ある企業の「マーケティング部」は、「広告やカタログを作る部署」であり、ある企業では「コミュニケーション（広告など）戦略を立案する部署」であり、ある企業では「商品企画からコミュニケーションまでを統括する部署」です。<br /><br />
-              当社ではマーケティングを<strong>「企業全体として売れる仕組み・仕掛けを作ること」</strong>と定義しています。<br /><br />
-              <strong
-                >商品の企画や広告に限らず、営業活動やwebサイト、PR（広報）、店舗、接客、など、「売る」ことに関わる全ての機能を連動させることが重要だと考えています。</strong
-              ><br /><br />
-              多くの企業ではこれが出来ていません。<br /><br />
-              大企業はもとより、社内の意思疎通が容易なはずの小規模な企業ですら、出来ていないのです。
-            </p>
-            <picture>
-              <source
-                srcset="
+<body>
+  <!-- header.htmlの読み込み -->
+  {{> header}}
+
+  <main class="main contact">
+    <section class="p-page__head">
+      <hgroup class="p-page__head__inner">
+        <p>OUR MARKETING</p>
+        <h1>当社の考える「マーケティング」とは</h1>
+        <span>Our marketing</span>
+      </hgroup>
+    </section>
+    <div class="p-page__head-sub">
+      <picture>
+        <source srcset="../public/assets/images/marketing/mv-page-marketing-sp.jpg" media="(max-width:768px)" />
+        <img src="../public/assets/images/marketing/mv-page-marketing-pc.jpg" alt="" />
+      </picture>
+    </div>
+    <article class="page-marketing">
+      <section class="aboutMarketing" id="aboutMarketing">
+        <h2>
+          マーケティングとは「企業全体として売れる仕組み・仕掛けを作ること」
+        </h2>
+        <div class="aboutMarketing__wrap">
+          <p class="wrap-text">
+            「マーケティング」という言葉は、企業や人によって定義・役割が異なります。<br />
+            ある企業の「マーケティング部」は、「広告やカタログを作る部署」であり、ある企業では「コミュニケーション（広告など）戦略を立案する部署」であり、ある企業では「商品企画からコミュニケーションまでを統括する部署」です。<br /><br />
+            当社ではマーケティングを<strong>「企業全体として売れる仕組み・仕掛けを作ること」</strong>と定義しています。<br /><br />
+            <strong>商品の企画や広告に限らず、営業活動やwebサイト、PR（広報）、店舗、接客、など、「売る」ことに関わる全ての機能を連動させることが重要だと考えています。</strong><br /><br />
+            多くの企業ではこれが出来ていません。<br /><br />
+            大企業はもとより、社内の意思疎通が容易なはずの小規模な企業ですら、出来ていないのです。
+          </p>
+          <picture>
+            <source srcset="
                   ../public/assets/images/marketing/img-page-marketing-01-sp.png
-                "
-                media="(max-width:768px)"
-              />
-              <img
-                src="../public/assets/images/marketing/img-page-marketing-01-pc.png"
-                alt="「売る」ことに関わる全ての機能"
-              />
-            </picture>
-          </div>
-        </section>
+                " media="(max-width:768px)" />
+            <img src="../public/assets/images/marketing/img-page-marketing-01-pc.png" alt="「売る」ことに関わる全ての機能" />
+          </picture>
+        </div>
+      </section>
 
-        <section class="structure" id="structure">
-          <h2>チームが効果的に連携する、組織としての仕組みが重要</h2>
-          <div class="structure__wrap">
-            <picture>
-              <source
-                srcset="
+      <section class="structure" id="structure">
+        <h2>チームが効果的に連携する、組織としての仕組みが重要</h2>
+        <div class="structure__wrap">
+          <picture>
+            <source srcset="
                   ../public/assets/images/marketing/img-page-marketing-02-sp.png
-                "
-                media="(max-width:768px)"
-              />
-              <img
-                src="../public/assets/images/marketing/img-page-marketing-02-pc.png"
-                alt="チームが効果的に連携する、組織としての仕組みが重要"
-              />
-            </picture>
-            <p class="wrap-text">
-              世の中には、マーケティングで有名な企業があります。<br /><br />
-              これらの企業の成功事例を参考にされている方も多いと思います。<br /><br />
-              しかしマーケティングに長けた企業は、優秀なマーケターの他に、優秀な市場調査チームや優秀な商品開発チーム、優秀な広告制作チーム、優秀な営業チームがあり、社内に多くのノウハウがあり、そして多額のマーケティング予算を持っています。<br /><br />
-              そして<strong
-                >なによりも重要なのは、これらの優秀なチームが効果的に連携する組織としての仕組みがあります。</strong
-              ><br /><br />
-              一方で多くの企業（大企業も含む）には、このような優秀なチームはありません。<br />
-              チームはあっても、連携する仕組みがありません。<br /><br />
-              そうした中で、新たな事業、新たなブランド、新たな商品/サービスをどう立ち上げていくか。<br />
-              当社代表は、常にこうした環境で悪戦苦闘してきました。<br /><br />
-              そもそも「マーケティング機能」が無い会社、マーケティングに対する理解の無い会社、マーケティング部はあっても商品企画部門や営業部門との連携が無い会社（←世の中にはこのパターンがとても多いのです）の中で、「本来のマーケティング」を実施できる体制作りから始めました。<br /><br />
-              苦労してマーケティング機能を立ち上げても、次の壁は、乏しい人員や予算で効果を上げることでした。
-            </p>
-          </div>
-        </section>
+                " media="(max-width:768px)" />
+            <img src="../public/assets/images/marketing/img-page-marketing-02-pc.png" alt="チームが効果的に連携する、組織としての仕組みが重要" />
+          </picture>
+          <p class="wrap-text">
+            世の中には、マーケティングで有名な企業があります。<br /><br />
+            これらの企業の成功事例を参考にされている方も多いと思います。<br /><br />
+            しかしマーケティングに長けた企業は、優秀なマーケターの他に、優秀な市場調査チームや優秀な商品開発チーム、優秀な広告制作チーム、優秀な営業チームがあり、社内に多くのノウハウがあり、そして多額のマーケティング予算を持っています。<br /><br />
+            そして<strong>なによりも重要なのは、これらの優秀なチームが効果的に連携する組織としての仕組みがあります。</strong><br /><br />
+            一方で多くの企業（大企業も含む）には、このような優秀なチームはありません。<br />
+            チームはあっても、連携する仕組みがありません。<br /><br />
+            そうした中で、新たな事業、新たなブランド、新たな商品/サービスをどう立ち上げていくか。<br />
+            当社代表は、常にこうした環境で悪戦苦闘してきました。<br /><br />
+            そもそも「マーケティング機能」が無い会社、マーケティングに対する理解の無い会社、マーケティング部はあっても商品企画部門や営業部門との連携が無い会社（←世の中にはこのパターンがとても多いのです）の中で、「本来のマーケティング」を実施できる体制作りから始めました。<br /><br />
+            苦労してマーケティング機能を立ち上げても、次の壁は、乏しい人員や予算で効果を上げることでした。
+          </p>
+        </div>
+      </section>
 
-        <article class="full-width">
-          <picture>
-            <source
-              srcset="
+      <article class="full-width">
+        <picture>
+          <source srcset="
                 ../public/assets/images/marketing/img-page-marketing-03-sp.png
-              "
-              media="(max-width:768px)"
-            />
-            <img
-              src="../public/assets/images/marketing/img-page-marketing-03-pc.png"
-              alt="談笑する２人のサラリーマン"
-            />
-          </picture>
-        </article>
-
-        <section class="achieve" id="achieve">
-          <h2>組織全体としてのマーケティングで成果を上げる</h2>
-          <div class="achieve__wrap">
-            <p class="wrap-text">
-              「とても良い商品/サービスなのに売れない」「そもそも知られてもいない」のは、マーケティング（売れる仕組み・仕掛けを作ること）が正しく機能していないからです。<br /><br />
-              先に述べた当社のマーケティングの定義によれば、例えば「SNSを活用する」「PRをする」「広告を出す」「展示会に出す」などは、マーケティング活動の中のごく一部です。<br />
-              <strong
-                >SNS、PR、webマーケティング、展示会など、「個々の方法論」だけでは、しっかりとしたマーケティングは出来ません</strong
-              >（もちろん個々の方法論自体は重要です）。<br /><br />
-              軍隊で言うと、これらの方法論は、戦略に応じて投入される個々の部隊、例えば爆撃機隊、戦車隊、狙撃隊、にあたります。つまり大元の「戦略」があり、その戦略を遂行するために適切な部隊を選び、各部隊が連携し合うことによって戦略目標（例：ノルマンディーから上陸してパリを解放する）を達成させることが必要です。<br />
-              元々の戦略が適切でなかったり、選択された部隊が戦略と合致していなかったり、あるいはそもそも戦略が明確でなければ、いくら個々の方法論（SNS、PRなど）が完璧に遂行されても効果を出すことはできません。<br /><br />
-              様々な方法論の前にしっかりとした「戦略」を作り、戦略をベースに様々な手段（webマーケティング、PR、展示会、ダイレクトメール、営業活動など）を効果的に組み合わせ、<strong>「売る」ことに関わる全ての部門（マーケティング部、商品企画部、営業部など）を連動させていく</strong>必要があります。<br /><br />
-              これらの方法論は、複数の部門がかかわります。<br />
-              戦略を立てた後は、これらの部門間の壁を超え、壁を破り、全体を連動・連携させることが更に重要となります。
-            </p>
-            <picture>
-              <source
-                srcset="
-                  ../public/assets/images/marketing/img-page-marketing-04-sp.jpg
-                "
-                media="(max-width:768px)"
-              />
-              <img
-                src="../public/assets/images/marketing/img-page-marketing-04-pc.jpg"
-                alt="組織全体としてのマーケティングで成果を上げる"
-              />
-            </picture>
-          </div>
-        </section>
-
-        <section class="essential" id="essential">
-          <h2>本質的な問題はなにか。本質的な解決策はなにか。</h2>
-          <div class="essential__wrap">
-            <p class="wrap-text">
-              「SNSを上手く使えないか」「インフルエンサーで盛り上げたい」「webサイトを立ち上げたい」など、個別の相談を受けることがありますが、そもそもとして、「何のために」それを実施するのか、その目的のために、その施策で本当に正しいのか、その施策だけで十分なのか、そこを掘り下げて考えるところから当社は始めます。<br /><br />
-              クライアントにとって本質的な問題はなにか。<br />
-              そのための本質的な解決策はなにか。<br /><br />
-              結果として、当初の依頼と全く異なるアクションに至ることもあります。<br /><br />
-              ■骨太の戦略を立てる<br />
-              ↓<br />
-              ■戦略に沿って、関係するすべての機能を連携させる<br />
-              ↓<br />
-              ■戦略に沿って、必要な方法論（※）を実施する<br /><br />
-              ※商品企画、webマーケティング、リアルマーケティング、展示会、ダイレクトメール、営業提案資料、営業活動、店舗デザイン、接客、顧客対応、問合せ対応、等々。
-            </p>
-          </div>
-        </section>
-
-        <article class="full-width">
-          <picture>
-            <source
-              srcset="
-                ../public/assets/images/marketing/img-page-marketing-05-sp.jpg
-              "
-              media="(max-width:768px)"
-            />
-            <img
-              src="../public/assets/images/marketing/img-page-marketing-05-pc.jpg"
-              alt="握手を交わすサラリーマン"
-            />
-          </picture>
-        </article>
-
-        <section class="depth" id="depth">
-          <div class="depth__wrap">
-            <picture>
-              <source
-                srcset="
-                  ../public/assets/images/marketing/img-page-marketing-06-sp.jpg
-                "
-                media="(max-width:768px)"
-              />
-              <img
-                src="../public/assets/images/marketing/img-page-marketing-06-pc.jpg"
-                alt="オフィス街の風景"
-              />
-            </picture>
-            <p class="wrap-text">
-              当社代表の経歴を見て、「大企業だから成功したのであろう」「知名度のある企業だから成功したのだろう」と思われるかもしれません。<br /><br />
-              今は知名度が高かったり大きくなったりしていますが、当時はまったく無名の会社でした。<br />
-              大企業であっても全くの新規事業で、業界内では知名度ゼロでした。<br />
-              あるいは大企業であっても、世界初の商品で、世に全く知られていない状態でした。<br /><br />
-              更に、無名の企業の場合はもとより、大企業であっても新規事業は、リソース（ヒト・モノ・金・情報）は極めて乏しいものです。<br /><br />
-              こうした環境下で、顧客にとって本当に良い商品/サービスを認知していただき、広めていくのが、正にマーケティング（売れるための仕組み・仕掛け作り）の醍醐味と言えます。
-            </p>
-          </div>
-        </section>
+              " media="(max-width:768px)" />
+          <img src="../public/assets/images/marketing/img-page-marketing-03-pc.png" alt="談笑する２人のサラリーマン" />
+        </picture>
       </article>
-    </main>
-    <!-- footer.htmlの読み込み -->
-    {{> footer}}
-    <script type="module" src="./js/main.js"></script>
-  </body>
+
+      <section class="achieve" id="achieve">
+        <h2>組織全体としてのマーケティングで成果を上げる</h2>
+        <div class="achieve__wrap">
+          <p class="wrap-text">
+            「とても良い商品/サービスなのに売れない」「そもそも知られてもいない」のは、マーケティング（売れる仕組み・仕掛けを作ること）が正しく機能していないからです。<br /><br />
+            先に述べた当社のマーケティングの定義によれば、例えば「SNSを活用する」「PRをする」「広告を出す」「展示会に出す」などは、マーケティング活動の中のごく一部です。<br />
+            <strong>SNS、PR、webマーケティング、展示会など、「個々の方法論」だけでは、しっかりとしたマーケティングは出来ません</strong>（もちろん個々の方法論自体は重要です）。<br /><br />
+            軍隊で言うと、これらの方法論は、戦略に応じて投入される個々の部隊、例えば爆撃機隊、戦車隊、狙撃隊、にあたります。つまり大元の「戦略」があり、その戦略を遂行するために適切な部隊を選び、各部隊が連携し合うことによって戦略目標（例：ノルマンディーから上陸してパリを解放する）を達成させることが必要です。<br />
+            元々の戦略が適切でなかったり、選択された部隊が戦略と合致していなかったり、あるいはそもそも戦略が明確でなければ、いくら個々の方法論（SNS、PRなど）が完璧に遂行されても効果を出すことはできません。<br /><br />
+            様々な方法論の前にしっかりとした「戦略」を作り、戦略をベースに様々な手段（webマーケティング、PR、展示会、ダイレクトメール、営業活動など）を効果的に組み合わせ、<strong>「売る」ことに関わる全ての部門（マーケティング部、商品企画部、営業部など）を連動させていく</strong>必要があります。<br /><br />
+            これらの方法論は、複数の部門がかかわります。<br />
+            戦略を立てた後は、これらの部門間の壁を超え、壁を破り、全体を連動・連携させることが更に重要となります。
+          </p>
+          <picture>
+            <source srcset="
+                  ../public/assets/images/marketing/img-page-marketing-04-sp.jpg
+                " media="(max-width:768px)" />
+            <img src="../public/assets/images/marketing/img-page-marketing-04-pc.jpg" alt="組織全体としてのマーケティングで成果を上げる" />
+          </picture>
+        </div>
+      </section>
+
+      <section class="essential" id="essential">
+        <h2>本質的な問題はなにか。本質的な解決策はなにか。</h2>
+        <div class="essential__wrap">
+          <p class="wrap-text">
+            「SNSを上手く使えないか」「インフルエンサーで盛り上げたい」「webサイトを立ち上げたい」など、個別の相談を受けることがありますが、そもそもとして、「何のために」それを実施するのか、その目的のために、その施策で本当に正しいのか、その施策だけで十分なのか、そこを掘り下げて考えるところから当社は始めます。<br /><br />
+            クライアントにとって本質的な問題はなにか。<br />
+            そのための本質的な解決策はなにか。<br /><br />
+            結果として、当初の依頼と全く異なるアクションに至ることもあります。<br /><br />
+            ■骨太の戦略を立てる<br />
+            ↓<br />
+            ■戦略に沿って、関係するすべての機能を連携させる<br />
+            ↓<br />
+            ■戦略に沿って、必要な方法論（※）を実施する<br /><br />
+            ※商品企画、webマーケティング、リアルマーケティング、展示会、ダイレクトメール、営業提案資料、営業活動、店舗デザイン、接客、顧客対応、問合せ対応、等々。
+          </p>
+        </div>
+      </section>
+
+      <article class="full-width">
+        <picture>
+          <source srcset="
+                ../public/assets/images/marketing/img-page-marketing-05-sp.jpg
+              " media="(max-width:768px)" />
+          <img src="../public/assets/images/marketing/img-page-marketing-05-pc.jpg" alt="握手を交わすサラリーマン" />
+        </picture>
+      </article>
+
+      <section class="depth" id="depth">
+        <div class="depth__wrap">
+          <picture>
+            <source srcset="
+                  ../public/assets/images/marketing/img-page-marketing-06-sp.jpg
+                " media="(max-width:768px)" />
+            <img src="../public/assets/images/marketing/img-page-marketing-06-pc.jpg" alt="オフィス街の風景" />
+          </picture>
+          <p class="wrap-text">
+            当社代表の経歴を見て、「大企業だから成功したのであろう」「知名度のある企業だから成功したのだろう」と思われるかもしれません。<br /><br />
+            今は知名度が高かったり大きくなったりしていますが、当時はまったく無名の会社でした。<br />
+            大企業であっても全くの新規事業で、業界内では知名度ゼロでした。<br />
+            あるいは大企業であっても、世界初の商品で、世に全く知られていない状態でした。<br /><br />
+            更に、無名の企業の場合はもとより、大企業であっても新規事業は、リソース（ヒト・モノ・金・情報）は極めて乏しいものです。<br /><br />
+            こうした環境下で、顧客にとって本当に良い商品/サービスを認知していただき、広めていくのが、正にマーケティング（売れるための仕組み・仕掛け作り）の醍醐味と言えます。
+          </p>
+        </div>
+      </section>
+    </article>
+  </main>
+  <!-- footer.htmlの読み込み -->
+  {{> footer}}
+
+</body>
+
 </html>
