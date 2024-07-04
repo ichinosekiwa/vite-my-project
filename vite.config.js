@@ -4,6 +4,7 @@ import handlebars from 'vite-plugin-handlebars';
 import viteImagemin from 'vite-plugin-imagemin';
 import fs from 'fs';
 import path from 'path';
+import imagemin from 'imagemin';
 import imageminWebp from 'imagemin-webp'; // WebP変換用のプラグインをインポート
 
 const files = [];
@@ -165,11 +166,16 @@ export default defineConfig({
       webp: {
         quality: 75,
       },
-      plugins: [
-        imageminWebp({
-          quality: 75,
-        }),
-      ],
     }),
+    {
+      name: 'imagemin-webp',
+      apply: 'build',
+      async closeBundle() {
+        await imagemin(['src/images/*.{jpg,png}'], {
+          destination: 'dist/images',
+          plugins: [imageminWebp({ quality: 50 })],
+        });
+      },
+    },
   ],
 });

@@ -1,274 +1,260 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <!-- header.htmlの読み込み -->
-  {{> header}}
+<!-- header.htmlの読み込み -->
+{{> header}}
 
-  <main class="main">
-    <section class="p-page__head">
-      <hgroup class="p-page__head__inner">
-        <p>WORKS</p>
-        <h1>実績</h1>
-        <span>Works</span>
-      </hgroup>
+<main class="main">
+  <section class="p-page__head">
+    <hgroup class="p-page__head__inner">
+      <p>WORKS</p>
+      <h1>実績</h1>
+      <span>Works</span>
+    </hgroup>
+  </section>
+  <div class="p-page__head-sub">
+    <picture>
+      <source srcset="public/assets/images/mv-page-works-sp.jpg" media="(max-width:768px)" />
+      <img src="public/assets/images/mv-page-works.jpg" alt="実績" />
+    </picture>
+  </div>
+  <article class="page-works">
+    <section class="consultant" id="consultant">
+      <h2>コンサルティング・顧問例</h2>
+      <div class="consulting__wrap">
+        <dl>
+          <dt>サービス業</dt>
+          <dd>顧問：経営戦略、事業開発、マーケティング戦略</dd>
+        </dl>
+        <dl>
+          <dt>製造業</dt>
+          <dd>
+            顧問：新事業立上げ、マーケティング戦略、デジタルマーケティング
+          </dd>
+        </dl>
+        <dl>
+          <dt>製造業</dt>
+          <dd>顧問：EC、デジタルマーケティング</dd>
+        </dl>
+        <dl>
+          <dt>コンサルティング業</dt>
+          <dd>コンサルタント：新サービス展開、デジタルマーケティング</dd>
+        </dl>
+        <dl>
+          <dt>宗教法人</dt>
+          <dd>顧問：マーケティング戦略、ブランディング</dd>
+        </dl>
+        <dl>
+          <dt>飲食業</dt>
+          <dd>コンサルタント：ブランディング、集客</dd>
+        </dl>
+        <dl>
+          <dt>飲食業</dt>
+          <dd>コンサルタント：マーケティング、集客</dd>
+        </dl>
+        <dl>
+          <dt>製造業</dt>
+          <dd>コンサルタント：経営分析、資金繰り</dd>
+        </dl>
+        <dl>
+          <dt>廃棄物処理業</dt>
+          <dd>コンサルタント：SDGs経営支援</dd>
+        </dl>
+        <dl>
+          <dt>小売業</dt>
+          <dd>コンサルタント：SNS活用によるブランディング、集客</dd>
+        </dl>
+        <dl>
+          <dt>飲食チェーン</dt>
+          <dd>コンサルタント：ブランディング</dd>
+        </dl>
+        <dl>
+          <dt>販売業</dt>
+          <dd>コンサルタント：事業計画策定、KPI設定、KPI管理の仕組み構築</dd>
+        </dl>
+        <dl>
+          <dt>製造業</dt>
+          <dd>コンサルタント：SDGs経営支援</dd>
+        </dl>
+      </div>
     </section>
-    <div class="p-page__head-sub">
-      <picture>
-        <source
-          srcset="../public/assets/images/mv-page-works-sp.jpg"
-          media="(max-width:768px)"
-        />
-        <img src="../public/assets/images/mv-page-works.jpg" alt="実績" />
-      </picture>
-    </div>
-    <article class="page-works">
-      <section class="consultant" id="consultant">
-        <h2>コンサルティング・顧問例</h2>
-        <div class="consulting__wrap">
-          <dl>
-            <dt>サービス業</dt>
-            <dd>顧問：経営戦略、事業開発、マーケティング戦略</dd>
-          </dl>
-          <dl>
-            <dt>製造業</dt>
-            <dd>
-              顧問：新事業立上げ、マーケティング戦略、デジタルマーケティング
-            </dd>
-          </dl>
-          <dl>
-            <dt>製造業</dt>
-            <dd>顧問：EC、デジタルマーケティング</dd>
-          </dl>
-          <dl>
-            <dt>コンサルティング業</dt>
-            <dd>コンサルタント：新サービス展開、デジタルマーケティング</dd>
-          </dl>
-          <dl>
-            <dt>宗教法人</dt>
-            <dd>顧問：マーケティング戦略、ブランディング</dd>
-          </dl>
-          <dl>
-            <dt>飲食業</dt>
-            <dd>コンサルタント：ブランディング、集客</dd>
-          </dl>
-          <dl>
-            <dt>飲食業</dt>
-            <dd>コンサルタント：マーケティング、集客</dd>
-          </dl>
-          <dl>
-            <dt>製造業</dt>
-            <dd>コンサルタント：経営分析、資金繰り</dd>
-          </dl>
-          <dl>
-            <dt>廃棄物処理業</dt>
-            <dd>コンサルタント：SDGs経営支援</dd>
-          </dl>
-          <dl>
-            <dt>小売業</dt>
-            <dd>コンサルタント：SNS活用によるブランディング、集客</dd>
-          </dl>
-          <dl>
-            <dt>飲食チェーン</dt>
-            <dd>コンサルタント：ブランディング</dd>
-          </dl>
-          <dl>
-            <dt>販売業</dt>
-            <dd>コンサルタント：事業計画策定、KPI設定、KPI管理の仕組み構築</dd>
-          </dl>
-          <dl>
-            <dt>製造業</dt>
-            <dd>コンサルタント：SDGs経営支援</dd>
-          </dl>
-        </div>
-      </section>
-      <section class="seminar" id="seminar">
-        <h2>研修・セミナー・講義</h2>
-        <div class="seminar__wrap">
-          <h4>
-            東京理科大学、港区、台東区、独立行政法人、一般企業（一部上場企業、中小企業、スタートアップ）など
-          </h4>
-          <ul class="seminar__wrap-items">
-            <li>
-              <h5>2024年</h5>
-              <dl class="year-2024">
-                <dt>マーケティング、ブランディング、ビジネスプラン構築</dt>
-                <dd>一部上場企業　中堅社員</dd>
-                <dt>マーケティング基礎</dt>
-                <dd>一部上場企業　中堅社員</dd>
-              </dl>
-            </li>
-            <li>
-              <h5>2023年</h5>
-              <dl class="year-2023">
-                <dt>課題解決研修</dt>
-                <dd>一部上場企業 中堅社員</dd>
-                <dt>マーケティングフレームワーク研修</dt>
-                <dd>一部上場企業</dd>
-                <dt>ブランディング研修 基本編</dt>
-                <dd>中堅サービス企業</dd>
-                <dt>webサイトコンテンツ作成</dt>
-                <dd>コンサルティング企業 マーケティング担当者</dd>
-                <dt>マーケティング研修</dt>
-                <dd>コンサルティング企業 マーケティング担当者</dd>
-                <dt>新入社員ロジカルシンキング</dt>
-                <dd>一部上場企業 新入社員</dd>
-                <dt>新入社員ビジネス文書研修</dt>
-                <dd>一部上場企業 新入社員</dd>
-                <dt>商品企画・マーケティング研修</dt>
-                <dd>一部上場企業 商品企画部門</dd>
-                <dt>ブランディング実戦研修</dt>
-                <dd>一部上場企業 管理職</dd>
-                <dt>ブランディング研修</dt>
-                <dd>一部上場企業 全社員</dd>
-                <dt>マーケティングのための組織改革</dt>
-                <dd>一部上場企業 役員研修</dd>
-                <dt>ウイズ・コロナ時代に成功するネット通販</dt>
-                <dd>港区立産業振興センター 中小企業セミナー</dd>
-              </dl>
-            </li>
-            <li>
-              <h5>2022年</h5>
-              <dl class="year-2022">
-                <dt>創業サロン</dt>
-                <dd>文京区産業振興課 創業者向けセミナー</dd>
-                <dt>超実戦的ロジカルシンキング＆マーケティング</dt>
-                <dd>一部上場企業 商品企画部</dd>
-                <dt>
-                  超実戦的ロジカルシンキング
-                  ～実務に使える数字の読み方・洞察力～
-                </dt>
-                <dd>中小企業診断士 フォーラム</dd>
-                <dt>プロダクト開発とマーケティング</dt>
-                <dd>東京理科大学起業講座</dd>
-                <dt>ブランディング論</dt>
-                <dd>一部上場企業</dd>
-                <dt>webサイトコンテンツ作成</dt>
-                <dd>一部上場企業</dd>
-                <dt>マーケティング・リサーチ</dt>
-                <dd>独立行政法人</dd>
-                <dt>動画講座（企業向け）</dt>
-                <dd>
-                  ・マーケティング・リサーチ<br />
-                  ・マーケティングフレームワーク
-                </dd>
-              </dl>
-            </li>
-            <li>
-              <h5>2021年</h5>
-              <dl class="year-2021">
-                <dt>新事業・ブランド立上げ実践編 ～戦略論～</dt>
-                <dd>中小企業診断士 フォーラム 2021/12</dd>
-                <dt>マーケティングフレームワーク</dt>
-                <dd>一部上場企業</dd>
-                <dt>プロダクト開発とマーケティング</dt>
-                <dd>東京理科大学起業講座</dd>
-                <dt>中小企業のマーケティング</dt>
-                <dd>台東区 経営者向けセミナー</dd>
-                <dt>SNS活用方法</dt>
-                <dd>印刷業企業</dd>
-                <dt>知られていない商品を売る方法</dt>
-                <dd>中小企業診断士 研究会</dd>
-                <dt>マーケティング基礎</dt>
-                <dd>食品加工販売企業</dd>
-                <dt>戦略と戦術 ～超実戦編～</dt>
-                <dd>中小企業診断士 研究会</dd>
-                <dt>webコンテンツライティング</dt>
-                <dd>B2B向けクラウドサービス提供企業</dd>
-                <dt>新事業・ブランド立上げ　ー体験的マーケティング論ー</dt>
-                <dd>東京都中小企業診断士協会</dd>
-                <dt>
-                  お金をかけずに売上300倍！<br />事業立上げの大切なポイント
-                </dt>
-                <dd>
-                  社団法人日本経営協会<br />
-                  <a
-                    href="https://www.youtube.com/watch?v=Z8CmkNrVyWU"
-                    target="_blank"
-                    >https://www.youtube.com/watch?v=Z8CmkNrVyWU
+    <section class="seminar" id="seminar">
+      <h2>研修・セミナー・講義</h2>
+      <div class="seminar__wrap">
+        <h4>
+          東京理科大学、港区、台東区、独立行政法人、一般企業（一部上場企業、中小企業、スタートアップ）など
+        </h4>
+        <ul class="seminar__wrap-items">
+          <li>
+            <h5>2024年</h5>
+            <dl class="year-2024">
+              <dt>マーケティング、ブランディング、ビジネスプラン構築</dt>
+              <dd>一部上場企業　中堅社員</dd>
+              <dt>マーケティング基礎</dt>
+              <dd>一部上場企業　中堅社員</dd>
+            </dl>
+          </li>
+          <li>
+            <h5>2023年</h5>
+            <dl class="year-2023">
+              <dt>課題解決研修</dt>
+              <dd>一部上場企業 中堅社員</dd>
+              <dt>マーケティングフレームワーク研修</dt>
+              <dd>一部上場企業</dd>
+              <dt>ブランディング研修 基本編</dt>
+              <dd>中堅サービス企業</dd>
+              <dt>webサイトコンテンツ作成</dt>
+              <dd>コンサルティング企業 マーケティング担当者</dd>
+              <dt>マーケティング研修</dt>
+              <dd>コンサルティング企業 マーケティング担当者</dd>
+              <dt>新入社員ロジカルシンキング</dt>
+              <dd>一部上場企業 新入社員</dd>
+              <dt>新入社員ビジネス文書研修</dt>
+              <dd>一部上場企業 新入社員</dd>
+              <dt>商品企画・マーケティング研修</dt>
+              <dd>一部上場企業 商品企画部門</dd>
+              <dt>ブランディング実戦研修</dt>
+              <dd>一部上場企業 管理職</dd>
+              <dt>ブランディング研修</dt>
+              <dd>一部上場企業 全社員</dd>
+              <dt>マーケティングのための組織改革</dt>
+              <dd>一部上場企業 役員研修</dd>
+              <dt>ウイズ・コロナ時代に成功するネット通販</dt>
+              <dd>港区立産業振興センター 中小企業セミナー</dd>
+            </dl>
+          </li>
+          <li>
+            <h5>2022年</h5>
+            <dl class="year-2022">
+              <dt>創業サロン</dt>
+              <dd>文京区産業振興課 創業者向けセミナー</dd>
+              <dt>超実戦的ロジカルシンキング＆マーケティング</dt>
+              <dd>一部上場企業 商品企画部</dd>
+              <dt>
+                超実戦的ロジカルシンキング
+                ～実務に使える数字の読み方・洞察力～
+              </dt>
+              <dd>中小企業診断士 フォーラム</dd>
+              <dt>プロダクト開発とマーケティング</dt>
+              <dd>東京理科大学起業講座</dd>
+              <dt>ブランディング論</dt>
+              <dd>一部上場企業</dd>
+              <dt>webサイトコンテンツ作成</dt>
+              <dd>一部上場企業</dd>
+              <dt>マーケティング・リサーチ</dt>
+              <dd>独立行政法人</dd>
+              <dt>動画講座（企業向け）</dt>
+              <dd>
+                ・マーケティング・リサーチ<br />
+                ・マーケティングフレームワーク
+              </dd>
+            </dl>
+          </li>
+          <li>
+            <h5>2021年</h5>
+            <dl class="year-2021">
+              <dt>新事業・ブランド立上げ実践編 ～戦略論～</dt>
+              <dd>中小企業診断士 フォーラム 2021/12</dd>
+              <dt>マーケティングフレームワーク</dt>
+              <dd>一部上場企業</dd>
+              <dt>プロダクト開発とマーケティング</dt>
+              <dd>東京理科大学起業講座</dd>
+              <dt>中小企業のマーケティング</dt>
+              <dd>台東区 経営者向けセミナー</dd>
+              <dt>SNS活用方法</dt>
+              <dd>印刷業企業</dd>
+              <dt>知られていない商品を売る方法</dt>
+              <dd>中小企業診断士 研究会</dd>
+              <dt>マーケティング基礎</dt>
+              <dd>食品加工販売企業</dd>
+              <dt>戦略と戦術 ～超実戦編～</dt>
+              <dd>中小企業診断士 研究会</dd>
+              <dt>webコンテンツライティング</dt>
+              <dd>B2B向けクラウドサービス提供企業</dd>
+              <dt>新事業・ブランド立上げ　ー体験的マーケティング論ー</dt>
+              <dd>東京都中小企業診断士協会</dd>
+              <dt>
+                お金をかけずに売上300倍！<br />事業立上げの大切なポイント
+              </dt>
+              <dd>
+                社団法人日本経営協会<br />
+                <a href="https://www.youtube.com/watch?v=Z8CmkNrVyWU"
+                  target="_blank">https://www.youtube.com/watch?v=Z8CmkNrVyWU
 
-                    <img
-                      src="../public/assets/images/img-page-works-youtube.jpg"
-                      alt="お金をかけずに事業を伸ばす方法"
-                  /></a>
-                </dd>
-              </dl>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <article class="full-width">
-        <picture>
-          <source
-            srcset="../public/assets/images/img-page-works02-sp.jpg"
-            media="(max-width:768px)"
-          />
-          <img
-            src="../public/assets/images/img-page-works02.jpg"
-            alt="階段を上る３人のサラリーマン"
-          />
-        </picture>
-      </article>
-      <section class="pic" id="pic">
-        <h2>事業担当者として</h2>
-        <div class="pic__wrap">
-          <ul class="pic__wrap__list">
-            <li class="pic__wrap__list-item">
-              <h3>市場創出例</h3>
-              <ul>
-                <li>
-                  シリコンバレーのベンチャー企業の新コンセプト商品を日本に導入。
-                </li>
-                <li>ドキュメントスキャナという言葉を一般化させ、市場創出。</li>
-                <li>
-                  新コンセプト商品（ヘッド・マウント・ディスプレイ）の商業化の成功。
-                </li>
-                <li>米ビジネスウィーク誌にて”Product of the Year”受賞。</li>
-                <li>
-                  ゴルフ市場において、夏に半袖ポロシャツの下に長袖インナーを着用する”奇異な”スタイルの提唱と普及の成功。ゴルフショップにインナー売場を生み出した。
-                </li>
-                <li>
-                  低反発が主流だった寝具市場において、高反発マットレスの市場を確立
-                </li>
-              </ul>
-            </li>
-            <li class="pic__wrap__list-item">
-              <h3>主な実績</h3>
-              <ul>
-                <li>
-                  PC市場の無名ブランド機器を、低予算の中2年間で30台/月から1万台/月、トップシェアに。
-                </li>
-                <li>
-                  日経パソコン誌にて、無名ブランドから技術力の高いブランドトップ5に。
-                </li>
-                <li>
-                  ネット通販の定石が存在せず、誰もが手探りのEC黎明期に、ネットで売れないと言われるアパレルECをゼロから年商75億に。オンラインショッピング大賞受賞。
-                </li>
-                <li>
-                  巨大な競合のいる中、無名の新興スポーツブランドを、売上100億、スポーツブランド8位に。
-                </li>
-                <li>全く新しいコンセプトの新興寝具ブランドを売上150億へ。</li>
-                <li>
-                  店舗販売・カタログ通販・ネット通販（EC）の3チャネルがバラバラだった企業にて、顧客データベースを統合し、全チャネルのマーケティング活動を統合・連携。
-                </li>
-                <li>新興企業にて経営企画機能をゼロから立上げ。</li>
-                <li>経営企画として初の外部資本導入に成功。</li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </section>
+                  <img src="public/assets/images/img-page-works-youtube.jpg" alt="お金をかけずに事業を伸ばす方法" /></a>
+              </dd>
+            </dl>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <article class="full-width">
+      <picture>
+        <source srcset="public/assets/images/img-page-works02-sp.jpg" media="(max-width:768px)" />
+        <img src="public/assets/images/img-page-works02.jpg" alt="階段を上る３人のサラリーマン" />
+      </picture>
     </article>
-  </main>
-  <!-- 代表者紹介 -->
-  <!-- <section class="ceo page-works" id="ceo">
+    <section class="pic" id="pic">
+      <h2>事業担当者として</h2>
+      <div class="pic__wrap">
+        <ul class="pic__wrap__list">
+          <li class="pic__wrap__list-item">
+            <h3>市場創出例</h3>
+            <ul>
+              <li>
+                シリコンバレーのベンチャー企業の新コンセプト商品を日本に導入。
+              </li>
+              <li>ドキュメントスキャナという言葉を一般化させ、市場創出。</li>
+              <li>
+                新コンセプト商品（ヘッド・マウント・ディスプレイ）の商業化の成功。
+              </li>
+              <li>米ビジネスウィーク誌にて”Product of the Year”受賞。</li>
+              <li>
+                ゴルフ市場において、夏に半袖ポロシャツの下に長袖インナーを着用する”奇異な”スタイルの提唱と普及の成功。ゴルフショップにインナー売場を生み出した。
+              </li>
+              <li>
+                低反発が主流だった寝具市場において、高反発マットレスの市場を確立
+              </li>
+            </ul>
+          </li>
+          <li class="pic__wrap__list-item">
+            <h3>主な実績</h3>
+            <ul>
+              <li>
+                PC市場の無名ブランド機器を、低予算の中2年間で30台/月から1万台/月、トップシェアに。
+              </li>
+              <li>
+                日経パソコン誌にて、無名ブランドから技術力の高いブランドトップ5に。
+              </li>
+              <li>
+                ネット通販の定石が存在せず、誰もが手探りのEC黎明期に、ネットで売れないと言われるアパレルECをゼロから年商75億に。オンラインショッピング大賞受賞。
+              </li>
+              <li>
+                巨大な競合のいる中、無名の新興スポーツブランドを、売上100億、スポーツブランド8位に。
+              </li>
+              <li>全く新しいコンセプトの新興寝具ブランドを売上150億へ。</li>
+              <li>
+                店舗販売・カタログ通販・ネット通販（EC）の3チャネルがバラバラだった企業にて、顧客データベースを統合し、全チャネルのマーケティング活動を統合・連携。
+              </li>
+              <li>新興企業にて経営企画機能をゼロから立上げ。</li>
+              <li>経営企画として初の外部資本導入に成功。</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </article>
+</main>
+<!-- 代表者紹介 -->
+<!-- <section class="ceo page-works" id="ceo">
     <div class="ceo__inner">
       <div class="ceo__img">
         <picture>
           <source
-            srcset="../public/assets/images/img-ceo-takegami-sp.jpg"
+            srcset="public/assets/images/img-ceo-takegami-sp.jpg"
             media="(max-width:768px)"
           />
           <img
-            src="../public/assets/images/img-ceo-takegami-pc.jpg"
+            src="public/assets/images/img-ceo-takegami-pc.jpg"
             alt="代表取締役社長　竹上創"
           />
         </picture>
@@ -286,23 +272,24 @@
         <a href="" class="c-btn c-btn__sm"
           >代表プロフィールへ<span
             ><img
-              src="../public/assets/images/common/icon-arrow-right.svg"
+              src="public/assets/images/common/icon-arrow-right.svg"
               alt="矢印" /></span
         ></a>
         <span class="ceo__img-txt">
           <picture>
             <source
-              srcset="../public/assets/images/img-text-ceo-takegami-sp.svg"
+              srcset="public/assets/images/img-text-ceo-takegami-sp.svg"
               media="(max-width:768px)"
             />
             <img
-              src="../public/assets/images/img-text-ceo-takegami.svg"
+              src="public/assets/images/img-text-ceo-takegami.svg"
               alt="Takegami Hajime"
             /> </picture
         ></span>
       </div>
     </div>
   </section> -->
-  <!-- footer.htmlの読み込み -->
-  {{> footer}}
+<!-- footer.htmlの読み込み -->
+{{> footer}}
+
 </html>
